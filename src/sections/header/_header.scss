@@ -1,0 +1,8 @@
+$header__background-color: $grey-very-light;
+$header__padding-horizontal: 49px;
+
+.header {
+  background-color: $header__background-color;
+  height: 98px + $header__padding-horizontal * 2;
+  padding: $header__padding-horizontal;
+}

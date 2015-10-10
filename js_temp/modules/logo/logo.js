@@ -1,8 +1,7 @@
 var Logo = React.createClass({displayName: "Logo",
   render: function() {
     return (
-      React.createElement("div", {className: "logo"}
-      )
+      React.createElement("img", {src: "assets/img/logo.svg"})
     )
   }
 });

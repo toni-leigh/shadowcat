@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0; }
 
@@ -16,3 +19,8 @@ ul {
     .content-is-centred {
       margin: 0 auto;
       width: 1280px; } }
+
+.header {
+  background-color: #fafafa;
+  height: 196px;
+  padding: 49px; }
