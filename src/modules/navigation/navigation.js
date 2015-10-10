@@ -1,10 +1,10 @@
-var Navigation = React.createClass({displayName: "Navigation",
+var Navigation = React.createClass({
   buildList: function() {
     var navItems = this.getNavItems();
     var rows = [];
     var x = 0;
     this.getNavItems().forEach(function(navItem) {
-      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name}));
+      rows.push(<NavigationLink key={'nav' + x} slug={navItem.slug} name={navItem.name}/>);
       x ++;
     });
     return rows;
@@ -41,11 +41,11 @@ var Navigation = React.createClass({displayName: "Navigation",
 
   render: function() {
     return (
-      React.createElement("nav", {className: "navigation"}, 
-        React.createElement("ul", null, 
-          this.buildList()
-        )
-      )
+      <nav className='navigation'>
+        <ul>
+          {this.buildList()}
+        </ul>
+      </nav>
     )
   }
 });

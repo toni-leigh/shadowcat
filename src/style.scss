@@ -2,6 +2,7 @@
 
 // common
 @import "common/_reset";
+@import "common/_utility";
 
 // modules
 @import "modules/logo/_logo";
@@ -20,10 +21,11 @@
 @import "modules/map/_map";
 @import "modules/aside-panel/_aside-panel";
 @import "modules/image-thumbnail/_image-thumbnail";
+@import "modules/navigation/_navigation";
 
 // page sections
-@import "sections/navigation/_navigation";
 @import "sections/heading/_heading";
+@import "sections/header/_header";
 @import "sections/video-spotlight/_video-spotlight";
 @import "sections/text/_text";
 @import "sections/aside/_aside";

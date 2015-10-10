@@ -1,0 +1,12 @@
+.page-section {
+  padding: 70px 0 100px;
+}
+
+.content-is-centred {
+  padding: 0 3.125%;
+  width: 100%;
+  @media (min-width: 1280px) {
+    margin: 0 auto;
+    width: 1280px;
+  }
+}

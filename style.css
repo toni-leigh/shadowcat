@@ -1,8 +1,18 @@
 body {
   margin: 0; }
 
-.button-small {
-  position: fixed; }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
-.home {
-  background-color: #95c; }
+.page-section {
+  padding: 70px 0 100px; }
+
+.content-is-centred {
+  padding: 0 3.125%;
+  width: 100%; }
+  @media (min-width: 1280px) {
+    .content-is-centred {
+      margin: 0 auto;
+      width: 1280px; } }

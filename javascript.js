@@ -52,19 +52,19 @@ var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   }
 });
 
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+var ContactDetail = React.createClass({displayName: "ContactDetail",
   render: function() {
     return (
-      React.createElement("div", {className: "image-thumbnail"}
+      React.createElement("div", {className: "contact-detail"}
       )
     )
   }
 });
 
-var ContactDetail = React.createClass({displayName: "ContactDetail",
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
-      React.createElement("div", {className: "contact-detail"}
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -110,6 +110,79 @@ var Map = React.createClass({displayName: "Map",
   render: function() {
     return (
       React.createElement("div", {className: "map"}
+      )
+    )
+  }
+});
+
+var Navigation = React.createClass({displayName: "Navigation",
+  buildList: function() {
+    var navItems = this.getNavItems();
+    var rows = [];
+    var x = 0;
+    this.getNavItems().forEach(function(navItem) {
+      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name}));
+      x ++;
+    });
+    return rows;
+  },
+
+  getNavItems: function() {
+    return [
+      {
+        name: 'Home',
+        slug: 'index'
+      },
+      {
+        name: 'Service',
+        slug: 'service'
+      },
+      {
+        name: 'Project',
+        slug: 'project'
+      },
+      {
+        name: 'Blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Products',
+        slug: 'products'
+      },
+      {
+        name: 'Basket',
+        slug: 'basket'
+      }
+    ];
+  },
+
+  render: function() {
+    return (
+      React.createElement("nav", {className: "navigation"}, 
+        React.createElement("ul", null, 
+          this.buildList()
+        )
+      )
+    )
+  }
+});
+
+var NavigationLink = React.createClass({displayName: "NavigationLink",
+  navLiClass: function() {
+    return 'navigation__item navigation__item--' + this.props.slug;
+  },
+  navLinkClass: function() {
+    return 'navigation__link navigation__link--' + this.props.slug;
+  },
+  navUrl: function() {
+    return '/' + this.props.slug + '.html';
+  },
+  render: function() {
+    return (
+      React.createElement("li", {className: this.navLiClass()}, 
+        React.createElement("a", {className: this.navLiClass(), href: this.navUrl()}, 
+          this.props.name
+        )
       )
     )
   }
@@ -163,7 +236,8 @@ var BlogPost = React.createClass({displayName: "BlogPost",
 var Home = React.createClass({displayName: "Home",
   render: function() {
     return (
-      React.createElement("main", {className: "home"}
+      React.createElement("main", {className: "home"}, 
+        React.createElement(Header, null)
       )
     )
   }
@@ -250,6 +324,19 @@ var Footer = React.createClass({displayName: "Footer",
   }
 });
 
+var Header = React.createClass({displayName: "Header",
+  render: function() {
+    return (
+      React.createElement("header", {className: "page-section header"}, 
+        React.createElement("div", {className: "content-is-centred"}, 
+          React.createElement(Logo, null), 
+          React.createElement(Navigation, null)
+        )
+      )
+    )
+  }
+});
+
 var Heading = React.createClass({displayName: "Heading",
   render: function() {
     return (
@@ -278,9 +365,73 @@ var Lightbox = React.createClass({displayName: "Lightbox",
 });
 
 var Navigation = React.createClass({displayName: "Navigation",
+  buildList: function() {
+    var navItems = this.getNavItems();
+    var rows = [];
+    var x = 0;
+    this.getNavItems().forEach(function(navItem) {
+      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name}));
+      x ++;
+    });
+    return rows;
+  },
+
+  getNavItems: function() {
+    return [
+      {
+        name: 'Home',
+        slug: 'index'
+      },
+      {
+        name: 'Service',
+        slug: 'service'
+      },
+      {
+        name: 'Project',
+        slug: 'project'
+      },
+      {
+        name: 'Blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Products',
+        slug: 'products'
+      },
+      {
+        name: 'Basket',
+        slug: 'basket'
+      }
+    ];
+  },
+
   render: function() {
     return (
-      React.createElement("div", {className: "navigation"}
+      React.createElement("nav", {className: "navigation"}, 
+        React.createElement("ul", null, 
+          this.buildList()
+        )
+      )
+    )
+  }
+});
+
+var NavigationLink = React.createClass({displayName: "NavigationLink",
+  navLiClass: function() {
+    return 'navigation__item navigation__item--' + this.props.slug;
+  },
+  navLinkClass: function() {
+    return 'navigation__link navigation__link--' + this.props.slug;
+  },
+  navUrl: function() {
+    return '/' + this.props.slug + '.html';
+  },
+  render: function() {
+    return (
+      React.createElement("li", {className: this.navLiClass()}, 
+        React.createElement("a", {className: this.navLiClass(), href: this.navUrl()}, 
+          this.props.name
+        )
       )
     )
   }
