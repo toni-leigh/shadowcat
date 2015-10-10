@@ -1,0 +1,10 @@
+.heading__heading,
+.heading__strapline {
+  padding: 15px;
+  width: 100%; }
+
+.heading__heading {
+  color: #777; }
+
+.heading__strapline {
+  color: #222; }
