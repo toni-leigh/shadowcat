@@ -4,7 +4,8 @@ var Header = React.createClass({
       <header className='page-section header'>
         <div className='content-is-centred'>
           <Logo />
-          <Navigation />
+          <div className='header__business-name'>Shadowcat Films</div>
+          <Navigation selected={this.props['page-slug']} />
         </div>
       </header>
     )

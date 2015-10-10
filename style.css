@@ -20,7 +20,59 @@ ul {
       margin: 0 auto;
       width: 1280px; } }
 
+.navigation {
+  float: right;
+  height: 98px;
+  line-height: 98px; }
+  .navigation__item {
+    display: inline-block;
+    margin-left: 30px; }
+  .navigation__link {
+    color: #050505;
+    font-family: "Khand", sans-serif;
+    font-size: 22px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .navigation__link:after {
+      background-color: #48BED9;
+      bottom: -5px;
+      content: '';
+      height: 3px;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      transition: all 0.075s;
+      width: 0%; }
+    .navigation__link:hover:after {
+      bottom: 0px;
+      opacity: 1;
+      width: 100%; }
+    .navigation__link--basket,
+    .navigation__link--products {
+      color: #D96C48; }
+      .navigation__link--basket:hover:after,
+      .navigation__link--products:hover:after {
+        background-color: #D96C48; }
+    .navigation__link.selected:after {
+      bottom: 0px;
+      opacity: 1;
+      width: 100%; }
+
 .header {
   background-color: #fafafa;
-  height: 196px;
-  padding: 49px; }
+  height: 158px;
+  padding: 30px 0; }
+  .header__business-name {
+    color: #050505;
+    display: inline-block;
+    font-family: "Khand", sans-serif;
+    font-size: 38px;
+    height: 98px;
+    line-height: 98px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap; }
+  .header .logo {
+    float: left; }

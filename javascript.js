@@ -146,7 +146,7 @@ var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
 var Logo = React.createClass({displayName: "Logo",
   render: function() {
     return (
-      React.createElement("img", {src: "assets/img/logo.svg"})
+      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
     )
   }
 });
@@ -166,7 +166,7 @@ var Navigation = React.createClass({displayName: "Navigation",
     var rows = [];
     var x = 0;
     this.getNavItems().forEach(function(navItem) {
-      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name}));
+      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name, selected: navItem.selected}));
       x ++;
     });
     return rows;
@@ -176,27 +176,38 @@ var Navigation = React.createClass({displayName: "Navigation",
     return [
       {
         name: 'Home',
-        slug: 'index'
+        slug: 'index',
+        selected: true
       },
       {
-        name: 'Service',
-        slug: 'service'
+        name: 'Documentaries',
+        slug: 'documentaries',
+        selected: false
       },
       {
-        name: 'Project',
-        slug: 'project'
+        name: 'Video Production',
+        slug: 'video-production',
+        selected: false
+      },
+      {
+        name: 'Contact',
+        slug: 'contact',
+        selected: false
       },
       {
         name: 'Blog',
-        slug: 'blog'
+        slug: 'blog',
+        selected: false
       },
       {
         name: 'Products',
-        slug: 'products'
+        slug: 'products',
+        selected: false
       },
       {
         name: 'Basket',
-        slug: 'basket'
+        slug: 'basket',
+        selected: false
       }
     ];
   },
@@ -217,7 +228,10 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
     return 'navigation__item navigation__item--' + this.props.slug;
   },
   navLinkClass: function() {
-    return 'navigation__link navigation__link--' + this.props.slug;
+    return 'navigation__link navigation__link--' + this.props.slug + ' ' + this.navSelected();
+  },
+  navSelected: function() {
+    return true === this.props.selected ? 'selected' : ''
   },
   navUrl: function() {
     return '/' + this.props.slug + '.html';
@@ -225,7 +239,7 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
   render: function() {
     return (
       React.createElement("li", {className: this.navLiClass()}, 
-        React.createElement("a", {className: this.navLiClass(), href: this.navUrl()}, 
+        React.createElement("a", {className: this.navLinkClass(), href: this.navUrl()}, 
           this.props.name
         )
       )
@@ -329,6 +343,7 @@ var Header = React.createClass({displayName: "Header",
       React.createElement("header", {className: "page-section header"}, 
         React.createElement("div", {className: "content-is-centred"}, 
           React.createElement(Logo, null), 
+          React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
           React.createElement(Navigation, null)
         )
       )
@@ -345,92 +360,10 @@ var Heading = React.createClass({displayName: "Heading",
   }
 });
 
-var ImageFixed = React.createClass({displayName: "ImageFixed",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-fixed"}
-      )
-    )
-  }
-});
-
 var Lightbox = React.createClass({displayName: "Lightbox",
   render: function() {
     return (
       React.createElement("div", {className: "lightbox"}
-      )
-    )
-  }
-});
-
-var Navigation = React.createClass({displayName: "Navigation",
-  buildList: function() {
-    var navItems = this.getNavItems();
-    var rows = [];
-    var x = 0;
-    this.getNavItems().forEach(function(navItem) {
-      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name}));
-      x ++;
-    });
-    return rows;
-  },
-
-  getNavItems: function() {
-    return [
-      {
-        name: 'Home',
-        slug: 'index'
-      },
-      {
-        name: 'Service',
-        slug: 'service'
-      },
-      {
-        name: 'Project',
-        slug: 'project'
-      },
-      {
-        name: 'Blog',
-        slug: 'blog'
-      },
-      {
-        name: 'Products',
-        slug: 'products'
-      },
-      {
-        name: 'Basket',
-        slug: 'basket'
-      }
-    ];
-  },
-
-  render: function() {
-    return (
-      React.createElement("nav", {className: "navigation"}, 
-        React.createElement("ul", null, 
-          this.buildList()
-        )
-      )
-    )
-  }
-});
-
-var NavigationLink = React.createClass({displayName: "NavigationLink",
-  navLiClass: function() {
-    return 'navigation__item navigation__item--' + this.props.slug;
-  },
-  navLinkClass: function() {
-    return 'navigation__link navigation__link--' + this.props.slug;
-  },
-  navUrl: function() {
-    return '/' + this.props.slug + '.html';
-  },
-  render: function() {
-    return (
-      React.createElement("li", {className: this.navLiClass()}, 
-        React.createElement("a", {className: this.navLiClass(), href: this.navUrl()}, 
-          this.props.name
-        )
       )
     )
   }
@@ -467,6 +400,15 @@ var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
       React.createElement("div", {className: "video"}
+      )
+    )
+  }
+});
+
+var ImageFixed = React.createClass({displayName: "ImageFixed",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-fixed"}
       )
     )
   }

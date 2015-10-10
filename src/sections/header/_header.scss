@@ -1,8 +1,28 @@
 $header__background-color: $grey-very-light;
-$header__padding-horizontal: 49px;
+$header__central-height: 98px;
+$header__font: $font__standout;
+$header__font-color: $black;
+$header__padding-horizontal: 30px;
 
 .header {
   background-color: $header__background-color;
-  height: 98px + $header__padding-horizontal * 2;
-  padding: $header__padding-horizontal;
+  height: $header__central-height + $header__padding-horizontal * 2;
+  padding: $header__padding-horizontal 0;
+
+  &__business-name {
+    color: $header__font-color;
+    display: inline-block;
+    font-family: $header__font;
+    font-size: 38px;
+    height: $header__central-height;
+    line-height: $header__central-height;
+    margin-left: 30px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .logo {
+    float: left;
+  }
 }
