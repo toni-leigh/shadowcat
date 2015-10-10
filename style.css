@@ -1,10 +1,5 @@
-.heading__heading,
-.heading__strapline {
-  padding: 15px;
-  width: 100%; }
+body {
+  margin: 0; }
 
-.heading__heading {
-  color: #777; }
-
-.heading__strapline {
-  color: #222; }
+.home {
+  background-color: #95c; }

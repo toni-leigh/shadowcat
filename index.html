@@ -8,11 +8,15 @@
     <script src='build/react.js'></script>
     <script src='javascript.js'></script>
   </head>
-  <body id='react-home-page'>
+  <body>
+    <div id='react-home'></div>
   </body>
   <script>
     window.onload = function() {
-
+      React.render(
+        React.createElement(Home, {name: "The"}),
+        document.getElementById('react-home')
+      );
     }
   </script>
 </html>

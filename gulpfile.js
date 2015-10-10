@@ -23,3 +23,4 @@ gulp.task('jsxToJs', jsxToJs);
 gulp.task('styles', scssToCss);
 gulp.task('concat', concatenate);
 gulp.task('js', ['jsxToJs', 'concat']);
+gulp.task('build', ['js', 'styles']);
