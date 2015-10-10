@@ -1,2 +1,18 @@
 $font__standout: 'Khand', sans-serif;
 $font__common: arial;
+
+@mixin text-light() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+@mixin text-heavy() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.55em;
+  margin-bottom: 1.55em;
+}

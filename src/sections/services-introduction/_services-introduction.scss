@@ -1,3 +1,13 @@
 .services-introduction {
   @include base-padding();
+  &__heading {
+    @include text-light();
+    font-size: 36px;
+    margin-bottom: $general-padding__strapline-spacing;
+    text-align: center;
+  }
+  &__text {
+    margin: 0 200px;
+    width: 800px;
+  }
 }

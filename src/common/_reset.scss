@@ -3,14 +3,11 @@
 }
 
 body {
+  @include text-light();
   margin: 0;
 }
 
 h1, h2 {
-  margin: 0;
-}
-
-p {
   margin: 0;
 }
 
