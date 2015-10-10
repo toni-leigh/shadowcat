@@ -76,3 +76,11 @@ ul {
     white-space: nowrap; }
   .header .logo {
     float: left; }
+
+.home__top-wrapper {
+  background: radial-gradient(circle at 50% 400px, #fff 0%, #e0e0e0 100%);
+  height: 2000px;
+  width: 100%; }
+
+.home .header {
+  background-color: transparent; }

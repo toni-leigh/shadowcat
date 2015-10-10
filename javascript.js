@@ -20,7 +20,9 @@ var Home = React.createClass({displayName: "Home",
   render: function() {
     return (
       React.createElement("main", {className: "home"}, 
-        React.createElement(Header, null)
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home"})
+        )
       )
     )
   }
@@ -344,7 +346,7 @@ var Header = React.createClass({displayName: "Header",
         React.createElement("div", {className: "content-is-centred"}, 
           React.createElement(Logo, null), 
           React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
-          React.createElement(Navigation, null)
+          React.createElement(Navigation, {selected: this.props['page-slug']})
         )
       )
     )
@@ -355,6 +357,15 @@ var Heading = React.createClass({displayName: "Heading",
   render: function() {
     return (
       React.createElement("div", {className: "heading"}
+      )
+    )
+  }
+});
+
+var ImageFixed = React.createClass({displayName: "ImageFixed",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-fixed"}
       )
     )
   }
@@ -400,15 +411,6 @@ var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
       React.createElement("div", {className: "video"}
-      )
-    )
-  }
-});
-
-var ImageFixed = React.createClass({displayName: "ImageFixed",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-fixed"}
       )
     )
   }
