@@ -4,16 +4,20 @@
 body {
   margin: 0; }
 
+h1, h2 {
+  margin: 0; }
+
+p {
+  margin: 0; }
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0; }
 
-.page-section {
-  padding: 70px 0 100px; }
-
 .content-is-centred {
-  padding: 0 3.125%;
+  padding-left: 3.125%;
+  padding-right: 3.125%;
   width: 100%; }
   @media (min-width: 1280px) {
     .content-is-centred {
@@ -62,7 +66,8 @@ ul {
 .header {
   background-color: #fafafa;
   height: 158px;
-  padding: 30px 0; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
   .header__business-name {
     color: #050505;
     display: inline-block;
@@ -82,6 +87,10 @@ ul {
   height: 56.25vw;
   max-height: 675px;
   width: 100%; }
+
+.services-introduction {
+  padding-bottom: 100px;
+  padding-top: 70px; }
 
 .home__top-wrapper {
   background: radial-gradient(circle at 50% 400px, #fff 0%, #e0e0e0 100%);

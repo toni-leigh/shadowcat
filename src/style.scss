@@ -1,9 +1,10 @@
 // variables and mixins
 @import "common/_colours";
 @import "common/_fonts";
+@import "common/_variables";
+@import "common/_reset";
 
 // common
-@import "common/_reset";
 @import "common/_utility";
 
 // modules
@@ -42,6 +43,8 @@
 @import "sections/footer/_footer";
 @import "sections/thumbnail-gallery/_thumbnail-gallery";
 @import "sections/lightbox/_lightbox";
+@import "sections/our-choice-projects/_our-choice-projects";
+@import "sections/services-introduction/_services-introduction";
 
 // pages
 @import "pages/home/_home";

@@ -5,6 +5,8 @@ var Home = React.createClass({
         <div className='home__top-wrapper'>
           <Header page-slug='home'/>
           <VideoSpotlight src='//player.vimeo.com/video/95396328'/>
+          <ServicesIntroduction />
+          <OurChoiceProjects />
         </div>
       </main>
     )

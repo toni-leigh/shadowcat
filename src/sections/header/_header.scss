@@ -7,7 +7,8 @@ $header__padding-horizontal: 30px;
 .header {
   background-color: $header__background-color;
   height: $header__central-height + $header__padding-horizontal * 2;
-  padding: $header__padding-horizontal 0;
+  padding-top: $header__padding-horizontal;
+  padding-bottom: $header__padding-horizontal;
 
   &__business-name {
     color: $header__font-color;

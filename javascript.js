@@ -1,3 +1,54 @@
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home"}), 
+          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, null), 
+          React.createElement(OurChoiceProjects, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
+      )
+    )
+  }
+});
+
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -228,55 +279,6 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
   }
 });
 
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home"}), 
-          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"})
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var Aside = React.createClass({displayName: "Aside",
   render: function() {
     return (
@@ -343,12 +345,10 @@ var Footer = React.createClass({displayName: "Footer",
 var Header = React.createClass({displayName: "Header",
   render: function() {
     return (
-      React.createElement("header", {className: "page-section header"}, 
-        React.createElement("div", {className: "content-is-centred"}, 
-          React.createElement(Logo, null), 
-          React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
-          React.createElement(Navigation, {selected: this.props['page-slug']})
-        )
+      React.createElement("header", {className: "content-is-centred header"}, 
+        React.createElement(Logo, null), 
+        React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
+        React.createElement(Navigation, {selected: this.props['page-slug']})
       )
     )
   }
@@ -376,6 +376,56 @@ var Lightbox = React.createClass({displayName: "Lightbox",
   render: function() {
     return (
       React.createElement("div", {className: "lightbox"}
+      )
+    )
+  }
+});
+
+var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
+  render: function() {
+    return (
+      React.createElement("article", {className: "our-choice-projects"}
+      )
+    )
+  }
+});
+
+var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction",
+  getButtonDetails: function() {
+    return {
+      1: {
+        name: 'Documentaries',
+        slug: 'documentaries'
+      },
+      2: {
+        name: 'Video Production',
+        slug: 'video-production'
+      }
+    };
+  },
+  render: function() {
+    return (
+      React.createElement("article", {className: "services-introduction content-is-centred"}, 
+        React.createElement("h1", {className: "services-introduction__heading"}, "Find out all about our services"), 
+        React.createElement(ButtonPair, {"link-details": this.getButtonDetails()}), 
+        React.createElement("div", {className: "services-introduction__text"}, 
+          React.createElement("p", null, 
+            "Flexitarian single-origin coffee health goth Williamsburg, before they sold out fanny pack trust f" + ' ' +
+            "und banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a bird" + ' ' +
+            "on it, fap Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
+          ), 
+          React.createElement("p", null, 
+            "Williamsburg, before they sold out fanny pack trust fund banh mi.Flexitarian single-origin coffee" + ' ' +
+            "health goth  Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a" + ' ' +
+            "bird on it, fap Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
+          ), 
+          React.createElement("p", null, 
+            "Quinoa aesthetic plaid put a bird on it, fap Pinterest hoodie deep v brunch twee authentic normcore" + ' ' +
+            "Portland letterpress. Flexitarian single-origin coffee health goth Williamsburg, before they sold" + ' ' +
+            "out fanny pack trust fund banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Flexitarian" + ' ' +
+            "single-origin coffee health goth Williamsburg, before they sold out."
+          )
+        )
       )
     )
   }
