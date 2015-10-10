@@ -1,7 +1,10 @@
 p {
+  color: #595959;
   font-size: 18px;
   line-height: 1.55em;
-  margin-bottom: 1.55em; }
+  margin: 0 0 1.55em 0; }
+  p:last-of-type {
+    margin-bottom: 0; }
 
 * {
   box-sizing: border-box; }
@@ -88,6 +91,7 @@ ul {
 
 .video-spotlight {
   border: none;
+  box-shadow: 0 0 50px 0 rgba(89, 89, 89, 0.2);
   height: 56.25vw;
   max-height: 675px;
   width: 100%; }

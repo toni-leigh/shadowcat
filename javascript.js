@@ -40,6 +40,15 @@ var Project = React.createClass({displayName: "Project",
   }
 });
 
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
+      )
+    )
+  }
+});
+
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -67,15 +76,15 @@ var ButtonCta = React.createClass({displayName: "ButtonCta",
   }
 });
 
-
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-small"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
 });
+
 
 var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
@@ -139,10 +148,10 @@ var Logo = React.createClass({displayName: "Logo",
   }
 });
 
-var Service = React.createClass({displayName: "Service",
+var Map = React.createClass({displayName: "Map",
   render: function() {
     return (
-      React.createElement("div", {className: "service"}
+      React.createElement("div", {className: "map"}
       )
     )
   }
@@ -230,15 +239,6 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
         React.createElement("a", {className: this.navLinkClass(), href: this.navUrl()}, 
           this.props.name
         )
-      )
-    )
-  }
-});
-
-var Map = React.createClass({displayName: "Map",
-  render: function() {
-    return (
-      React.createElement("div", {className: "map"}
       )
     )
   }
@@ -364,15 +364,6 @@ var ImageFixed = React.createClass({displayName: "ImageFixed",
   }
 });
 
-var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
-  render: function() {
-    return (
-      React.createElement("article", {className: "our-choice-projects"}
-      )
-    )
-  }
-});
-
 var Lightbox = React.createClass({displayName: "Lightbox",
   render: function() {
     return (
@@ -382,38 +373,10 @@ var Lightbox = React.createClass({displayName: "Lightbox",
   }
 });
 
-var Testimonials = React.createClass({displayName: "Testimonials",
+var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
   render: function() {
     return (
-      React.createElement("div", {className: "testimonials"}
-      )
-    )
-  }
-});
-
-var Video = React.createClass({displayName: "Video",
-  render: function() {
-    return (
-      React.createElement("div", {className: "video"}
-      )
-    )
-  }
-});
-
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
-  render: function() {
-    return (
-      React.createElement("div", {className: "thumbnail-gallery"}
-      )
-    )
-  }
-});
-
-var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
-  render: function() {
-    return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameborder: "0", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true})
+      React.createElement("article", {className: "our-choice-projects"}
       )
     )
   }
@@ -460,10 +423,47 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
   }
 });
 
+var Testimonials = React.createClass({displayName: "Testimonials",
+  render: function() {
+    return (
+      React.createElement("div", {className: "testimonials"}
+      )
+    )
+  }
+});
+
 var Text = React.createClass({displayName: "Text",
   render: function() {
     return (
       React.createElement("div", {className: "text"}
+      )
+    )
+  }
+});
+
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+  render: function() {
+    return (
+      React.createElement("div", {className: "thumbnail-gallery"}
+      )
+    )
+  }
+});
+
+var Video = React.createClass({displayName: "Video",
+  render: function() {
+    return (
+      React.createElement("div", {className: "video"}
+      )
+    )
+  }
+});
+
+var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
+  render: function() {
+    return (
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameborder: "0", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true})
       )
     )
   }

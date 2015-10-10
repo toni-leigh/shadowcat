@@ -12,7 +12,11 @@ $font__common: arial;
 }
 
 p {
+  color: $grey-mid;
   font-size: 18px;
   line-height: 1.55em;
-  margin-bottom: 1.55em;
+  margin: 0 0 1.55em 0;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
