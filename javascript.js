@@ -1,54 +1,3 @@
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home"}), 
-          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, null), 
-          React.createElement(OurChoiceProjects, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -85,6 +34,14 @@ var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   }
 });
 
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-small"}
+      )
+    )
+  }
+});
 
 var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
@@ -244,15 +201,6 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
   }
 });
 
-var PageHeading = React.createClass({displayName: "PageHeading",
-  render: function() {
-    return (
-      React.createElement("div", {className: "page-heading"}
-      )
-    )
-  }
-});
-
 var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple",
   render: function() {
     return (
@@ -262,10 +210,70 @@ var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple
   }
 });
 
+var PageHeading = React.createClass({displayName: "PageHeading",
+  render: function() {
+    return (
+      React.createElement("div", {className: "page-heading"}
+      )
+    )
+  }
+});
+
 var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
   render: function() {
     return (
       React.createElement("div", {className: "section-heading-with-strapline"}
+      )
+    )
+  }
+});
+
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home"}), 
+          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, null), 
+          React.createElement(OurChoiceProjects, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
       )
     )
   }
@@ -292,7 +300,9 @@ var BlogSmall = React.createClass({displayName: "BlogSmall",
 var ButtonPair = React.createClass({displayName: "ButtonPair",
   render: function() {
     return (
-      React.createElement("div", {className: "button-pair"}
+      React.createElement("div", {className: "button-pair"}, 
+        React.createElement("a", {className: "button-pair__button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
+        React.createElement("a", {className: "button-pair__button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
       )
     )
   }
