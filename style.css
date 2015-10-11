@@ -31,6 +31,14 @@ ul {
       margin: 0 auto;
       width: 1280px; } }
 
+.background {
+  left: 0;
+  right: 0; }
+  .background--orange {
+    background-color: #FD906C; }
+    .background--orange-dark {
+      background-color: #D96C48; }
+
 .navigation {
   float: right;
   height: 98px;
@@ -114,7 +122,11 @@ ul {
     .button-pair__button:last-of-type {
       margin-right: 0; }
     .button-pair__button:hover {
-      background-color: #6CE2FD; }
+      background-color: #5AD0eb; }
+
+.call-to-action {
+  padding-bottom: 100px;
+  padding-top: 70px; }
 
 .services-introduction {
   padding-bottom: 100px;

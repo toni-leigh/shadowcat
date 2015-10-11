@@ -7,6 +7,7 @@ var Home = React.createClass({
           <VideoSpotlight src='//player.vimeo.com/video/95396328'/>
           <ServicesIntroduction />
           <OurChoiceProjects />
+          <CallToAction />
         </div>
       </main>
     )

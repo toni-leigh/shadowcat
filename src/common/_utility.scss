@@ -7,3 +7,15 @@
     width: 1280px;
   }
 }
+
+.background {
+  left: 0;
+  right: 0;
+
+  &--orange {
+    background-color: $orange-light;
+    &-dark {
+      background-color: $orange-dark;
+    }
+  }
+}
