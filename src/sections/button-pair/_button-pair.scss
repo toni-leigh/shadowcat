@@ -1,6 +1,7 @@
 $button-pair__text: $grey-very-light;
 $button-pair__background: $blue-dark;
 $button-pair__background--hover: $blue-light;
+$button-pair__vertical-breakpoint: 520px;
 
 .button-pair {
   margin-bottom: $general-padding__top;
@@ -8,10 +9,26 @@ $button-pair__background--hover: $blue-light;
   &__button {
     background-color: $button-pair__background;
     color: $button-pair__text;
-    margin-right: 30px;
-    padding: 0 50px;
+    margin-bottom: 20px;
+    @media (min-width: 520px) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
     &:last-of-type {
-      margin-right: 0;
+      margin-bottom: 0;
+      @media (min-width: $button-pair__vertical-breakpoint) {
+        margin-right: 0;
+      }
+    }
+    padding: 0 40px;
+    width: 100%;
+    // minumum width of button + padding of 15px on contain at 240px
+    @media (min-width: 251px) {
+      padding: 0 50px;
+      width: 236px;
+    }
+    @media (min-width: $button-pair__vertical-breakpoint) {
+      width: auto;
     }
     &:hover {
       background-color: $button-pair__background--hover;
