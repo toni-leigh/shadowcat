@@ -14,12 +14,6 @@ $button-pair__vertical-breakpoint: 520px;
       margin-bottom: 0;
       margin-right: 30px;
     }
-    &:last-of-type {
-      margin-bottom: 0;
-      @media (min-width: $button-pair__vertical-breakpoint) {
-        margin-right: 0;
-      }
-    }
     padding: 0 40px;
     width: 100%;
     // minumum width of button + padding of 15px on contain at 240px
@@ -32,6 +26,16 @@ $button-pair__vertical-breakpoint: 520px;
     }
     &:hover {
       background-color: $button-pair__background--hover;
+    }
+    &-2 {
+      background-color: $green-dark;
+      margin-bottom: 0;
+      @media (min-width: $button-pair__vertical-breakpoint) {
+        margin-right: 0;
+      }
+      &:hover {
+        background-color: $green-light;
+      }
     }
   }
 }

@@ -147,11 +147,6 @@ ul {
       .button-pair__button {
         margin-bottom: 0;
         margin-right: 30px; } }
-    .button-pair__button:last-of-type {
-      margin-bottom: 0; }
-      @media (min-width: 520px) {
-        .button-pair__button:last-of-type {
-          margin-right: 0; } }
     @media (min-width: 251px) {
       .button-pair__button {
         padding: 0 50px;
@@ -161,6 +156,14 @@ ul {
         width: auto; } }
     .button-pair__button:hover {
       background-color: #5AD0eb; }
+    .button-pair__button-2 {
+      background-color: #3B7736;
+      margin-bottom: 0; }
+      @media (min-width: 520px) {
+        .button-pair__button-2 {
+          margin-right: 0; } }
+      .button-pair__button-2:hover {
+        background-color: #5B9756; }
 
 .call-to-action {
   padding-bottom: 72px;

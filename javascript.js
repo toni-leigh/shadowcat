@@ -1,3 +1,56 @@
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home"}), 
+          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, null), 
+          React.createElement(OurChoiceProjects, null), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
+      )
+    )
+  }
+});
+
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -230,59 +283,6 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
   }
 });
 
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home"}), 
-          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, null), 
-          React.createElement(OurChoiceProjects, null), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var Aside = React.createClass({displayName: "Aside",
   render: function() {
     return (
@@ -324,8 +324,8 @@ var ButtonPair = React.createClass({displayName: "ButtonPair",
   render: function() {
     return (
       React.createElement("div", {className: "button-pair"}, 
-        React.createElement("a", {className: "button-pair__button button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
-        React.createElement("a", {className: "button-pair__button button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
+        React.createElement("a", {className: "button-pair__button button-pair__button-1 button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
+        React.createElement("a", {className: "button-pair__button button-pair__button-2 button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
       )
     )
   }
