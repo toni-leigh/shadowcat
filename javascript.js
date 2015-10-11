@@ -25,7 +25,7 @@ var Home = React.createClass({displayName: "Home",
           React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
           React.createElement(ServicesIntroduction, null), 
           React.createElement(OurChoiceProjects, null), 
-          React.createElement(CallToAction, null)
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product", "button-text": "Get a DVD Copy", "button-slug": "products"})
         )
       )
     )
@@ -86,6 +86,15 @@ var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   }
 });
 
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-submit"}
+      )
+    )
+  }
+});
+
 var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   render: function() {
     return (
@@ -95,10 +104,10 @@ var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   }
 });
 
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+var ContactDetail = React.createClass({displayName: "ContactDetail",
   render: function() {
     return (
-      React.createElement("div", {className: "button-submit"}
+      React.createElement("div", {className: "contact-detail"}
       )
     )
   }
@@ -126,15 +135,6 @@ var InputTextarea = React.createClass({displayName: "InputTextarea",
   render: function() {
     return (
       React.createElement("div", {className: "input-textarea"}
-      )
-    )
-  }
-});
-
-var ContactDetail = React.createClass({displayName: "ContactDetail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "contact-detail"}
       )
     )
   }
@@ -313,7 +313,9 @@ var CallToAction = React.createClass({displayName: "CallToAction",
   render: function() {
     return (
       React.createElement("div", {className: "background background--orange-dark"}, 
-        React.createElement("div", {className: "content-is-centred call-to-action"}
+        React.createElement("article", {className: "content-is-centred call-to-action"}, 
+          React.createElement("h1", {className: "call-to-action__heading"}, this.props.heading), 
+          React.createElement("a", {className: "call-to-action__button", href: this.props['button-slug'] + '.html'}, this.props['button-text'])
         )
       )
     )
@@ -338,6 +340,15 @@ var Contact = React.createClass({displayName: "Contact",
   }
 });
 
+var Footer = React.createClass({displayName: "Footer",
+  render: function() {
+    return (
+      React.createElement("div", {className: "footer"}
+      )
+    )
+  }
+});
+
 var Header = React.createClass({displayName: "Header",
   render: function() {
     return (
@@ -345,6 +356,15 @@ var Header = React.createClass({displayName: "Header",
         React.createElement(Logo, null), 
         React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
         React.createElement(Navigation, {selected: this.props['page-slug']})
+      )
+    )
+  }
+});
+
+var Heading = React.createClass({displayName: "Heading",
+  render: function() {
+    return (
+      React.createElement("div", {className: "heading"}
       )
     )
   }
@@ -427,19 +447,19 @@ var Testimonials = React.createClass({displayName: "Testimonials",
   }
 });
 
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+var Text = React.createClass({displayName: "Text",
   render: function() {
     return (
-      React.createElement("div", {className: "thumbnail-gallery"}
+      React.createElement("div", {className: "text"}
       )
     )
   }
 });
 
-var Text = React.createClass({displayName: "Text",
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   render: function() {
     return (
-      React.createElement("div", {className: "text"}
+      React.createElement("div", {className: "thumbnail-gallery"}
       )
     )
   }
@@ -454,29 +474,11 @@ var Video = React.createClass({displayName: "Video",
   }
 });
 
-var Footer = React.createClass({displayName: "Footer",
-  render: function() {
-    return (
-      React.createElement("div", {className: "footer"}
-      )
-    )
-  }
-});
-
 var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
   render: function() {
     return (
       React.createElement("div", {className: "content-is-centred"}, 
         React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameborder: "0", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true})
-      )
-    )
-  }
-});
-
-var Heading = React.createClass({displayName: "Heading",
-  render: function() {
-    return (
-      React.createElement("div", {className: "heading"}
       )
     )
   }

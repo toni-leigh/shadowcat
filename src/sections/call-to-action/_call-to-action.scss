@@ -1,4 +1,35 @@
+$cta__background: $orange-dark;
+$cta__contrast: $grey-very-light;
+
 .call-to-action {
   padding-bottom: $general-padding__bottom;
   padding-top: $general-padding__top;
+  text-align: center;
+
+  &__button {
+    background-color: rgba($cta__contrast, 0.2);
+    border: 1px solid $cta__contrast;
+    border-radius: 2px;
+    color: $cta__contrast;
+    display: inline-block;
+    font-family: $font__standout;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 34px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $cta__contrast;
+      color: $cta__background;
+    }
+  }
+  &__heading {
+    color: $cta__contrast;
+    font-size: 30px;
+    font-family: $font__standout;
+    margin-bottom: $general-padding__strapline_spacing;
+  }
 }

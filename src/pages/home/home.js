@@ -4,10 +4,10 @@ var Home = React.createClass({
       <main className='home'>
         <div className='home__top-wrapper'>
           <Header page-slug='home'/>
-          <VideoSpotlight src='//player.vimeo.com/video/95396328'/>
+          <VideoSpotlight src='//player.vimeo.com/video/95396328' />
           <ServicesIntroduction />
           <OurChoiceProjects />
-          <CallToAction />
+          <CallToAction heading='Looking for our spotlight product?' button-text='Get a DVD Copy' button-slug='products'/>
         </div>
       </main>
     )
