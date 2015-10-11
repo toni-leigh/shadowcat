@@ -1,55 +1,3 @@
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home"}), 
-          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, null), 
-          React.createElement(OurChoiceProjects, null), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product", "button-text": "Get a DVD Copy", "button-slug": "products"})
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -86,19 +34,19 @@ var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   }
 });
 
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   render: function() {
     return (
-      React.createElement("div", {className: "button-submit"}
+      React.createElement("div", {className: "button-small"}
       )
     )
   }
 });
 
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
     return (
-      React.createElement("div", {className: "button-small"}
+      React.createElement("div", {className: "button-submit"}
       )
     )
   }
@@ -280,6 +228,59 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
   }
 });
 
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home"}), 
+          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, null), 
+          React.createElement(OurChoiceProjects, null), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
+      )
+    )
+  }
+});
+
 var Aside = React.createClass({displayName: "Aside",
   render: function() {
     return (
@@ -292,7 +293,25 @@ var Aside = React.createClass({displayName: "Aside",
 var BlogSmall = React.createClass({displayName: "BlogSmall",
   render: function() {
     return (
-      React.createElement("div", {className: "blog-small"}
+      React.createElement("div", {className: "blog-small"}, 
+        React.createElement(BlogPostSmall, {heading: "Quinoa aesthetic plaid", date: "9th Oct. 2015", text: "YOLO fingerstache next level twee. Truffaut skateboard gastropub selfies occupy distillery Tumblr cred. Authentic +1 chambray deep v meh gluten-free. Seitan organic aesthetic, wolf cronut gentrify polaroid meh Schlitz irony cold-pressed."}), 
+        React.createElement(BlogPostSmall, {heading: "Pinterest hoodie deep v brunch", date: "3rd Oct. 2015", text: "Meh single-origin coffee lomo wolf. Cliche Kickstarter McSweeneys, lumbersexual Odd Future you probably havent heard of them PBR&B typewriter meggings lomo. Occupy put a bird on it keffiyeh flexitarian. Beard hella meditation, whatever wayfarers pickled sriracha disrupt."}), 
+        React.createElement(BlogPostSmall, {heading: "Portland letterpress", date: "24th Sept. 2015", text: "Leggings try-hard mustache Helvetica, viral sriracha tofu wayfarers synth lumbersexual PBR&B fingerstache asymmetrical Bushwick. Scenester street art VHS, McSweeneys banjo pork belly deep v typewriter Carles four dollar toast tofu letterpress occupy stumptown"}), 
+        React.createElement(BlogPostSmall, {heading: "Plaid put a bird", date: "20th Sept. 2015", text: "Brooklyn four dollar toast post-ironic photo booth, bitters fanny pack direct trade meditation Marfa. Shoreditch master cleanse single-origin coffee, hella Pitchfork Carles next level aesthetic sriracha kogi church-key. Brooklyn viral occupy, synth tousled irony."})
+      )
+    )
+  }
+});
+
+var BlogPostSmall = React.createClass({displayName: "BlogPostSmall",
+  render: function() {
+    return (
+      React.createElement("article", {className: "blog-small__post"}, 
+        React.createElement("h1", {className: "blog-small__post-date"}, this.props.heading), 
+        React.createElement("span", {className: "blog-small__post-date"}, this.props.date), 
+        React.createElement("div", {className: "blog-small__post-text"}, 
+          this.props.text
+        )
       )
     )
   }
@@ -419,15 +438,15 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
           React.createElement("p", null, 
             "Flexitarian single-origin coffee health goth Williamsburg, before they sold out fanny pack trust f" + ' ' +
             "und banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a bird" + ' ' +
-            "on it, fap Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
+            "on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
           ), 
           React.createElement("p", null, 
             "Williamsburg, before they sold out fanny pack trust fund banh mi.Flexitarian single-origin coffee" + ' ' +
             "health goth  Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a" + ' ' +
-            "bird on it, fap Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
+            "bird on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
           ), 
           React.createElement("p", null, 
-            "Quinoa aesthetic plaid put a bird on it, fap Pinterest hoodie deep v brunch twee authentic normcore" + ' ' +
+            "Quinoa aesthetic plaid put a bird on it, Pinterest hoodie deep v brunch twee authentic normcore" + ' ' +
             "Portland letterpress. Flexitarian single-origin coffee health goth Williamsburg, before they sold" + ' ' +
             "out fanny pack trust fund banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Flexitarian" + ' ' +
             "single-origin coffee health goth Williamsburg, before they sold out."

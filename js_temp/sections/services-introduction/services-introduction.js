@@ -20,15 +20,15 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
           React.createElement("p", null, 
             "Flexitarian single-origin coffee health goth Williamsburg, before they sold out fanny pack trust f" + ' ' +
             "und banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a bird" + ' ' +
-            "on it, fap Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
+            "on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
           ), 
           React.createElement("p", null, 
             "Williamsburg, before they sold out fanny pack trust fund banh mi.Flexitarian single-origin coffee" + ' ' +
             "health goth  Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a" + ' ' +
-            "bird on it, fap Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
+            "bird on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
           ), 
           React.createElement("p", null, 
-            "Quinoa aesthetic plaid put a bird on it, fap Pinterest hoodie deep v brunch twee authentic normcore" + ' ' +
+            "Quinoa aesthetic plaid put a bird on it, Pinterest hoodie deep v brunch twee authentic normcore" + ' ' +
             "Portland letterpress. Flexitarian single-origin coffee health goth Williamsburg, before they sold" + ' ' +
             "out fanny pack trust fund banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Flexitarian" + ' ' +
             "single-origin coffee health goth Williamsburg, before they sold out."
