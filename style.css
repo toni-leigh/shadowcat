@@ -76,6 +76,85 @@ ul {
   margin-bottom: 50px;
   text-align: center; }
 
+.aside-panel {
+  display: inline-block;
+  margin-bottom: 1.25%;
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  width: 100%; }
+  .aside-panel:last-child {
+    margin-bottom: 0; }
+    @media (min-width: 540px) {
+      .aside-panel:last-child {
+        margin-bottom: 1.25%; } }
+  @media (min-width: 540px) {
+    .aside-panel {
+      margin-right: 1.25%;
+      padding-bottom: 49.375%;
+      width: 49.375%; } }
+  @media (min-width: 880px) {
+    .aside-panel {
+      padding-bottom: 32.5%;
+      width: 32.5%; } }
+  @media (min-width: 400px) and (max-width: 879px) {
+    .aside-panel:nth-child(2n) {
+      margin-right: 0; } }
+  @media (min-width: 880px) {
+    .aside-panel:nth-child(3n) {
+      margin-right: 0; } }
+  .aside-panel__image,
+  .aside-panel__details {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%; }
+  .aside-panel__image {
+    height: 200%;
+    top: -25%; }
+    @media (min-width: 540px) {
+      .aside-panel__image {
+        height: 100%;
+        top: 0; } }
+  .aside-panel__details {
+    background-color: rgba(250, 250, 250, 0.8);
+    border: 3px solid #48BED9;
+    opacity: 0;
+    padding: 7.5%;
+    top: 0;
+    transition: all 0.1s;
+    z-index: 1; }
+    .aside-panel__details:hover {
+      opacity: 1; }
+  .aside-panel__heading {
+    color: #48BED9;
+    font-family: "Khand", sans-serif;
+    font-size: 20px; }
+  .aside-panel__link {
+    background-color: transparent;
+    border: 1px solid #48BED9;
+    bottom: 15%;
+    color: #48BED9;
+    padding: 0 2em;
+    position: absolute;
+    right: 7.5%; }
+    @media (min-width: 540px) {
+      .aside-panel__link {
+        bottom: 7.5%; } }
+    .aside-panel__link:hover {
+      background-color: #48BED9;
+      color: #fafafa; }
+  .aside-panel--video-production .aside-panel__details {
+    border-color: #3B7736; }
+  .aside-panel--video-production .aside-panel__heading {
+    color: #3B7736; }
+  .aside-panel--video-production .aside-panel__link {
+    border-color: #3B7736;
+    color: #3B7736; }
+    .aside-panel--video-production .aside-panel__link:hover {
+      background-color: #3B7736;
+      color: #fafafa; }
+
 .navigation {
   float: right;
   height: 98px;
@@ -299,6 +378,15 @@ ul {
       .contact__details {
         right: 0;
         width: 48.0625%; } }
+
+.our-choice-projects {
+  padding-bottom: 72px; }
+  .our-choice-projects__heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 24px;
+    text-align: center; }
 
 .services-introduction {
   padding-bottom: 72px;

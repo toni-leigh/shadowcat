@@ -1,0 +1,9 @@
+.our-choice-projects {
+  padding-bottom: $general-padding__bottom;
+  &__heading {
+    @include text-light();
+    font-size: 36px;
+    margin-bottom: $general-padding__strapline-spacing;
+    text-align: center;
+  }
+}

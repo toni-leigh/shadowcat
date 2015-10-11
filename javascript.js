@@ -1,61 +1,13 @@
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home"}), 
-          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, null), 
-          React.createElement(OurChoiceProjects, null), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, null), 
-          React.createElement(Contact, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
-      React.createElement("div", {className: "aside-panel"}
+      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type']}, 
+        React.createElement("img", {className: "aside-panel__image", src: this.props['image-src']}), 
+        React.createElement("div", {className: "aside-panel__details"}, 
+          React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
+          React.createElement("p", {className: "aside-panel__text"}, this.props['text']), 
+          React.createElement("a", {className: "aside-panel__link button", href: this.props['slug']}, this.props['link-text'])
+        )
       )
     )
   }
@@ -284,6 +236,60 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
   }
 });
 
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home"}), 
+          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, null), 
+          React.createElement(OurChoiceProjects, null), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, null), 
+          React.createElement(Contact, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
+      )
+    )
+  }
+});
+
 var Aside = React.createClass({displayName: "Aside",
   render: function() {
     return (
@@ -453,7 +459,16 @@ var Lightbox = React.createClass({displayName: "Lightbox",
 var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
   render: function() {
     return (
-      React.createElement("article", {className: "our-choice-projects"}
+      React.createElement("article", {className: "our-choice-projects content-is-centred"}, 
+        React.createElement("h1", {className: "our-choice-projects__heading"}, "Our choice projects"), 
+        React.createElement("div", {className: "our-choice-projects__choices"}, 
+          React.createElement(AsidePanel, {heading: "City Project", "image-src": "assets/img/city.jpg", slug: "documentary/1", "link-text": "View project", type: "documentary", text: "Deep v you probably havent heard of them dreamcatcher, kitsch artisan listicle"}), 
+          React.createElement(AsidePanel, {heading: "People have long titles sometimes", "image-src": "assets/img/people1.jpg", slug: "documentary/2", "link-text": "View project", type: "documentary", text: "Marfa iPhone Wes Anderson wayfarers flexitarian. Hashtag Banksy church-key, slow-carb art party."}), 
+          React.createElement(AsidePanel, {heading: "Business Promotion", "image-src": "assets/img/business.jpg", slug: "documentary/3", "link-text": "View project", type: "documentary", text: "Tote bag sustainable cardigan blog Brooklyn, bespoke normcore pork belly Blue Bottle."}), 
+          React.createElement(AsidePanel, {heading: "Motor Sports Day", "image-src": "assets/img/sport.jpg", slug: "video-production/1", "link-text": "View project", type: "video-production", text: "PBR&B photo booth Banksy Marfa aesthetic, chambray polaroid selfies lo-fi Truffaut viral brunch."}), 
+          React.createElement(AsidePanel, {heading: "Natural World", "image-src": "assets/img/nature.jpg", slug: "video-production/2", "link-text": "View project", type: "video-production", text: "Shoreditch readymade synth. Cold-pressed small batch vinyl, kitsch tilde hashtag squid try-hard."}), 
+          React.createElement(AsidePanel, {heading: "Abstract Artists", "image-src": "assets/img/abstract.jpg", slug: "video-production/3", "link-text": "View project", type: "video-production", text: "Pinterest biodiesel freegan aesthetic brunch. Cray YOLO Pitchfork keffiyeh. "})
+        )
       )
     )
   }
