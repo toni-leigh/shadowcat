@@ -1,6 +1,6 @@
-$general-padding__top: 70px;
-$general-padding__bottom: 100px;
-$general-padding__strapline-spacing: 30px;
+$general-padding__top: 50px;
+$general-padding__bottom: 72px;
+$general-padding__strapline-spacing: 24px;
 
 @mixin base-padding() {
   padding-bottom: $general-padding__bottom;

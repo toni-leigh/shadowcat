@@ -1,7 +1,7 @@
 var BlogSmall = React.createClass({displayName: "BlogSmall",
   render: function() {
     return (
-      React.createElement("div", {className: "blog-small"}, 
+      React.createElement("div", {className: "blog-small content-is-centred"}, 
         React.createElement(SectionHeadingWithStrapline, {heading: "Blog Latest", strapline: "These are the latest posts from our blog"}), 
         React.createElement(BlogPostSmall, {heading: "Quinoa aesthetic plaid", date: "9th Oct. 2015", text: "YOLO fingerstache next level twee. Truffaut skateboard gastropub selfies occupy distillery Tumblr cred. Authentic +1 chambray deep v meh gluten-free. Seitan organic aesthetic, wolf cronut gentrify polaroid meh Schlitz irony cold-pressed."}), 
         React.createElement(BlogPostSmall, {heading: "Pinterest hoodie deep v brunch", date: "3rd Oct. 2015", text: "Meh single-origin coffee lomo wolf. Cliche Kickstarter McSweeneys, lumbersexual Odd Future you probably havent heard of them PBR&B typewriter meggings lomo. Occupy put a bird on it keffiyeh flexitarian. Beard hella meditation, whatever wayfarers pickled sriracha disrupt."}), 
