@@ -9,17 +9,11 @@ $cta__contrast: $grey-very-light;
   &__button {
     background-color: rgba($cta__contrast, 0.2);
     border: 1px solid $cta__contrast;
-    border-radius: 2px;
     color: $cta__contrast;
-    display: inline-block;
     font-family: $font__standout;
     font-size: 24px;
-    height: 50px;
-    line-height: 50px;
     padding: 0 34px;
-    text-decoration: none;
     text-transform: uppercase;
-    transition: all 0.2s;
 
     &:hover {
       background-color: $cta__contrast;

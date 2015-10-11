@@ -1,11 +1,12 @@
 // variables and mixins
 @import "common/_colours";
-@import "common/_fonts";
+@import "common/_fonts-and-text";
 @import "common/_variables";
 @import "common/_reset";
 
 // common
 @import "common/_utility";
+@import "common/_buttons";
 
 // modules
 @import "modules/logo/_logo";

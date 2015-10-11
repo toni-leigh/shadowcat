@@ -1,3 +1,21 @@
 .blog-small {
-
+  padding-bottom: $general-padding__bottom;
+  padding-top: $general-padding__top;
+  &__post {
+    margin-bottom: 1.55em;
+    &-heading {
+      border-bottom: 2px solid $blue-dark;
+      display: inline-block;
+      font-family: $font__standout;
+      font-size: 24px;
+    }
+    &-date {
+      color: $green-dark;
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      margin: 0.775em 0;
+    }
+  }
 }

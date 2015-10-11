@@ -1,3 +1,12 @@
-.section-heading-with-strapline {
+.section-header__heading {
+  font-family: $font__standout;
+  font-size: 30px;
+  margin-bottom: $general-padding__strapline-spacing;
+  text-align: center;
+}
 
+.section-header__strapline {
+  font-size: 18px;
+  margin-bottom: $general-padding__top;
+  text-align: center;
 }

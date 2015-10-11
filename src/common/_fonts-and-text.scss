@@ -1,5 +1,4 @@
 $font__standout: 'Khand', sans-serif;
-$font__common: arial;
 
 @mixin text-light() {
   font-family: 'Roboto', sans-serif;
@@ -19,4 +18,9 @@ p {
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.text {
+  margin: 0 auto;
+  max-width: 800px;
 }

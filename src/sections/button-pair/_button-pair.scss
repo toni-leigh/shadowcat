@@ -7,16 +7,9 @@ $button-pair__background--hover: $blue-light;
   text-align: center;
   &__button {
     background-color: $button-pair__background;
-    border-radius: 3px;
     color: $button-pair__text;
-    display: inline-block;
-    font-size: 18px;
-    height: 50px;
-    line-height: 50px;
     margin-right: 30px;
     padding: 0 50px;
-    text-decoration: none;
-    transition: background-color 0.2s;
     &:last-of-type {
       margin-right: 0;
     }
