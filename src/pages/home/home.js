@@ -9,6 +9,7 @@ var Home = React.createClass({
           <OurChoiceProjects />
           <CallToAction heading='Looking for our spotlight product?' button-text='Get a DVD Copy' button-slug='products'/>
           <BlogSmall />
+          <Contact />
         </div>
       </main>
     )

@@ -12,6 +12,13 @@
   left: 0;
   right: 0;
 
+  &--blue {
+    background-color: $blue-light;
+    &-dark {
+      background-color: $blue-dark;
+    }
+  }
+
   &--orange {
     background-color: $orange-light;
     &-dark {

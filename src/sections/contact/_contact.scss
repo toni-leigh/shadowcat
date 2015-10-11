@@ -1,3 +1,103 @@
 .contact {
+  @include base-padding();
+  @include clearfix();
 
+  color: $grey-very-light;
+
+  &__details,
+  &__form {
+    position: relative;
+    width: 100%;
+    @media (min-width: 800px) {
+      width: 48.0625%;
+    }
+  }
+
+  &__form {
+    float: left;
+    margin-bottom: 40px;
+    @media (min-width: 800px) {
+      left: 0;
+      margin-bottom: 0;
+      width: 48.0625%;
+    }
+
+    &-label {
+      display: block;
+      font-family: $font__standout;
+      font-size: 24px;
+      margin-bottom: 0.25em;
+      width: 100%;
+    }
+    &-input {
+      background-color: $blue-dark;
+      border: 2px solid $grey-very-light;
+      border-radius: 3px;
+      color: $grey-very-light;
+      font-size: 16px;
+      margin-bottom: 1.55em;
+      outline: none;
+      padding: 0.666em;
+      transition: all 0.1s;
+      width: 100%;
+      @media (min-width: 335px) {
+        width: 320px;
+      }
+      &:focus {
+        background-color: $grey-very-light;
+        color: $grey-mid;
+        &::-webkit-input-placeholder{
+          color: rgba($grey-mid, 0.5);
+        }
+        &:-moz-placeholder{
+          color: rgba($grey-mid, 0.5);
+        }
+        &::-moz-placeholder{
+          color: rgba($grey-mid, 0.5);
+        }
+        &:-ms-input-placeholder {
+          color: rgba($grey-mid, 0.5);
+        }
+      }
+      &::-webkit-input-placeholder{
+        color: rgba($grey-very-light, 0.5);
+      }
+      &:-moz-placeholder{
+        color: rgba($grey-very-light, 0.5);
+      }
+      &::-moz-placeholder{
+        color: rgba($grey-very-light, 0.5);
+      }
+      &:-ms-input-placeholder {
+        color: rgba($grey-very-light, 0.5);
+      }
+    }
+    &-textarea {
+      height: 200px;
+      width: 100%;
+    }
+    &-submit {
+      background-color: rgba($green-dark, 0.3);
+      border: 2px solid $grey-very-light;
+      color: $grey-very-light;
+      cursor: pointer;
+      float: right;
+      line-height: 48px;
+      padding: 0 30px;
+      transition: all 0.1s;
+      &:focus,
+      &:hover {
+        background-color: $grey-very-light;
+        color: $grey-mid;
+        outline: none;
+      }
+    }
+  }
+  &__details {
+    float: right;
+    @media (min-width: 800px) {
+      right: 0;
+      width: 48.0625%;
+    }
+  }
 }
