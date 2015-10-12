@@ -225,17 +225,6 @@ var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple
   }
 });
 
-var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
-  render: function() {
-    return (
-      React.createElement("div", {class: "section-header"}, 
-        React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
-        React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
-      )
-    )
-  }
-});
-
 var Blog = React.createClass({displayName: "Blog",
   render: function() {
     return (
@@ -268,6 +257,17 @@ var Home = React.createClass({displayName: "Home",
           React.createElement(Contact, null), 
           React.createElement(Footer, null)
         )
+      )
+    )
+  }
+});
+
+var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
+  render: function() {
+    return (
+      React.createElement("div", {class: "section-header"}, 
+        React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
+        React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
       )
     )
   }
@@ -415,11 +415,11 @@ var Footer = React.createClass({displayName: "Footer",
   render: function() {
     return (
       React.createElement("div", {className: "background background--black"}, 
-        React.createElement("footer", {className: "footer"}, 
+        React.createElement("footer", {className: "footer content-is-centred"}, 
           React.createElement("ul", {className: "footer__social"}, 
-            React.createElement("li", {className: "footer__social-link"}, React.createElement("a", {href: "#"}, "Facebook")), 
-            React.createElement("li", {className: "footer__social-link"}, React.createElement("a", {href: "#"}, "Twitter")), 
-            React.createElement("li", {className: "footer__social-link"}, React.createElement("a", {href: "#"}, "Youtube"))
+            React.createElement("li", {className: "footer__social-link facebook"}, React.createElement("a", {href: "#"}, "Facebook")), 
+            React.createElement("li", {className: "footer__social-link twitter"}, React.createElement("a", {href: "#"}, "Twitter")), 
+            React.createElement("li", {className: "footer__social-link youtube"}, React.createElement("a", {href: "#"}, "Youtube"))
           ), 
           React.createElement("span", {className: "footer__copywrite"}, "© 2015 Shadowcat Films")
         )

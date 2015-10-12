@@ -420,6 +420,56 @@ ul {
         color: #fafafa;
         text-decoration: none; }
 
+.footer {
+  color: #fafafa;
+  font-family: "Khand", sans-serif;
+  font-size: 18px;
+  line-height: 2em;
+  padding-bottom: 3.125%;
+  padding-top: 3.125%; }
+  @media (min-width: 720px) {
+    .footer {
+      font-size: 24px;
+      line-height: 3em;
+      padding-bottom: 0;
+      padding-top: 0; } }
+  .footer__social {
+    display: inline-block;
+    text-transform: lowercase;
+    width: 100%; }
+    @media (min-width: 720px) {
+      .footer__social {
+        width: 50%; } }
+    .footer__social-link {
+      display: inline-block;
+      text-align: center;
+      width: 100%; }
+      @media (min-width: 300px) {
+        .footer__social-link {
+          width: 33%; } }
+      @media (min-width: 720px) {
+        .footer__social-link {
+          margin-right: 1em;
+          text-align: left;
+          width: auto; } }
+      .footer__social-link a {
+        color: #fafafa;
+        text-decoration: none; }
+      .footer__social-link.facebook a:hover {
+        color: #3b5998; }
+      .footer__social-link.twitter a:hover {
+        color: #55acee; }
+      .footer__social-link.youtube a:hover {
+        color: #cd201f; }
+  .footer__copywrite {
+    display: inline-block;
+    text-align: center;
+    width: 100%; }
+    @media (min-width: 720px) {
+      .footer__copywrite {
+        text-align: right;
+        width: 50%; } }
+
 .our-choice-projects {
   padding-bottom: 72px; }
   .our-choice-projects__heading {
