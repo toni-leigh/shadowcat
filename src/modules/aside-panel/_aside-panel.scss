@@ -2,7 +2,10 @@
   display: inline-block;
   margin-bottom: 1.25%;
   overflow: hidden;
-  padding-bottom: 50%;
+  padding-bottom: 100%;
+  @media (min-width: 400px) {
+    padding-bottom: 61.8%;
+  }
   position: relative;
   width: 100%;
   &:last-child {
@@ -41,8 +44,12 @@
     width: 100%;
   }
   &__image {
-    height: 200%;
-    top: -25%;
+    height: 100%;
+    top: 0;
+    @media (min-width: 400px) {
+      height: 138.2%;
+      top: -19.1%;
+    }
     @media (min-width: 540px) {
       height: 100%;
       top: 0;
@@ -52,7 +59,10 @@
     background-color: rgba($grey-very-light, 0.8);
     border: 3px solid $blue-dark;
     opacity: 0;
-    padding: 7.5%;
+    padding: 5%;
+    @media (min-width: 540px) {
+      padding: 7.5%;
+    }
     top: 0;
     transition: all 0.1s;
     z-index: 1;
@@ -68,14 +78,20 @@
   &__link {
     background-color: transparent;
     border: 1px solid $blue-dark;
-    bottom: 15%;
+    bottom: 5%;
+    @media (min-width: 400px) {
+      bottom: 9.15%;
+    }
     @media (min-width: 540px) {
       bottom: 7.5%;
     }
     color: $blue-dark;
     padding: 0 2em;
     position: absolute;
-    right: 7.5%;
+    right: 5%;
+    @media (min-width: 540px) {
+      right: 7.5%;
+    }
     &:hover {
       background-color: $blue-dark;
       color: $grey-very-light;
