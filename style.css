@@ -46,6 +46,8 @@ ul {
 .background {
   left: 0;
   right: 0; }
+  .background--black {
+    background-color: #050505; }
   .background--blue {
     background-color: #5AD0eb; }
     .background--blue-dark {
@@ -310,7 +312,7 @@ ul {
       margin: 0.775em 0; }
 
 .contact {
-  padding-bottom: 72px;
+  padding-bottom: 48px;
   padding-top: 50px;
   color: #fafafa; }
   .contact:before,
@@ -397,6 +399,26 @@ ul {
       .contact__details {
         right: 0;
         width: 48.0625%; } }
+  .contact__detail {
+    float: left;
+    line-height: 1.55em;
+    margin-bottom: 24px;
+    width: 100%; }
+    @media (min-width: 460px) {
+      .contact__detail {
+        margin-right: 1.5%;
+        width: 48.5%; } }
+    .contact__detail-heading {
+      display: inline-block;
+      font-family: "Khand", sans-serif;
+      font-size: 24px;
+      margin-bottom: 0.5em;
+      width: 100%; }
+    .contact__detail-body {
+      color: #fafafa; }
+      .contact__detail-body a {
+        color: #fafafa;
+        text-decoration: none; }
 
 .our-choice-projects {
   padding-bottom: 72px; }

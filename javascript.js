@@ -76,19 +76,19 @@ var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   }
 });
 
-var InputTextarea = React.createClass({displayName: "InputTextarea",
+var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
-      React.createElement("div", {className: "input-textarea"}
+      React.createElement("div", {className: "input-text"}
       )
     )
   }
 });
 
-var InputText = React.createClass({displayName: "InputText",
+var InputTextarea = React.createClass({displayName: "InputTextarea",
   render: function() {
     return (
-      React.createElement("div", {className: "input-text"}
+      React.createElement("div", {className: "input-textarea"}
       )
     )
   }
@@ -265,7 +265,8 @@ var Home = React.createClass({displayName: "Home",
           React.createElement(OurChoiceProjects, null), 
           React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
           React.createElement(BlogSmall, null), 
-          React.createElement(Contact, null)
+          React.createElement(Contact, null), 
+          React.createElement(Footer, null)
         )
       )
     )
@@ -285,6 +286,45 @@ var Service = React.createClass({displayName: "Service",
   render: function() {
     return (
       React.createElement("div", {className: "service"}
+      )
+    )
+  }
+});
+
+var Aside = React.createClass({displayName: "Aside",
+  render: function() {
+    return (
+      React.createElement("div", {className: "aside"}
+      )
+    )
+  }
+});
+
+var BlogSmall = React.createClass({displayName: "BlogSmall",
+  render: function() {
+    return (
+      React.createElement("div", {className: "background background--grey-very-light"}, 
+        React.createElement("div", {className: "blog-small content-is-centred"}, 
+          React.createElement(SectionHeadingWithStrapline, {heading: "Blog Latest", strapline: "These are the latest posts from our blog"}), 
+          React.createElement(BlogPostSmall, {heading: "Quinoa aesthetic plaid", date: "9th Oct. 2015", text: "YOLO fingerstache next level twee. Truffaut skateboard gastropub selfies occupy distillery Tumblr cred. Authentic +1 chambray deep v meh gluten-free. Seitan organic aesthetic, wolf cronut gentrify polaroid meh Schlitz irony cold-pressed."}), 
+          React.createElement(BlogPostSmall, {heading: "Pinterest hoodie deep v brunch", date: "3rd Oct. 2015", text: "Meh single-origin coffee lomo wolf. Cliche Kickstarter McSweeneys, lumbersexual Odd Future you probably havent heard of them PBR&B typewriter meggings lomo. Occupy put a bird on it keffiyeh flexitarian. Beard hella meditation, whatever wayfarers pickled sriracha disrupt."}), 
+          React.createElement(BlogPostSmall, {heading: "Portland letterpress", date: "24th Sept. 2015", text: "Leggings try-hard mustache Helvetica, viral sriracha tofu wayfarers synth lumbersexual PBR&B fingerstache asymmetrical Bushwick. Scenester street art VHS, McSweeneys banjo pork belly deep v typewriter Carles four dollar toast tofu letterpress occupy stumptown"}), 
+          React.createElement(BlogPostSmall, {heading: "Plaid put a bird", date: "20th Sept. 2015", text: "Brooklyn four dollar toast post-ironic photo booth, bitters fanny pack direct trade meditation Marfa. Shoreditch master cleanse single-origin coffee, hella Pitchfork Carles next level aesthetic sriracha kogi church-key. Brooklyn viral occupy, synth tousled irony."})
+        )
+      )
+    )
+  }
+});
+
+var BlogPostSmall = React.createClass({displayName: "BlogPostSmall",
+  render: function() {
+    return (
+      React.createElement("article", {className: "blog-small__post text"}, 
+        React.createElement("h1", {className: "blog-small__post-heading"}, this.props.heading), 
+        React.createElement("span", {className: "blog-small__post-date"}, this.props.date), 
+        React.createElement("div", {className: "blog-small__post-text"}, 
+          React.createElement("p", null, this.props.text)
+        )
       )
     )
   }
@@ -343,26 +383,26 @@ var Contact = React.createClass({displayName: "Contact",
           ), 
           React.createElement("div", {className: "contact__details"}, 
             React.createElement(Map, null), 
-            React.createElement("div", {className: "contact__detail-small"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Managing Director"), 
-              React.createElement("span", {className: "contact__detail-body"}, "Alysoun Sharpe")
+              React.createElement("p", {className: "contact__detail-body"}, "Alysoun Sharpe")
             ), 
-            React.createElement("div", {className: "contact__detail-small"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Telephone"), 
-              React.createElement("span", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
             ), 
-            React.createElement("div", {className: "contact__detail-large"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Address"), 
-              React.createElement("span", {className: "contact__detail-body"}, 
-                "3 The Street," + ' ' +
-                "A Little Town Somewhere," + ' ' +
-                "That County," + ' ' +
+              React.createElement("p", {className: "contact__detail-body"}, 
+                "3 The Street,", React.createElement("br", null), 
+                "A Little Town Somewhere,", React.createElement("br", null), 
+                "That County,", React.createElement("br", null), 
                 "AB12 3CD"
               )
             ), 
-            React.createElement("div", {className: "contact__detail-small"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Email"), 
-              React.createElement("span", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
             )
           )
         )
@@ -374,7 +414,15 @@ var Contact = React.createClass({displayName: "Contact",
 var Footer = React.createClass({displayName: "Footer",
   render: function() {
     return (
-      React.createElement("div", {className: "footer"}
+      React.createElement("div", {className: "background background--black"}, 
+        React.createElement("footer", {className: "footer"}, 
+          React.createElement("ul", {className: "footer__social"}, 
+            React.createElement("li", {className: "footer__social-link"}, React.createElement("a", {href: "#"}, "Facebook")), 
+            React.createElement("li", {className: "footer__social-link"}, React.createElement("a", {href: "#"}, "Twitter")), 
+            React.createElement("li", {className: "footer__social-link"}, React.createElement("a", {href: "#"}, "Youtube"))
+          ), 
+          React.createElement("span", {className: "footer__copywrite"}, "© 2015 Shadowcat Films")
+        )
       )
     )
   }
@@ -410,19 +458,28 @@ var ImageFixed = React.createClass({displayName: "ImageFixed",
   }
 });
 
-var Aside = React.createClass({displayName: "Aside",
+var Lightbox = React.createClass({displayName: "Lightbox",
   render: function() {
     return (
-      React.createElement("div", {className: "aside"}
+      React.createElement("div", {className: "lightbox"}
       )
     )
   }
 });
 
-var Lightbox = React.createClass({displayName: "Lightbox",
+var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
   render: function() {
     return (
-      React.createElement("div", {className: "lightbox"}
+      React.createElement("article", {className: "our-choice-projects content-is-centred"}, 
+        React.createElement("h1", {className: "our-choice-projects__heading"}, "Our choice projects"), 
+        React.createElement("div", {className: "our-choice-projects__choices"}, 
+          React.createElement(AsidePanel, {heading: "City Project", "image-src": "assets/img/city.jpg", slug: "documentary/1", "link-text": "View project", type: "documentary", text: "Deep v you probably havent heard of them dreamcatcher, kitsch artisan listicle"}), 
+          React.createElement(AsidePanel, {heading: "People have long titles sometimes", "image-src": "assets/img/people1.jpg", slug: "documentary/2", "link-text": "View project", type: "documentary", text: "Marfa iPhone Wes Anderson wayfarers flexitarian. Hashtag Banksy church-key, slow-carb art party."}), 
+          React.createElement(AsidePanel, {heading: "Business Promotion", "image-src": "assets/img/business.jpg", slug: "documentary/3", "link-text": "View project", type: "documentary", text: "Tote bag sustainable cardigan blog Brooklyn, bespoke normcore pork belly Blue Bottle."}), 
+          React.createElement(AsidePanel, {heading: "Motor Sports Day", "image-src": "assets/img/sport.jpg", slug: "video-production/1", "link-text": "View project", type: "video-production", text: "PBR&B photo booth Banksy Marfa aesthetic, chambray polaroid selfies lo-fi Truffaut viral brunch."}), 
+          React.createElement(AsidePanel, {heading: "Natural World", "image-src": "assets/img/nature.jpg", slug: "video-production/2", "link-text": "View project", type: "video-production", text: "Shoreditch readymade synth. Cold-pressed small batch vinyl, kitsch tilde hashtag squid try-hard."}), 
+          React.createElement(AsidePanel, {heading: "Abstract Artists", "image-src": "assets/img/abstract.jpg", slug: "video-production/3", "link-text": "View project", type: "video-production", text: "Pinterest biodiesel freegan aesthetic brunch. Cray YOLO Pitchfork keffiyeh. "})
+        )
       )
     )
   }
@@ -469,24 +526,6 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
   }
 });
 
-var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
-  render: function() {
-    return (
-      React.createElement("article", {className: "our-choice-projects content-is-centred"}, 
-        React.createElement("h1", {className: "our-choice-projects__heading"}, "Our choice projects"), 
-        React.createElement("div", {className: "our-choice-projects__choices"}, 
-          React.createElement(AsidePanel, {heading: "City Project", "image-src": "assets/img/city.jpg", slug: "documentary/1", "link-text": "View project", type: "documentary", text: "Deep v you probably havent heard of them dreamcatcher, kitsch artisan listicle"}), 
-          React.createElement(AsidePanel, {heading: "People have long titles sometimes", "image-src": "assets/img/people1.jpg", slug: "documentary/2", "link-text": "View project", type: "documentary", text: "Marfa iPhone Wes Anderson wayfarers flexitarian. Hashtag Banksy church-key, slow-carb art party."}), 
-          React.createElement(AsidePanel, {heading: "Business Promotion", "image-src": "assets/img/business.jpg", slug: "documentary/3", "link-text": "View project", type: "documentary", text: "Tote bag sustainable cardigan blog Brooklyn, bespoke normcore pork belly Blue Bottle."}), 
-          React.createElement(AsidePanel, {heading: "Motor Sports Day", "image-src": "assets/img/sport.jpg", slug: "video-production/1", "link-text": "View project", type: "video-production", text: "PBR&B photo booth Banksy Marfa aesthetic, chambray polaroid selfies lo-fi Truffaut viral brunch."}), 
-          React.createElement(AsidePanel, {heading: "Natural World", "image-src": "assets/img/nature.jpg", slug: "video-production/2", "link-text": "View project", type: "video-production", text: "Shoreditch readymade synth. Cold-pressed small batch vinyl, kitsch tilde hashtag squid try-hard."}), 
-          React.createElement(AsidePanel, {heading: "Abstract Artists", "image-src": "assets/img/abstract.jpg", slug: "video-production/3", "link-text": "View project", type: "video-production", text: "Pinterest biodiesel freegan aesthetic brunch. Cray YOLO Pitchfork keffiyeh. "})
-        )
-      )
-    )
-  }
-});
-
 var Testimonials = React.createClass({displayName: "Testimonials",
   render: function() {
     return (
@@ -514,16 +553,6 @@ var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   }
 });
 
-var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
-  render: function() {
-    return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameborder: "0", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true})
-      )
-    )
-  }
-});
-
 var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
@@ -533,31 +562,11 @@ var Video = React.createClass({displayName: "Video",
   }
 });
 
-var BlogSmall = React.createClass({displayName: "BlogSmall",
+var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
   render: function() {
     return (
-      React.createElement("div", {className: "background background--grey-very-light"}, 
-        React.createElement("div", {className: "blog-small content-is-centred"}, 
-          React.createElement(SectionHeadingWithStrapline, {heading: "Blog Latest", strapline: "These are the latest posts from our blog"}), 
-          React.createElement(BlogPostSmall, {heading: "Quinoa aesthetic plaid", date: "9th Oct. 2015", text: "YOLO fingerstache next level twee. Truffaut skateboard gastropub selfies occupy distillery Tumblr cred. Authentic +1 chambray deep v meh gluten-free. Seitan organic aesthetic, wolf cronut gentrify polaroid meh Schlitz irony cold-pressed."}), 
-          React.createElement(BlogPostSmall, {heading: "Pinterest hoodie deep v brunch", date: "3rd Oct. 2015", text: "Meh single-origin coffee lomo wolf. Cliche Kickstarter McSweeneys, lumbersexual Odd Future you probably havent heard of them PBR&B typewriter meggings lomo. Occupy put a bird on it keffiyeh flexitarian. Beard hella meditation, whatever wayfarers pickled sriracha disrupt."}), 
-          React.createElement(BlogPostSmall, {heading: "Portland letterpress", date: "24th Sept. 2015", text: "Leggings try-hard mustache Helvetica, viral sriracha tofu wayfarers synth lumbersexual PBR&B fingerstache asymmetrical Bushwick. Scenester street art VHS, McSweeneys banjo pork belly deep v typewriter Carles four dollar toast tofu letterpress occupy stumptown"}), 
-          React.createElement(BlogPostSmall, {heading: "Plaid put a bird", date: "20th Sept. 2015", text: "Brooklyn four dollar toast post-ironic photo booth, bitters fanny pack direct trade meditation Marfa. Shoreditch master cleanse single-origin coffee, hella Pitchfork Carles next level aesthetic sriracha kogi church-key. Brooklyn viral occupy, synth tousled irony."})
-        )
-      )
-    )
-  }
-});
-
-var BlogPostSmall = React.createClass({displayName: "BlogPostSmall",
-  render: function() {
-    return (
-      React.createElement("article", {className: "blog-small__post text"}, 
-        React.createElement("h1", {className: "blog-small__post-heading"}, this.props.heading), 
-        React.createElement("span", {className: "blog-small__post-date"}, this.props.date), 
-        React.createElement("div", {className: "blog-small__post-text"}, 
-          React.createElement("p", null, this.props.text)
-        )
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameborder: "0", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true})
       )
     )
   }

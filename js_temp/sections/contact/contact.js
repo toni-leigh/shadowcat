@@ -18,26 +18,26 @@ var Contact = React.createClass({displayName: "Contact",
           ), 
           React.createElement("div", {className: "contact__details"}, 
             React.createElement(Map, null), 
-            React.createElement("div", {className: "contact__detail-small"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Managing Director"), 
-              React.createElement("span", {className: "contact__detail-body"}, "Alysoun Sharpe")
+              React.createElement("p", {className: "contact__detail-body"}, "Alysoun Sharpe")
             ), 
-            React.createElement("div", {className: "contact__detail-small"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Telephone"), 
-              React.createElement("span", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
             ), 
-            React.createElement("div", {className: "contact__detail-large"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Address"), 
-              React.createElement("span", {className: "contact__detail-body"}, 
-                "3 The Street," + ' ' +
-                "A Little Town Somewhere," + ' ' +
-                "That County," + ' ' +
+              React.createElement("p", {className: "contact__detail-body"}, 
+                "3 The Street,", React.createElement("br", null), 
+                "A Little Town Somewhere,", React.createElement("br", null), 
+                "That County,", React.createElement("br", null), 
                 "AB12 3CD"
               )
             ), 
-            React.createElement("div", {className: "contact__detail-small"}, 
+            React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Email"), 
-              React.createElement("span", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
             )
           )
         )

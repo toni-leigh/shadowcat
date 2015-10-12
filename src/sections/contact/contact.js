@@ -18,26 +18,26 @@ var Contact = React.createClass({
           </form>
           <div className='contact__details'>
             <Map />
-            <div className='contact__detail-small'>
+            <div className='contact__detail'>
               <span className='contact__detail-heading'>Managing Director</span>
-              <span className='contact__detail-body'>Alysoun Sharpe</span>
+              <p className='contact__detail-body'>Alysoun Sharpe</p>
             </div>
-            <div className='contact__detail-small'>
+            <div className='contact__detail'>
               <span className='contact__detail-heading'>Telephone</span>
-              <span className='contact__detail-body'><a href='tel:01234567890'>01234 567 890</a></span>
+              <p className='contact__detail-body'><a href='tel:01234567890'>01234 567 890</a></p>
             </div>
-            <div className='contact__detail-large'>
+            <div className='contact__detail'>
               <span className='contact__detail-heading'>Address</span>
-              <span className='contact__detail-body'>
-                3 The Street,
-                A Little Town Somewhere,
-                That County,
+              <p className='contact__detail-body'>
+                3 The Street,<br />
+                A Little Town Somewhere,<br />
+                That County,<br />
                 AB12 3CD
-              </span>
+              </p>
             </div>
-            <div className='contact__detail-small'>
+            <div className='contact__detail'>
               <span className='contact__detail-heading'>Email</span>
-              <span className='contact__detail-body'><a href='mailto:email@shadowcatfilms.co.uk'>email@shadowcatfilms.co.uk</a></span>
+              <p className='contact__detail-body'><a href='mailto:email@shadowcatfilms.co.uk'>email@shadowcatfilms.co.uk</a></p>
             </div>
           </div>
         </div>
