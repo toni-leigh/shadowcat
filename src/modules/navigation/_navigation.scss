@@ -2,12 +2,74 @@ $navigation__font: $font__standout;
 $navigation__font-color: $black;
 
 .navigation {
-  float: right;
-  height: 98px;
-  line-height: 98px;
+  @media (min-width: 900px) {
+    float: right;
+    height: 98px;
+    line-height: 98px;
+  }
+  &__links {
+    background-color: $grey-very-light;
+    border-bottom: 3px solid $blue-dark;
+    box-shadow: 0 0 50px 0 rgba($grey-mid, 0.2);
+    position: absolute;
+    padding: 3.125%;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    @media (min-width: 480px) {
+      border-left: 3px solid $blue-dark;
+      width: 480px;
+    }
+    @media (min-width: 900px) {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      display: block;
+      padding: 0;
+      position: static;
+      right: auto;
+      top: auto;
+      width: auto;
+    }
+  }
+  &__trigger {
+    border: 1px solid $black;
+    color: $black;
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: -25px;
+    padding: 0 26px;
+    position: absolute;
+    right: 3.125%;
+    top: 50%;
+    transition: all 0.1s;
+    &:hover {
+      color: $grey-very-light;
+      background-color: $black;
+    }
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
   &__item {
     display: inline-block;
-    margin-left: 30px;
+    margin-bottom: 12px;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: 480px) {
+      margin-bottom: 24px;
+    }
+    @media (min-width: 900px) {
+      margin-bottom: 0;
+      margin-left: 20px;
+      width: auto;
+    }
+    @media (min-width: 1211px) {
+      margin-left: 30px;
+    }
   }
   &__link {
     color: $navigation__font-color;

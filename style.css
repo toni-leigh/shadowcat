@@ -176,61 +176,147 @@ ul {
       background-color: #3B7736;
       color: #fafafa; }
 
-.navigation {
-  float: right;
-  height: 98px;
-  line-height: 98px; }
-  .navigation__item {
-    display: inline-block;
-    margin-left: 30px; }
-  .navigation__link {
-    color: #050505;
-    font-family: "Khand", sans-serif;
-    font-size: 22px;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .navigation__link:after {
-      background-color: #48BED9;
-      bottom: -5px;
-      content: '';
-      height: 3px;
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      transition: all 0.075s;
-      width: 0%; }
-    .navigation__link:hover:after {
-      bottom: 0px;
-      opacity: 1;
-      width: 100%; }
-    .navigation__link--basket,
-    .navigation__link--products {
-      color: #D96C48; }
-      .navigation__link--basket:hover:after,
-      .navigation__link--products:hover:after {
-        background-color: #D96C48; }
-    .navigation__link.selected:after {
-      bottom: 0px;
-      opacity: 1;
-      width: 100%; }
+@media (min-width: 900px) {
+  .navigation {
+    float: right;
+    height: 98px;
+    line-height: 98px; } }
+
+.navigation__links {
+  background-color: #fafafa;
+  border-bottom: 3px solid #48BED9;
+  box-shadow: 0 0 50px 0 rgba(89, 89, 89, 0.2);
+  position: absolute;
+  padding: 3.125%;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+  @media (min-width: 480px) {
+    .navigation__links {
+      border-left: 3px solid #48BED9;
+      width: 480px; } }
+  @media (min-width: 900px) {
+    .navigation__links {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      display: block;
+      padding: 0;
+      position: static;
+      right: auto;
+      top: auto;
+      width: auto; } }
+
+.navigation__trigger {
+  border: 1px solid #050505;
+  color: #050505;
+  cursor: pointer;
+  font-size: 22px;
+  margin-top: -25px;
+  padding: 0 26px;
+  position: absolute;
+  right: 3.125%;
+  top: 50%;
+  transition: all 0.1s; }
+  .navigation__trigger:hover {
+    color: #fafafa;
+    background-color: #050505; }
+  @media (min-width: 900px) {
+    .navigation__trigger {
+      display: none; } }
+
+.navigation__item {
+  display: inline-block;
+  margin-bottom: 12px;
+  width: 100%; }
+  .navigation__item:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 480px) {
+    .navigation__item {
+      margin-bottom: 24px; } }
+  @media (min-width: 900px) {
+    .navigation__item {
+      margin-bottom: 0;
+      margin-left: 20px;
+      width: auto; } }
+  @media (min-width: 1211px) {
+    .navigation__item {
+      margin-left: 30px; } }
+
+.navigation__link {
+  color: #050505;
+  font-family: "Khand", sans-serif;
+  font-size: 22px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .navigation__link:after {
+    background-color: #48BED9;
+    bottom: -5px;
+    content: '';
+    height: 3px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.075s;
+    width: 0%; }
+  .navigation__link:hover:after {
+    bottom: 0px;
+    opacity: 1;
+    width: 100%; }
+  .navigation__link--basket,
+  .navigation__link--products {
+    color: #D96C48; }
+    .navigation__link--basket:hover:after,
+    .navigation__link--products:hover:after {
+      background-color: #D96C48; }
+  .navigation__link.selected:after {
+    bottom: 0px;
+    opacity: 1;
+    width: 100%; }
 
 .header {
   background-color: #fafafa;
-  height: 158px;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  box-sizing: content-box;
+  height: 98px;
+  max-width: 1200px;
+  padding-top: 3.125%;
+  padding-bottom: 3.125%;
+  position: relative;
+  width: 93.5%; }
   .header__business-name {
     color: #050505;
-    display: inline-block;
+    display: none;
     font-family: "Khand", sans-serif;
-    font-size: 38px;
+    font-size: 28px;
     height: 98px;
     line-height: 98px;
-    margin-left: 30px;
+    margin-left: 20px;
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap; }
+    @media (min-width: 450px) {
+      .header__business-name {
+        display: inline-block; } }
+    @media (min-width: 900px) {
+      .header__business-name {
+        display: none; } }
+    @media (min-width: 1070px) {
+      .header__business-name {
+        display: inline-block; } }
+    @media (min-width: 540px) {
+      .header__business-name {
+        font-size: 38px; } }
+    @media (min-width: 900px) {
+      .header__business-name {
+        font-size: 28px; } }
+    @media (min-width: 1140px) {
+      .header__business-name {
+        font-size: 38px; } }
+    @media (min-width: 1211px) {
+      .header__business-name {
+        margin-left: 30px; } }
   .header .logo {
     float: left; }
 

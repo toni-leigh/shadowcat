@@ -53,9 +53,10 @@ var Navigation = React.createClass({displayName: "Navigation",
   render: function() {
     return (
       React.createElement("nav", {className: "navigation"}, 
-        React.createElement("ul", null, 
+        React.createElement("ul", {className: "navigation__links"}, 
           this.buildList()
-        )
+        ), 
+        React.createElement("a", {className: "navigation__trigger button"}, "Menu")
       )
     )
   }

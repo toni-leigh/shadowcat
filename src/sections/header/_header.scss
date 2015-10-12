@@ -2,22 +2,46 @@ $header__background-color: $grey-very-light;
 $header__central-height: 98px;
 $header__font: $font__standout;
 $header__font-color: $black;
-$header__padding-horizontal: 30px;
 
 .header {
   background-color: $header__background-color;
-  height: $header__central-height + $header__padding-horizontal * 2;
-  padding-top: $header__padding-horizontal;
-  padding-bottom: $header__padding-horizontal;
+  box-sizing: content-box;
+  height: 98px;
+  max-width: 1200px;
+  padding-top: 3.125%;
+  padding-bottom: 3.125%;
+  position: relative;
+  width: 93.5%;
 
   &__business-name {
     color: $header__font-color;
-    display: inline-block;
+    display: none;
+    @media (min-width: 450px) {
+      display: inline-block;
+    }
+    @media (min-width: 900px) {
+      display: none;
+    }
+    @media (min-width: 1070px ) {
+      display: inline-block;
+    }
     font-family: $header__font;
-    font-size: 38px;
-    height: $header__central-height;
-    line-height: $header__central-height;
-    margin-left: 30px;
+    font-size: 28px;
+    @media (min-width: 540px) {
+      font-size: 38px;
+    }
+    @media (min-width: 900px) {
+      font-size: 28px;
+    }
+    @media (min-width: 1140px) {
+      font-size: 38px;
+    }
+    height: 98px;
+    line-height: 98px;
+    margin-left: 20px;
+    @media (min-width: 1211px) {
+      margin-left: 30px;
+    }
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;

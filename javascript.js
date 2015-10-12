@@ -22,19 +22,19 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
@@ -175,9 +175,10 @@ var Navigation = React.createClass({displayName: "Navigation",
   render: function() {
     return (
       React.createElement("nav", {className: "navigation"}, 
-        React.createElement("ul", null, 
+        React.createElement("ul", {className: "navigation__links"}, 
           this.buildList()
-        )
+        ), 
+        React.createElement("a", {className: "navigation__trigger button"}, "Menu")
       )
     )
   }
@@ -225,6 +226,17 @@ var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple
   }
 });
 
+var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
+  render: function() {
+    return (
+      React.createElement("div", {class: "section-header"}, 
+        React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
+        React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
+      )
+    )
+  }
+});
+
 var Blog = React.createClass({displayName: "Blog",
   render: function() {
     return (
@@ -257,17 +269,6 @@ var Home = React.createClass({displayName: "Home",
           React.createElement(Contact, null), 
           React.createElement(Footer, null)
         )
-      )
-    )
-  }
-});
-
-var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
-  render: function() {
-    return (
-      React.createElement("div", {class: "section-header"}, 
-        React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
-        React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
       )
     )
   }
