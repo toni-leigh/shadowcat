@@ -376,7 +376,7 @@ ul {
       height: 200px;
       width: 100%; }
     .contact__form-submit {
-      background-color: rgba(59, 119, 54, 0.3);
+      background-color: rgba(250, 250, 250, 0.4);
       border: 2px solid #fafafa;
       color: #fafafa;
       cursor: pointer;

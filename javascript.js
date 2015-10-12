@@ -1,57 +1,3 @@
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home"}), 
-          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, null), 
-          React.createElement(OurChoiceProjects, null), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, null), 
-          React.createElement(Contact, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -67,19 +13,19 @@ var AsidePanel = React.createClass({displayName: "AsidePanel",
   }
 });
 
-var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "bread-crumbs"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "bread-crumbs"}
       )
     )
   }
@@ -285,6 +231,60 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
       React.createElement("div", {class: "section-header"}, 
         React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
         React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
+      )
+    )
+  }
+});
+
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home"}), 
+          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, null), 
+          React.createElement(OurChoiceProjects, null), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, null), 
+          React.createElement(Contact, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
       )
     )
   }
