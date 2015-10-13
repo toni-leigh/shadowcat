@@ -1,4 +1,5 @@
 .our-choice-projects {
+  color: $grey-mid;
   padding-bottom: $general-padding__bottom;
   &__heading {
     @include text-light();
