@@ -1,212 +1,3 @@
-var AsidePanel = React.createClass({displayName: "AsidePanel",
-  render: function() {
-    return (
-      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type']}, 
-        React.createElement("img", {className: "aside-panel__image", src: this.props['image-src']}), 
-        React.createElement("div", {className: "aside-panel__details"}, 
-          React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
-          React.createElement("p", {className: "aside-panel__text"}, this.props['text']), 
-          React.createElement("a", {className: "aside-panel__link button", href: this.props['slug']}, this.props['link-text'])
-        )
-      )
-    )
-  }
-});
-
-var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
-  render: function() {
-    return (
-      React.createElement("div", {className: "bread-crumbs"}
-      )
-    )
-  }
-});
-
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-large"}
-      )
-    )
-  }
-});
-
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-small"}
-      )
-    )
-  }
-});
-
-var ButtonCta = React.createClass({displayName: "ButtonCta",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-cta"}
-      )
-    )
-  }
-});
-
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-submit"}
-      )
-    )
-  }
-});
-
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-thumbnail"}
-      )
-    )
-  }
-});
-
-var ContactDetail = React.createClass({displayName: "ContactDetail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "contact-detail"}
-      )
-    )
-  }
-});
-
-var InputText = React.createClass({displayName: "InputText",
-  render: function() {
-    return (
-      React.createElement("div", {className: "input-text"}
-      )
-    )
-  }
-});
-
-var InputTextarea = React.createClass({displayName: "InputTextarea",
-  render: function() {
-    return (
-      React.createElement("div", {className: "input-textarea"}
-      )
-    )
-  }
-});
-
-var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "key-value-detail"}
-      )
-    )
-  }
-});
-
-var Logo = React.createClass({displayName: "Logo",
-  render: function() {
-    return (
-      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
-    )
-  }
-});
-
-var Map = React.createClass({displayName: "Map",
-  render: function() {
-    return (
-      React.createElement("div", {className: "map"}
-      )
-    )
-  }
-});
-
-var Navigation = React.createClass({displayName: "Navigation",
-  buildList: function() {
-    var navItems = this.props['nav-items'];
-    var rows = [];
-    var x = 0;
-    navItems.forEach(function(navItem) {
-      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name, selected: navItem.selected}));
-      x ++;
-    });
-    return rows;
-  },
-
-  getInitialState: function() {
-    return({
-      'open': false
-    });
-  },
-
-  openClass: function() {
-    return this.state.open ? 'is-open' : 'is-closed';
-  },
-
-  render: function() {
-    return (
-      React.createElement("nav", {className: 'navigation ' + this.openClass()}, 
-        React.createElement("ul", {className: "navigation__links"}, 
-          this.buildList()
-        ), 
-        React.createElement("a", {className: "navigation__trigger button"}, "Menu")
-      )
-    )
-  }
-});
-
-var NavigationLink = React.createClass({displayName: "NavigationLink",
-  navLiClass: function() {
-    return 'navigation__item navigation__item--' + this.props.slug;
-  },
-  navLinkClass: function() {
-    return 'navigation__link navigation__link--' + this.props.slug + ' ' + this.navSelected();
-  },
-  navSelected: function() {
-    return true === this.props.selected ? 'selected' : ''
-  },
-  navUrl: function() {
-    return '/' + this.props.slug + '.html';
-  },
-  render: function() {
-    return (
-      React.createElement("li", {className: this.navLiClass()}, 
-        React.createElement("a", {className: this.navLinkClass(), href: this.navUrl()}, 
-          this.props.name
-        )
-      )
-    )
-  }
-});
-
-var PageHeading = React.createClass({displayName: "PageHeading",
-  render: function() {
-    return (
-      React.createElement("div", {className: "page-heading"}
-      )
-    )
-  }
-});
-
-var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple",
-  render: function() {
-    return (
-      React.createElement("div", {className: "section-heading-simple"}
-      )
-    )
-  }
-});
-
-var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
-  render: function() {
-    return (
-      React.createElement("div", {class: "section-header"}, 
-        React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
-        React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
-      )
-    )
-  }
-});
-
 var Blog = React.createClass({displayName: "Blog",
   render: function() {
     return (
@@ -304,6 +95,212 @@ var Service = React.createClass({displayName: "Service",
   }
 });
 
+var AsidePanel = React.createClass({displayName: "AsidePanel",
+  render: function() {
+    return (
+      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type']}, 
+        React.createElement("img", {className: "aside-panel__image", src: this.props['image-src']}), 
+        React.createElement("div", {className: "aside-panel__details"}, 
+          React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
+          React.createElement("p", {className: "aside-panel__text"}, this.props['text']), 
+          React.createElement("a", {className: "aside-panel__link button", href: this.props['slug']}, this.props['link-text'])
+        )
+      )
+    )
+  }
+});
+
+var ButtonCta = React.createClass({displayName: "ButtonCta",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-cta"}
+      )
+    )
+  }
+});
+
+var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
+  render: function() {
+    return (
+      React.createElement("div", {className: "bread-crumbs"}
+      )
+    )
+  }
+});
+
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-large"}
+      )
+    )
+  }
+});
+
+
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-submit"}
+      )
+    )
+  }
+});
+
+var ContactDetail = React.createClass({displayName: "ContactDetail",
+  render: function() {
+    return (
+      React.createElement("div", {className: "contact-detail"}
+      )
+    )
+  }
+});
+
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-thumbnail"}
+      )
+    )
+  }
+});
+
+var InputText = React.createClass({displayName: "InputText",
+  render: function() {
+    return (
+      React.createElement("div", {className: "input-text"}
+      )
+    )
+  }
+});
+
+var InputTextarea = React.createClass({displayName: "InputTextarea",
+  render: function() {
+    return (
+      React.createElement("div", {className: "input-textarea"}
+      )
+    )
+  }
+});
+
+var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
+  render: function() {
+    return (
+      React.createElement("div", {className: "key-value-detail"}
+      )
+    )
+  }
+});
+
+var Logo = React.createClass({displayName: "Logo",
+  render: function() {
+    return (
+      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
+    )
+  }
+});
+
+var Map = React.createClass({displayName: "Map",
+  render: function() {
+    return (
+      React.createElement("div", {className: "map"}
+      )
+    )
+  }
+});
+
+var Navigation = React.createClass({displayName: "Navigation",
+  buildList: function() {
+    var navItems = this.props['nav-items'];
+    var rows = [];
+    var x = 0;
+    navItems.forEach(function(navItem) {
+      rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name, selected: navItem.selected}));
+      x ++;
+    });
+    return rows;
+  },
+
+  getInitialState: function() {
+    return({
+      'open': false
+    });
+  },
+
+  openClass: function() {
+    return this.state.open ? 'is-open' : 'is-closed';
+  },
+
+  slideMenu: function() {
+    this.state.open = this.state.open ? false : true;
+    this.setState(this.state);
+  },
+
+  render: function() {
+    return (
+      React.createElement("nav", {className: 'navigation ' + this.openClass()}, 
+        React.createElement("ul", {className: "navigation__links"}, 
+          this.buildList()
+        ), 
+        React.createElement("a", {className: "navigation__trigger button", onClick: this.slideMenu}, "Menu")
+      )
+    )
+  }
+});
+
+var NavigationLink = React.createClass({displayName: "NavigationLink",
+  navLiClass: function() {
+    return 'navigation__item navigation__item--' + this.props.slug;
+  },
+  navLinkClass: function() {
+    return 'navigation__link navigation__link--' + this.props.slug + ' ' + this.navSelected();
+  },
+  navSelected: function() {
+    return true === this.props.selected ? 'selected' : ''
+  },
+  navUrl: function() {
+    return '/' + this.props.slug + '.html';
+  },
+  render: function() {
+    return (
+      React.createElement("li", {className: this.navLiClass()}, 
+        React.createElement("a", {className: this.navLinkClass(), href: this.navUrl()}, 
+          this.props.name
+        )
+      )
+    )
+  }
+});
+
+var PageHeading = React.createClass({displayName: "PageHeading",
+  render: function() {
+    return (
+      React.createElement("div", {className: "page-heading"}
+      )
+    )
+  }
+});
+
+var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple",
+  render: function() {
+    return (
+      React.createElement("div", {className: "section-heading-simple"}
+      )
+    )
+  }
+});
+
+var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
+  render: function() {
+    return (
+      React.createElement("div", {class: "section-header"}, 
+        React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
+        React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
+      )
+    )
+  }
+});
+
 var Aside = React.createClass({displayName: "Aside",
   render: function() {
     return (
@@ -343,6 +340,17 @@ var BlogPostSmall = React.createClass({displayName: "BlogPostSmall",
   }
 });
 
+var ButtonPair = React.createClass({displayName: "ButtonPair",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-pair"}, 
+        React.createElement("a", {className: "button-pair__button button-pair__button-1 button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
+        React.createElement("a", {className: "button-pair__button button-pair__button-2 button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
+      )
+    )
+  }
+});
+
 var CallToAction = React.createClass({displayName: "CallToAction",
   render: function() {
     return (
@@ -360,65 +368,6 @@ var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
   render: function() {
     return (
       React.createElement("div", {className: "choice-projects"}
-      )
-    )
-  }
-});
-
-var ButtonPair = React.createClass({displayName: "ButtonPair",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-pair"}, 
-        React.createElement("a", {className: "button-pair__button button-pair__button-1 button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
-        React.createElement("a", {className: "button-pair__button button-pair__button-2 button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
-      )
-    )
-  }
-});
-
-var Contact = React.createClass({displayName: "Contact",
-  render: function() {
-    return (
-      React.createElement("div", {className: "background background--blue-dark"}, 
-        React.createElement("div", {className: "contact content-is-centred"}, 
-          React.createElement(SectionHeadingWithStrapline, {heading: "Get In Touch", strapline: "Please use any of the methods below to get in touch. We’d love to hear from you about anything."}), 
-          React.createElement("form", {className: "contact__form"}, 
-            React.createElement("label", {for: "name", className: "contact__form-label"}, "Name:"), 
-            React.createElement("input", {id: "name", className: "contact__form-input", type: "text", placeholder: "Enter your name"}), 
-            React.createElement("label", {for: "telephone", className: "contact__form-label"}, "Telephone:"), 
-            React.createElement("input", {id: "telephone", className: "contact__form-input", type: "text", placeholder: "Enter your telephone number"}), 
-            React.createElement("label", {for: "email", className: "contact__form-label"}, "Email:"), 
-            React.createElement("input", {id: "email", className: "contact__form-input", type: "text", placeholder: "you@example.com"}), 
-            React.createElement("label", {for: "message", className: "contact__form-label"}, "Message:"), 
-            React.createElement("textarea", {id: "message", className: "contact__form-input contact__form-textarea", type: "text", placeholder: "Your message"}
-            ), 
-            React.createElement("button", {className: "contact__form-submit button"}, "Send contact")
-          ), 
-          React.createElement("div", {className: "contact__details"}, 
-            React.createElement(Map, null), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Managing Director"), 
-              React.createElement("p", {className: "contact__detail-body"}, "Alysoun Sharpe")
-            ), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Telephone"), 
-              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
-            ), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Address"), 
-              React.createElement("p", {className: "contact__detail-body"}, 
-                "3 The Street,", React.createElement("br", null), 
-                "A Little Town Somewhere,", React.createElement("br", null), 
-                "That County,", React.createElement("br", null), 
-                "AB12 3CD"
-              )
-            ), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Email"), 
-              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
-            )
-          )
-        )
       )
     )
   }
@@ -580,6 +529,54 @@ var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
     return (
       React.createElement("div", {className: "content-is-centred"}, 
         React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameborder: "0", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true})
+      )
+    )
+  }
+});
+
+var Contact = React.createClass({displayName: "Contact",
+  render: function() {
+    return (
+      React.createElement("div", {className: "background background--blue-dark"}, 
+        React.createElement("div", {className: "contact content-is-centred"}, 
+          React.createElement(SectionHeadingWithStrapline, {heading: "Get In Touch", strapline: "Please use any of the methods below to get in touch. We’d love to hear from you about anything."}), 
+          React.createElement("form", {className: "contact__form"}, 
+            React.createElement("label", {for: "name", className: "contact__form-label"}, "Name:"), 
+            React.createElement("input", {id: "name", className: "contact__form-input", type: "text", placeholder: "Enter your name"}), 
+            React.createElement("label", {for: "telephone", className: "contact__form-label"}, "Telephone:"), 
+            React.createElement("input", {id: "telephone", className: "contact__form-input", type: "text", placeholder: "Enter your telephone number"}), 
+            React.createElement("label", {for: "email", className: "contact__form-label"}, "Email:"), 
+            React.createElement("input", {id: "email", className: "contact__form-input", type: "text", placeholder: "you@example.com"}), 
+            React.createElement("label", {for: "message", className: "contact__form-label"}, "Message:"), 
+            React.createElement("textarea", {id: "message", className: "contact__form-input contact__form-textarea", type: "text", placeholder: "Your message"}
+            ), 
+            React.createElement("button", {className: "contact__form-submit button"}, "Send contact")
+          ), 
+          React.createElement("div", {className: "contact__details"}, 
+            React.createElement(Map, null), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Managing Director"), 
+              React.createElement("p", {className: "contact__detail-body"}, "Alysoun Sharpe")
+            ), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Telephone"), 
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
+            ), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Address"), 
+              React.createElement("p", {className: "contact__detail-body"}, 
+                "3 The Street,", React.createElement("br", null), 
+                "A Little Town Somewhere,", React.createElement("br", null), 
+                "That County,", React.createElement("br", null), 
+                "AB12 3CD"
+              )
+            ), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Email"), 
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
+            )
+          )
+        )
       )
     )
   }

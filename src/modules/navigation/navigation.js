@@ -20,13 +20,18 @@ var Navigation = React.createClass({
     return this.state.open ? 'is-open' : 'is-closed';
   },
 
+  slideMenu: function() {
+    this.state.open = this.state.open ? false : true;
+    this.setState(this.state);
+  },
+
   render: function() {
     return (
       <nav className={'navigation ' + this.openClass()}>
         <ul className='navigation__links'>
           {this.buildList()}
         </ul>
-        <a className='navigation__trigger button'>Menu</a>
+        <a className='navigation__trigger button' onClick={this.slideMenu}>Menu</a>
       </nav>
     )
   }
