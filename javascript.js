@@ -1,100 +1,3 @@
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  getInitialState: function() {
-    return {
-      navItems: [
-        {
-          name: 'Home',
-          slug: 'index',
-          selected: true
-        },
-        {
-          name: 'Documentaries',
-          slug: 'documentaries',
-          selected: false
-        },
-        {
-          name: 'Video Production',
-          slug: 'video-production',
-          selected: false
-        },
-        {
-          name: 'Contact',
-          slug: 'contact',
-          selected: false
-        },
-        {
-          name: 'Blog',
-          slug: 'blog',
-          selected: false
-        },
-        {
-          name: 'Products',
-          slug: 'products',
-          selected: false
-        },
-        {
-          name: 'Basket',
-          slug: 'basket',
-          selected: false
-        }
-      ]
-    };
-  },
-
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
-          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, null), 
-          React.createElement(OurChoiceProjects, null), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, null), 
-          React.createElement(Contact, null), 
-          React.createElement(Footer, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -164,15 +67,6 @@ var ContactDetail = React.createClass({displayName: "ContactDetail",
   }
 });
 
-var InputText = React.createClass({displayName: "InputText",
-  render: function() {
-    return (
-      React.createElement("div", {className: "input-text"}
-      )
-    )
-  }
-});
-
 var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
@@ -182,10 +76,10 @@ var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   }
 });
 
-var InputTextarea = React.createClass({displayName: "InputTextarea",
+var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
-      React.createElement("div", {className: "input-textarea"}
+      React.createElement("div", {className: "input-text"}
       )
     )
   }
@@ -195,6 +89,15 @@ var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
   render: function() {
     return (
       React.createElement("div", {className: "key-value-detail"}
+      )
+    )
+  }
+});
+
+var InputTextarea = React.createClass({displayName: "InputTextarea",
+  render: function() {
+    return (
+      React.createElement("div", {className: "input-textarea"}
       )
     )
   }
@@ -307,6 +210,103 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
       React.createElement("div", {class: "section-header"}, 
         React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
         React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
+      )
+    )
+  }
+});
+
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  getInitialState: function() {
+    return {
+      navItems: [
+        {
+          name: 'Home',
+          slug: 'index',
+          selected: true
+        },
+        {
+          name: 'Documentaries',
+          slug: 'documentaries',
+          selected: false
+        },
+        {
+          name: 'Video Production',
+          slug: 'video-production',
+          selected: false
+        },
+        {
+          name: 'Contact',
+          slug: 'contact',
+          selected: false
+        },
+        {
+          name: 'Blog',
+          slug: 'blog',
+          selected: false
+        },
+        {
+          name: 'Products',
+          slug: 'products',
+          selected: false
+        },
+        {
+          name: 'Basket',
+          slug: 'basket',
+          selected: false
+        }
+      ]
+    };
+  },
+
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
+          React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, null), 
+          React.createElement(OurChoiceProjects, null), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, null), 
+          React.createElement(Contact, null), 
+          React.createElement(Footer, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
       )
     )
   }
