@@ -1,5 +1,6 @@
 .services-introduction {
   @include base-padding();
+  color: $grey-mid;
   &__heading {
     @include text-light();
     font-size: 36px;
