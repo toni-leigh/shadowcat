@@ -11,6 +11,7 @@ var OurChoiceProjects = React.createClass({
           <AsidePanel heading='Natural World' image-src='assets/img/nature.jpg' slug='video-production/2' link-text='View project' type='video-production' text='Shoreditch readymade synth. Cold-pressed small batch vinyl, kitsch tilde hashtag squid try-hard.' />
           <AsidePanel heading='Abstract Artists' image-src='assets/img/abstract.jpg' slug='video-production/3' link-text='View project' type='video-production' text='Pinterest biodiesel freegan aesthetic brunch. Cray YOLO Pitchfork keffiyeh. ' />
         </div>
+        <ServicesIntroduction />
       </article>
     )
   }

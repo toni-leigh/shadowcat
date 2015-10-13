@@ -3,6 +3,7 @@ var Contact = React.createClass({displayName: "Contact",
     return (
       React.createElement("div", {className: "background background--blue-dark"}, 
         React.createElement("div", {className: "contact content-is-centred"}, 
+          React.createElement(OurChoiceProjects, null), 
           React.createElement(SectionHeadingWithStrapline, {heading: "Get In Touch", strapline: "Please use any of the methods below to get in touch. We’d love to hear from you about anything."}), 
           React.createElement("form", {className: "contact__form"}, 
             React.createElement("label", {for: "name", className: "contact__form-label"}, "Name:"), 
