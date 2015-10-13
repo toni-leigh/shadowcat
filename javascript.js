@@ -164,19 +164,19 @@ var ContactDetail = React.createClass({displayName: "ContactDetail",
   }
 });
 
-var InputText = React.createClass({displayName: "InputText",
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
-      React.createElement("div", {className: "input-text"}
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
 });
 
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
-      React.createElement("div", {className: "image-thumbnail"}
+      React.createElement("div", {className: "input-text"}
       )
     )
   }
