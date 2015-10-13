@@ -28,8 +28,11 @@ var Navigation = React.createClass({displayName: "Navigation",
   render: function() {
     return (
       React.createElement("nav", {className: 'navigation ' + this.openClass()}, 
-        React.createElement("ul", {className: "navigation__links"}, 
-          this.buildList()
+        React.createElement("div", {className: "navigation__links"}, 
+          React.createElement("ul", null, 
+            this.buildList()
+          ), 
+          React.createElement("div", {className: "navigation__close", onClick: this.slideMenu}, "close")
         ), 
         React.createElement("a", {className: "navigation__trigger button", onClick: this.slideMenu}, "Menu")
       )

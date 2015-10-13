@@ -28,9 +28,12 @@ var Navigation = React.createClass({
   render: function() {
     return (
       <nav className={'navigation ' + this.openClass()}>
-        <ul className='navigation__links'>
-          {this.buildList()}
-        </ul>
+        <div className='navigation__links'>
+          <ul>
+            {this.buildList()}
+          </ul>
+          <div className='navigation__close' onClick={this.slideMenu}>close</div>
+        </div>
         <a className='navigation__trigger button' onClick={this.slideMenu}>Menu</a>
       </nav>
     )
