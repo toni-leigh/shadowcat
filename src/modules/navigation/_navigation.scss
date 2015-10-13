@@ -10,17 +10,12 @@ $navigation__font-color: $black;
   &__links {
     background-color: $grey-very-light;
     border-bottom: 3px solid $blue-dark;
-    box-shadow: 0 0 50px 0 rgba($grey-mid, 0.2);
-    position: absolute;
+    position: fixed;
     padding: 3.125%;
-    right: 0;
+    right: -100%;
     top: 0;
     width: 100%;
     z-index: 2;
-    @media (min-width: 480px) {
-      border-left: 3px solid $blue-dark;
-      width: 480px;
-    }
     @media (min-width: 900px) {
       background-color: transparent;
       box-shadow: none;
@@ -55,6 +50,7 @@ $navigation__font-color: $black;
   &__item {
     display: inline-block;
     margin-bottom: 12px;
+    text-align: center;
     width: 100%;
     &:last-child {
       margin-bottom: 0;

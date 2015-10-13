@@ -22,19 +22,19 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
@@ -67,19 +67,19 @@ var ContactDetail = React.createClass({displayName: "ContactDetail",
   }
 });
 
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
-      React.createElement("div", {className: "image-thumbnail"}
+      React.createElement("div", {className: "input-text"}
       )
     )
   }
 });
 
-var InputText = React.createClass({displayName: "InputText",
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
-      React.createElement("div", {className: "input-text"}
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }

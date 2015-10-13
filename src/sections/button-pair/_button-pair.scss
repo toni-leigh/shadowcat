@@ -9,6 +9,9 @@ $button-pair__vertical-breakpoint: 520px;
   &__button {
     background-color: $button-pair__background;
     color: $button-pair__text;
+    font-size: 22px;
+    height: 70px;
+    line-height: 70px;
     margin-bottom: 20px;
     @media (min-width: 520px) {
       margin-bottom: 0;

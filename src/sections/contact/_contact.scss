@@ -120,6 +120,7 @@
     }
     &-body {
       color: $grey-very-light;
+      word-wrap: break-word;
       a {
         color: $grey-very-light;
         text-decoration: none;
