@@ -38,6 +38,25 @@ $navigation__font-color: $black;
       right: 0%;
     }
   }
+  &__close {
+    cursor: pointer;
+    display: block;
+    font-family: $font__standout;
+    font-size: 16px;
+    @media (min-width: 480px) {
+      font-size: 22px;
+      padding: 0.4em 0;
+    }
+    position: absolute;
+    right: 3.125%;
+    top: 3.125%;
+    &:hover {
+      color: $red;
+    }
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
   &__trigger {
     border: 1px solid $black;
     color: $black;

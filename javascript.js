@@ -137,6 +137,14 @@ var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   }
 });
 
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-small"}
+      )
+    )
+  }
+});
 
 var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
@@ -156,19 +164,19 @@ var ContactDetail = React.createClass({displayName: "ContactDetail",
   }
 });
 
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
-      React.createElement("div", {className: "image-thumbnail"}
+      React.createElement("div", {className: "input-text"}
       )
     )
   }
 });
 
-var InputText = React.createClass({displayName: "InputText",
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
-      React.createElement("div", {className: "input-text"}
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }

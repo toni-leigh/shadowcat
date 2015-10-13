@@ -209,6 +209,24 @@ ul {
 .navigation.is-open .navigation__links {
   right: 0%; }
 
+.navigation__close {
+  cursor: pointer;
+  display: block;
+  font-family: "Khand", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  right: 3.125%;
+  top: 3.125%; }
+  @media (min-width: 480px) {
+    .navigation__close {
+      font-size: 22px;
+      padding: 0.4em 0; } }
+  .navigation__close:hover {
+    color: #ff3050; }
+  @media (min-width: 900px) {
+    .navigation__close {
+      display: none; } }
+
 .navigation__trigger {
   border: 1px solid #050505;
   color: #050505;
