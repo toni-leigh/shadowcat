@@ -1,58 +1,28 @@
 var Navigation = React.createClass({displayName: "Navigation",
   buildList: function() {
-    var navItems = this.getNavItems();
+    var navItems = this.props['nav-items'];
     var rows = [];
     var x = 0;
-    this.getNavItems().forEach(function(navItem) {
+    navItems.forEach(function(navItem) {
       rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name, selected: navItem.selected}));
       x ++;
     });
     return rows;
   },
 
-  getNavItems: function() {
-    return [
-      {
-        name: 'Home',
-        slug: 'index',
-        selected: true
-      },
-      {
-        name: 'Documentaries',
-        slug: 'documentaries',
-        selected: false
-      },
-      {
-        name: 'Video Production',
-        slug: 'video-production',
-        selected: false
-      },
-      {
-        name: 'Contact',
-        slug: 'contact',
-        selected: false
-      },
-      {
-        name: 'Blog',
-        slug: 'blog',
-        selected: false
-      },
-      {
-        name: 'Products',
-        slug: 'products',
-        selected: false
-      },
-      {
-        name: 'Basket',
-        slug: 'basket',
-        selected: false
-      }
-    ];
+  getInitialState: function() {
+    return({
+      'open': false
+    });
+  },
+
+  openClass: function() {
+    return this.state.open ? 'is-open' : 'is-closed';
   },
 
   render: function() {
     return (
-      React.createElement("nav", {className: "navigation"}, 
+      React.createElement("nav", {className: 'navigation ' + this.openClass()}, 
         React.createElement("ul", {className: "navigation__links"}, 
           this.buildList()
         ), 

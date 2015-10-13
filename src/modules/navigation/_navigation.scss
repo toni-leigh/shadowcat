@@ -12,8 +12,8 @@ $navigation__font-color: $black;
     border-bottom: 3px solid $blue-dark;
     position: fixed;
     padding: 3.125%;
-    right: -100%;
     top: 0;
+    transition: right 0.4s;
     width: 100%;
     z-index: 2;
     @media (min-width: 900px) {
@@ -26,6 +26,16 @@ $navigation__font-color: $black;
       right: auto;
       top: auto;
       width: auto;
+    }
+  }
+  &.is-closed {
+    .navigation__links {
+      right: -100%;
+    }
+  }
+  &.is-open {
+    .navigation__links {
+      right: 0%;
     }
   }
   &__trigger {

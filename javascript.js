@@ -22,15 +22,6 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-cta"}
-      )
-    )
-  }
-});
-
 var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
@@ -49,10 +40,28 @@ var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   }
 });
 
+var ButtonCta = React.createClass({displayName: "ButtonCta",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-cta"}
+      )
+    )
+  }
+});
+
 var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
     return (
       React.createElement("div", {className: "button-submit"}
+      )
+    )
+  }
+});
+
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -71,15 +80,6 @@ var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
       React.createElement("div", {className: "input-text"}
-      )
-    )
-  }
-});
-
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -122,59 +122,29 @@ var Map = React.createClass({displayName: "Map",
 
 var Navigation = React.createClass({displayName: "Navigation",
   buildList: function() {
-    var navItems = this.getNavItems();
+    var navItems = this.props['nav-items'];
     var rows = [];
     var x = 0;
-    this.getNavItems().forEach(function(navItem) {
+    navItems.forEach(function(navItem) {
       rows.push(React.createElement(NavigationLink, {key: 'nav' + x, slug: navItem.slug, name: navItem.name, selected: navItem.selected}));
       x ++;
     });
     return rows;
   },
 
-  getNavItems: function() {
-    return [
-      {
-        name: 'Home',
-        slug: 'index',
-        selected: true
-      },
-      {
-        name: 'Documentaries',
-        slug: 'documentaries',
-        selected: false
-      },
-      {
-        name: 'Video Production',
-        slug: 'video-production',
-        selected: false
-      },
-      {
-        name: 'Contact',
-        slug: 'contact',
-        selected: false
-      },
-      {
-        name: 'Blog',
-        slug: 'blog',
-        selected: false
-      },
-      {
-        name: 'Products',
-        slug: 'products',
-        selected: false
-      },
-      {
-        name: 'Basket',
-        slug: 'basket',
-        selected: false
-      }
-    ];
+  getInitialState: function() {
+    return({
+      'open': false
+    });
+  },
+
+  openClass: function() {
+    return this.state.open ? 'is-open' : 'is-closed';
   },
 
   render: function() {
     return (
-      React.createElement("nav", {className: "navigation"}, 
+      React.createElement("nav", {className: 'navigation ' + this.openClass()}, 
         React.createElement("ul", {className: "navigation__links"}, 
           this.buildList()
         ), 
@@ -256,11 +226,53 @@ var BlogPost = React.createClass({displayName: "BlogPost",
 });
 
 var Home = React.createClass({displayName: "Home",
+  getInitialState: function() {
+    return {
+      navItems: [
+        {
+          name: 'Home',
+          slug: 'index',
+          selected: true
+        },
+        {
+          name: 'Documentaries',
+          slug: 'documentaries',
+          selected: false
+        },
+        {
+          name: 'Video Production',
+          slug: 'video-production',
+          selected: false
+        },
+        {
+          name: 'Contact',
+          slug: 'contact',
+          selected: false
+        },
+        {
+          name: 'Blog',
+          slug: 'blog',
+          selected: false
+        },
+        {
+          name: 'Products',
+          slug: 'products',
+          selected: false
+        },
+        {
+          name: 'Basket',
+          slug: 'basket',
+          selected: false
+        }
+      ]
+    };
+  },
+
   render: function() {
     return (
       React.createElement("main", {className: "home"}, 
         React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home"}), 
+          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
           React.createElement(VideoSpotlight, {src: "//player.vimeo.com/video/95396328"}), 
           React.createElement(ServicesIntroduction, null), 
           React.createElement(OurChoiceProjects, null), 
@@ -331,17 +343,6 @@ var BlogPostSmall = React.createClass({displayName: "BlogPostSmall",
   }
 });
 
-var ButtonPair = React.createClass({displayName: "ButtonPair",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-pair"}, 
-        React.createElement("a", {className: "button-pair__button button-pair__button-1 button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
-        React.createElement("a", {className: "button-pair__button button-pair__button-2 button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
-      )
-    )
-  }
-});
-
 var CallToAction = React.createClass({displayName: "CallToAction",
   render: function() {
     return (
@@ -359,6 +360,17 @@ var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
   render: function() {
     return (
       React.createElement("div", {className: "choice-projects"}
+      )
+    )
+  }
+});
+
+var ButtonPair = React.createClass({displayName: "ButtonPair",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-pair"}, 
+        React.createElement("a", {className: "button-pair__button button-pair__button-1 button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
+        React.createElement("a", {className: "button-pair__button button-pair__button-2 button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
       )
     )
   }
@@ -435,7 +447,7 @@ var Header = React.createClass({displayName: "Header",
       React.createElement("header", {className: "content-is-centred header"}, 
         React.createElement(Logo, null), 
         React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
-        React.createElement(Navigation, {selected: this.props['page-slug']})
+        React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
       )
     )
   }

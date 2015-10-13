@@ -4,7 +4,7 @@ var Header = React.createClass({
       <header className='content-is-centred header'>
         <Logo />
         <div className='header__business-name'>Shadowcat Films</div>
-        <Navigation selected={this.props['page-slug']} />
+        <Navigation nav-items={this.props['nav-items']} selected={this.props['page-slug']} />
       </header>
     )
   }

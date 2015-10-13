@@ -187,8 +187,8 @@ ul {
   border-bottom: 3px solid #48BED9;
   position: fixed;
   padding: 3.125%;
-  right: -100%;
   top: 0;
+  transition: right 0.4s;
   width: 100%;
   z-index: 2; }
   @media (min-width: 900px) {
@@ -202,6 +202,12 @@ ul {
       right: auto;
       top: auto;
       width: auto; } }
+
+.navigation.is-closed .navigation__links {
+  right: -100%; }
+
+.navigation.is-open .navigation__links {
+  right: 0%; }
 
 .navigation__trigger {
   border: 1px solid #050505;
