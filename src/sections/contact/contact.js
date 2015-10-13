@@ -5,6 +5,7 @@ var Contact = React.createClass({
         <div className='contact content-is-centred'>
           <OurChoiceProjects />
           <SectionHeadingWithStrapline heading='Get In Touch' strapline='Please use any of the methods below to get in touch. We’d love to hear from you about anything.' />
+          <BlogSmall />
           <form className='contact__form'>
             <label for='name' className='contact__form-label'>Name:</label>
             <input id='name' className='contact__form-input' type='text' placeholder='Enter your name' />
