@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Khand:600|Roboto:300,400' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='style.css' />
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+    <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
     <script src='build/react.js'></script>
     <script src='javascript.js'></script>
   </head>
@@ -15,9 +16,12 @@
   <script>
     window.onload = function() {
       React.render(
-        React.createElement(Home, {name: "The"}),
+        React.createElement(Home, {'api-source': "http://shadowcatfilms.com/api/home"}),
         document.getElementById('react-home')
       );
+    }
+    function jsonpCallback(data) {
+      Home.prototype.setState(data);
     }
   </script>
 </html>

@@ -1,4 +1,11 @@
 var Home = React.createClass({
+  componentDidMount: function() {
+    var head = document.head;
+    var script = document.createElement("script");
+    script.setAttribute("src", this.props['api-source']);
+    head.appendChild(script);
+  },
+
   getInitialState: function() {
     return {
       navItems: [

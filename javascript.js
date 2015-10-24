@@ -13,19 +13,19 @@ var AsidePanel = React.createClass({displayName: "AsidePanel",
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "bread-crumbs"}
       )
     )
   }
 });
 
-var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "bread-crumbs"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
@@ -234,6 +234,13 @@ var BlogPost = React.createClass({displayName: "BlogPost",
 });
 
 var Home = React.createClass({displayName: "Home",
+  componentDidMount: function() {
+    debugger;
+    var head = document.head;
+    var script = document.createElement("script");
+    script.setAttribute("src", this.props['api-source']);
+    head.appendChild(script);
+  },
   getInitialState: function() {
     return {
       navItems: [
@@ -565,6 +572,15 @@ var Text = React.createClass({displayName: "Text",
   }
 });
 
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+  render: function() {
+    return (
+      React.createElement("div", {className: "thumbnail-gallery"}
+      )
+    )
+  }
+});
+
 var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
@@ -579,15 +595,6 @@ var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
     return (
       React.createElement("div", {className: "content-is-centred"}, 
         React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameborder: "0", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true})
-      )
-    )
-  }
-});
-
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
-  render: function() {
-    return (
-      React.createElement("div", {className: "thumbnail-gallery"}
       )
     )
   }
