@@ -165,14 +165,14 @@ ul {
     .aside-panel__link:hover {
       background-color: #48BED9;
       color: #fafafa; }
-  .aside-panel--video-production .aside-panel__details {
+  .aside-panel--video .aside-panel__details {
     border-color: #3B7736; }
-  .aside-panel--video-production .aside-panel__heading {
+  .aside-panel--video .aside-panel__heading {
     color: #3B7736; }
-  .aside-panel--video-production .aside-panel__link {
+  .aside-panel--video .aside-panel__link {
     border-color: #3B7736;
     color: #3B7736; }
-    .aside-panel--video-production .aside-panel__link:hover {
+    .aside-panel--video .aside-panel__link:hover {
       background-color: #3B7736;
       color: #fafafa; }
 
