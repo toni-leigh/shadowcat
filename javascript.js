@@ -17,57 +17,8 @@ var BlogPost = React.createClass({displayName: "BlogPost",
 });
 
 var Home = React.createClass({displayName: "Home",
-  componentDidMount: function() {
-    t = this;
-    window.jsonpCallback = function(data) {
-      t.setState(data);
-    }
-    var head = document.head;
-    var script = document.createElement("script");
-    script.setAttribute("src", this.props['api-source']);
-    head.appendChild(script);
-  },
-
   getInitialState: function() {
-    return {
-      navItems: [
-        {
-          name: 'Home',
-          slug: 'index',
-          selected: true
-        },
-        {
-          name: 'Documentaries',
-          slug: 'documentaries',
-          selected: false
-        },
-        {
-          name: 'Video Production',
-          slug: 'video-production',
-          selected: false
-        },
-        {
-          name: 'Contact',
-          slug: 'contact',
-          selected: false
-        },
-        {
-          name: 'Blog',
-          slug: 'blog',
-          selected: false
-        },
-        {
-          name: 'Products',
-          slug: 'products',
-          selected: false
-        },
-        {
-          name: 'Basket',
-          slug: 'basket',
-          selected: false
-        }
-      ]
-    };
+    return window.data;
   },
 
   render: function() {
@@ -139,19 +90,19 @@ var ButtonCta = React.createClass({displayName: "ButtonCta",
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-small"}
       )
     )
   }
 });
 
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-small"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
@@ -585,20 +536,20 @@ var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   }
 });
 
-var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
+var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
+      React.createElement("div", {className: "video"}
       )
     )
   }
 });
 
-var Video = React.createClass({displayName: "Video",
+var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
   render: function() {
     return (
-      React.createElement("div", {className: "video"}
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
       )
     )
   }

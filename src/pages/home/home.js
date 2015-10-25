@@ -1,55 +1,6 @@
 var Home = React.createClass({
-  componentDidMount: function() {
-    t = this;
-    window.jsonpCallback = function(data) {
-      t.setState(data);
-    }
-    var head = document.head;
-    var script = document.createElement("script");
-    script.setAttribute("src", this.props['api-source']);
-    head.appendChild(script);
-  },
-
   getInitialState: function() {
-    return {
-      navItems: [
-        {
-          name: 'Home',
-          slug: 'index',
-          selected: true
-        },
-        {
-          name: 'Documentaries',
-          slug: 'documentaries',
-          selected: false
-        },
-        {
-          name: 'Video Production',
-          slug: 'video-production',
-          selected: false
-        },
-        {
-          name: 'Contact',
-          slug: 'contact',
-          selected: false
-        },
-        {
-          name: 'Blog',
-          slug: 'blog',
-          selected: false
-        },
-        {
-          name: 'Products',
-          slug: 'products',
-          selected: false
-        },
-        {
-          name: 'Basket',
-          slug: 'basket',
-          selected: false
-        }
-      ]
-    };
+    return window.data;
   },
 
   render: function() {

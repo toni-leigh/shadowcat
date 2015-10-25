@@ -13,9 +13,16 @@
     <div id='react-home'></div>
   </body>
   <script>
+    window.jsonpCallback = function(data) {
+      window.data = data;
+    }
+    var head = document.head;
+    var script = document.createElement("script");
+    script.setAttribute("src", "http://shadowcatfilms.com/api/home");
+    head.appendChild(script);
     window.onload = function() {
       React.render(
-        React.createElement(Home, {'api-source': "http://shadowcatfilms.com/api/home"}),
+        React.createElement(Home),
         document.getElementById('react-home')
       );
     }
