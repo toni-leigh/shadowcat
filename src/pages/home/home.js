@@ -1,5 +1,9 @@
 var Home = React.createClass({
   componentDidMount: function() {
+    t = this;
+    window.jsonpCallback = function(data) {
+      t.setState(data);
+    }
     var head = document.head;
     var script = document.createElement("script");
     script.setAttribute("src", this.props['api-source']);

@@ -18,6 +18,10 @@ var BlogPost = React.createClass({displayName: "BlogPost",
 
 var Home = React.createClass({displayName: "Home",
   componentDidMount: function() {
+    t = this;
+    window.jsonpCallback = function(data) {
+      t.setState(data);
+    }
     var head = document.head;
     var script = document.createElement("script");
     script.setAttribute("src", this.props['api-source']);
@@ -581,20 +585,20 @@ var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   }
 });
 
-var Video = React.createClass({displayName: "Video",
-  render: function() {
-    return (
-      React.createElement("div", {className: "video"}
-      )
-    )
-  }
-});
-
 var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
   render: function() {
     return (
       React.createElement("div", {className: "content-is-centred"}, 
         React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
+      )
+    )
+  }
+});
+
+var Video = React.createClass({displayName: "Video",
+  render: function() {
+    return (
+      React.createElement("div", {className: "video"}
       )
     )
   }
