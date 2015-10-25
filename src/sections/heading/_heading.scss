@@ -1,3 +1,39 @@
 .heading {
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  height: 75vh;
+  position: relative;
 
+  &__tinted-overlay {
+    background-color: rgba(0,0,0,0.55);
+    bottom: 0;
+    display: table;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__content {
+    display: table-cell;
+    height: 75vh;
+    vertical-align: middle;
+  }
+
+  &__title {
+    color: $grey-very-light;
+    font-family: $font__standout;
+    font-size: 64px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+
+  &__strapline {
+    color: $grey-very-light;
+    font-family: $font__standout;
+    font-size: 16px;
+  }
 }

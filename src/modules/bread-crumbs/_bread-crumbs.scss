@@ -1,3 +1,35 @@
 .bread-crumbs {
+  &__crumb {
+    color: $grey-very-light;
+    display: inline-block;
+    font-family: $font__standout;
+    margin-right: 30px;
+    position: relative;
+    &:after {
+      border-bottom: 7px solid transparent;
+      border-left: 10px solid $blue-dark;
+      border-top: 7px solid transparent;
+      content: '';
+      height: 0;
+      right: -20px;
+      position: absolute;
+      top: 4px;
+      width: 0;
+    }
 
+    &--last {
+      &:after {
+        display: none;
+      }
+    }
+
+    a {
+      color: $grey-very-light;
+      text-decoration: none;
+      transition: all 0.1s;
+      &:hover {
+        color: $blue-dark;
+      }
+    }
+  }
 }

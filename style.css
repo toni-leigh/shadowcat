@@ -62,7 +62,7 @@ ul {
     .background--blue-dark {
       background-color: #48BED9; }
   .background--grey-very-light {
-    background-color: #f7f7f7; }
+    background-color: #fafafa; }
   .background--orange {
     background-color: #FD906C; }
     .background--orange-dark {
@@ -77,6 +77,31 @@ ul {
   line-height: 50px;
   text-decoration: none;
   transition: background-color 0.2s; }
+
+.bread-crumbs__crumb {
+  color: #fafafa;
+  display: inline-block;
+  font-family: "Khand", sans-serif;
+  margin-right: 30px;
+  position: relative; }
+  .bread-crumbs__crumb:after {
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #48BED9;
+    border-top: 7px solid transparent;
+    content: '';
+    height: 0;
+    right: -20px;
+    position: absolute;
+    top: 4px;
+    width: 0; }
+  .bread-crumbs__crumb--last:after {
+    display: none; }
+  .bread-crumbs__crumb a {
+    color: #fafafa;
+    text-decoration: none;
+    transition: all 0.1s; }
+    .bread-crumbs__crumb a:hover {
+      color: #48BED9; }
 
 .section-header__heading {
   font-family: "Khand", sans-serif;
@@ -304,6 +329,37 @@ ul {
     bottom: 0px;
     opacity: 1;
     width: 100%; }
+
+.heading {
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  height: 75vh;
+  position: relative; }
+  .heading__tinted-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    bottom: 0;
+    display: table;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+  .heading__content {
+    display: table-cell;
+    height: 75vh;
+    vertical-align: middle; }
+  .heading__title {
+    color: #fafafa;
+    font-family: "Khand", sans-serif;
+    font-size: 64px;
+    line-height: 1.5em;
+    text-transform: uppercase; }
+  .heading__strapline {
+    color: #fafafa;
+    font-family: "Khand", sans-serif;
+    font-size: 16px; }
 
 .header {
   background-color: #fafafa;
@@ -619,5 +675,5 @@ ul {
   background: radial-gradient(circle at 50% 400px, #fff 0%, #e0e0e0 100%);
   width: 100%; }
 
-.home .header {
+.home .background--grey-very-light {
   background-color: transparent; }

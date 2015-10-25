@@ -14,9 +14,27 @@ var AsidePanel = React.createClass({displayName: "AsidePanel",
 });
 
 var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
+  buildCrumbs: function() {
+    var crumbs = this.props['bread-crumbs'];
+    var rows = [];
+    var x = 0;
+    crumbs.forEach(function(crumb) {
+      if (crumb.slug !== null) {
+        rows.push(React.createElement("li", {className: "bread-crumbs__crumb"}, React.createElement("a", {href: '/' + crumb.slug}, crumb.name)));
+      } else {
+        rows.push(React.createElement("li", {className: "bread-crumbs__crumb bread-crumbs__crumb--last"}, React.createElement("span", null, crumb.name)));
+      }
+      x ++;
+    });
+    return rows;
+  },
+
   render: function() {
     return (
-      React.createElement("div", {className: "bread-crumbs"}
+      React.createElement("div", {className: "bread-crumbs"}, 
+        React.createElement("ul", null, 
+          this.buildCrumbs()
+        )
       )
     )
   }
@@ -276,6 +294,10 @@ var Service = React.createClass({displayName: "Service",
     return (
       React.createElement("div", {className: "service"}, 
         React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
+        React.createElement(Heading, {
+          background: "assets/backgrounds/sea2.jpg", 
+          title: "Documentaries", 
+          strapline: "This is the page that talks all about the documentaries"}), 
         React.createElement(Contact, null), 
         React.createElement(Footer, null)
       )
@@ -344,6 +366,15 @@ var ButtonPair = React.createClass({displayName: "ButtonPair",
   }
 });
 
+var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
+  render: function() {
+    return (
+      React.createElement("div", {className: "choice-projects"}
+      )
+    )
+  }
+});
+
 var CallToAction = React.createClass({displayName: "CallToAction",
   render: function() {
     return (
@@ -352,15 +383,6 @@ var CallToAction = React.createClass({displayName: "CallToAction",
           React.createElement("h1", {className: "call-to-action__heading"}, this.props.heading), 
           React.createElement("a", {className: "call-to-action__button button", href: this.props['button-slug'] + '.html'}, this.props['button-text'])
         )
-      )
-    )
-  }
-});
-
-var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
-  render: function() {
-    return (
-      React.createElement("div", {className: "choice-projects"}
       )
     )
   }
@@ -434,19 +456,43 @@ var Footer = React.createClass({displayName: "Footer",
 var Header = React.createClass({displayName: "Header",
   render: function() {
     return (
-      React.createElement("header", {className: "content-is-centred header"}, 
-        React.createElement(Logo, null), 
-        React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
-        React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
+      React.createElement("div", {className: "background background--grey-very-light"}, 
+        React.createElement("header", {className: "content-is-centred header"}, 
+          React.createElement(Logo, null), 
+          React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
+          React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
+        )
       )
     )
   }
 });
 
 var Heading = React.createClass({displayName: "Heading",
+  getInitialState: function() {
+    return {
+      breadCrumbs: [
+        {
+          name: 'Home',
+          slug: 'index'
+        },
+        {
+          name: 'Documentaries',
+          slug: null
+        }
+      ]
+    }
+  },
+
   render: function() {
     return (
-      React.createElement("div", {className: "heading"}
+      React.createElement("div", {className: "heading", style: { backgroundImage: 'url(' + this.props['background'] + ')'}}, 
+        React.createElement("div", {className: "heading__tinted-overlay"}, 
+          React.createElement("div", {className: "heading__content content-is-centred"}, 
+            React.createElement(BreadCrumbs, {"bread-crumbs": this.state.breadCrumbs}), 
+            React.createElement("h1", {className: "heading__title"}, this.props['title']), 
+            React.createElement("span", {className: "heading__strapline"}, this.props['strapline'])
+          )
+        )
       )
     )
   }
@@ -546,19 +592,19 @@ var Text = React.createClass({displayName: "Text",
   }
 });
 
-var Video = React.createClass({displayName: "Video",
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   render: function() {
     return (
-      React.createElement("div", {className: "video"}
+      React.createElement("div", {className: "thumbnail-gallery"}
       )
     )
   }
 });
 
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
-      React.createElement("div", {className: "thumbnail-gallery"}
+      React.createElement("div", {className: "video"}
       )
     )
   }
