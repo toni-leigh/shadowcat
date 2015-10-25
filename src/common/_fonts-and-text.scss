@@ -29,4 +29,16 @@ p {
 .text {
   margin: 0 auto;
   max-width: 800px;
+
+  a {
+    color: $black;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: all 0.1s;
+    &:hover {
+      color: $blue-dark;
+      text-decoration: underline;
+    }
+  }
 }

@@ -4,7 +4,7 @@ var BlogPostSmall = React.createClass({
       <article className='blog-small__post text'>
         <h1 className='blog-small__post-heading'>{this.props.heading}</h1>
         <span className='blog-small__post-date'>{this.props.date}</span>
-        <div className='blog-small__post-text' dangerouslySetInnerHTML={{__html: this.props['text']}} >
+        <div className='blog-small__post-text text' dangerouslySetInnerHTML={{__html: this.props['text']}} >
         </div>
       </article>
     )
