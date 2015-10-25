@@ -144,19 +144,19 @@ var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   }
 });
 
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   render: function() {
     return (
-      React.createElement("div", {className: "button-submit"}
+      React.createElement("div", {className: "button-small"}
       )
     )
   }
 });
 
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
     return (
-      React.createElement("div", {className: "button-small"}
+      React.createElement("div", {className: "button-submit"}
       )
     )
   }
@@ -311,7 +311,7 @@ var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple
 var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadingWithStrapline",
   render: function() {
     return (
-      React.createElement("div", {class: "section-header"}, 
+      React.createElement("div", {className: "section-header"}, 
         React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
         React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
       )
@@ -398,13 +398,13 @@ var Contact = React.createClass({displayName: "Contact",
         React.createElement("div", {className: "contact content-is-centred"}, 
           React.createElement(SectionHeadingWithStrapline, {heading: "Get In Touch", strapline: "Please use any of the methods below to get in touch. We’d love to hear from you about anything."}), 
           React.createElement("form", {className: "contact__form"}, 
-            React.createElement("label", {for: "name", className: "contact__form-label"}, "Name:"), 
+            React.createElement("label", {htmlFor: "name", className: "contact__form-label"}, "Name:"), 
             React.createElement("input", {id: "name", className: "contact__form-input", type: "text", placeholder: "Enter your name"}), 
-            React.createElement("label", {for: "telephone", className: "contact__form-label"}, "Telephone:"), 
+            React.createElement("label", {htmlFor: "telephone", className: "contact__form-label"}, "Telephone:"), 
             React.createElement("input", {id: "telephone", className: "contact__form-input", type: "text", placeholder: "Enter your telephone number"}), 
-            React.createElement("label", {for: "email", className: "contact__form-label"}, "Email:"), 
+            React.createElement("label", {htmlFor: "email", className: "contact__form-label"}, "Email:"), 
             React.createElement("input", {id: "email", className: "contact__form-input", type: "text", placeholder: "you@example.com"}), 
-            React.createElement("label", {for: "message", className: "contact__form-label"}, "Message:"), 
+            React.createElement("label", {htmlFor: "message", className: "contact__form-label"}, "Message:"), 
             React.createElement("textarea", {id: "message", className: "contact__form-input contact__form-textarea", type: "text", placeholder: "Your message"}
             ), 
             React.createElement("button", {className: "contact__form-submit button"}, "Send contact")

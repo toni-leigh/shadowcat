@@ -5,13 +5,13 @@ var Contact = React.createClass({
         <div className='contact content-is-centred'>
           <SectionHeadingWithStrapline heading='Get In Touch' strapline='Please use any of the methods below to get in touch. We’d love to hear from you about anything.' />
           <form className='contact__form'>
-            <label for='name' className='contact__form-label'>Name:</label>
+            <label htmlFor='name' className='contact__form-label'>Name:</label>
             <input id='name' className='contact__form-input' type='text' placeholder='Enter your name' />
-            <label for='telephone' className='contact__form-label'>Telephone:</label>
+            <label htmlFor='telephone' className='contact__form-label'>Telephone:</label>
             <input id='telephone' className='contact__form-input' type='text' placeholder='Enter your telephone number' />
-            <label for='email' className='contact__form-label'>Email:</label>
+            <label htmlFor='email' className='contact__form-label'>Email:</label>
             <input id='email' className='contact__form-input' type='text' placeholder='you@example.com' />
-            <label for='message' className='contact__form-label'>Message:</label>
+            <label htmlFor='message' className='contact__form-label'>Message:</label>
             <textarea id='message' className='contact__form-input contact__form-textarea' type='text' placeholder='Your message'>
             </textarea>
             <button className='contact__form-submit button'>Send contact</button>
