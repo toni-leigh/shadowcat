@@ -13,7 +13,7 @@ var Home = React.createClass({
           <ServicesIntroduction services-text={this.state.node_details.node_html} />
           <OurChoiceProjects projects={this.state.home_projects} />
           <CallToAction heading='Looking for our spotlight product?' button-text='Get a DVD Copy' button-slug='products' />
-          <BlogSmall />
+          <BlogSmall blog-posts={this.state.home_blog_posts}/>
           <Contact />
           <Footer />
         </div>

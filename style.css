@@ -420,6 +420,10 @@ ul {
       font-weight: 500;
       line-height: 14px;
       margin: 0.775em 0; }
+    .blog-small__post-text p {
+      display: none; }
+      .blog-small__post-text p:first-child {
+        display: block; }
 
 .contact {
   padding-bottom: 48px;

@@ -18,5 +18,13 @@
       line-height: 14px;
       margin: 0.775em 0;
     }
+    &-text {
+      p {
+        display: none;
+        &:first-child {
+          display: block;
+        }
+      }
+    }
   }
 }
