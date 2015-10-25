@@ -8,6 +8,8 @@ var Service = React.createClass({
     return (
       <div className='service'>
         <Header page-slug='documentaries' nav-items={this.state.navItems} />
+        <Contact />
+        <Footer />
       </div>
     )
   }
