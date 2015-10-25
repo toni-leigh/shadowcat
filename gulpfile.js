@@ -3,15 +3,11 @@ var concat = require('gulp-concat');
 var react = require('gulp-react');
 var sass = require('gulp-sass');
 
-var concatenate = function() {
-  gulp.src('js_temp/**/*.js')
-    .pipe(concat('javascript.js'))
-    .pipe(gulp.dest('./'))
-}
 var jsxToJs = function() {
   gulp.src('src/**/*.js')
     .pipe(react())
-    .pipe(gulp.dest('./js_temp/'));
+    .pipe(concat('javascript.js'))
+    .pipe(gulp.dest('./'));
 }
 var scssToCss = function() {
   gulp.src('src/style.scss')
@@ -21,6 +17,5 @@ var scssToCss = function() {
 
 gulp.task('jsxToJs', jsxToJs);
 gulp.task('styles', scssToCss);
-gulp.task('concat', concatenate);
 gulp.task('js', ['jsxToJs', 'concat']);
-gulp.task('build', ['js', 'styles']);
+gulp.task('build', ['jsxToJs', 'styles']);
