@@ -1,62 +1,3 @@
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  getInitialState: function() {
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
-          React.createElement(VideoSpotlight, {src: "http://player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, null), 
-          React.createElement(OurChoiceProjects, null), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, null), 
-          React.createElement(Contact, null), 
-          React.createElement(Footer, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  render: function() {
-    return (
-      React.createElement("div", {className: "service"}
-      )
-    )
-  }
-});
-
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
@@ -90,19 +31,19 @@ var ButtonCta = React.createClass({displayName: "ButtonCta",
   }
 });
 
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-small"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-small"}
       )
     )
   }
@@ -269,6 +210,66 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
       React.createElement("div", {className: "section-header"}, 
         React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
         React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
+      )
+    )
+  }
+});
+
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
+          React.createElement(VideoSpotlight, {src: "http://player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, {"services-text": this.state.node_details.node_html}), 
+          React.createElement(OurChoiceProjects, null), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, null), 
+          React.createElement(Contact, null), 
+          React.createElement(Footer, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  render: function() {
+    return (
+      React.createElement("div", {className: "service"}
       )
     )
   }
@@ -486,23 +487,7 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
       React.createElement("article", {className: "services-introduction content-is-centred"}, 
         React.createElement("h1", {className: "services-introduction__heading"}, "Find out all about our services"), 
         React.createElement(ButtonPair, {"link-details": this.getButtonDetails()}), 
-        React.createElement("div", {className: "services-introduction__text text"}, 
-          React.createElement("p", null, 
-            "Flexitarian single-origin coffee health goth Williamsburg, before they sold out fanny pack trust f" + ' ' +
-            "und banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a bird" + ' ' +
-            "on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
-          ), 
-          React.createElement("p", null, 
-            "Williamsburg, before they sold out fanny pack trust fund banh mi.Flexitarian single-origin coffee" + ' ' +
-            "health goth  Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a" + ' ' +
-            "bird on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress."
-          ), 
-          React.createElement("p", null, 
-            "Quinoa aesthetic plaid put a bird on it, Pinterest hoodie deep v brunch twee authentic normcore" + ' ' +
-            "Portland letterpress. Flexitarian single-origin coffee health goth Williamsburg, before they sold" + ' ' +
-            "out fanny pack trust fund banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Flexitarian" + ' ' +
-            "single-origin coffee health goth Williamsburg, before they sold out."
-          )
+        React.createElement("div", {className: "services-introduction__text text", dangerouslySetInnerHTML: {__html: this.props['services-text']}}
         )
       )
     )
@@ -527,19 +512,19 @@ var Text = React.createClass({displayName: "Text",
   }
 });
 
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
-      React.createElement("div", {className: "thumbnail-gallery"}
+      React.createElement("div", {className: "video"}
       )
     )
   }
 });
 
-var Video = React.createClass({displayName: "Video",
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   render: function() {
     return (
-      React.createElement("div", {className: "video"}
+      React.createElement("div", {className: "thumbnail-gallery"}
       )
     )
   }

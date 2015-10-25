@@ -16,23 +16,7 @@ var ServicesIntroduction = React.createClass({
       <article className='services-introduction content-is-centred'>
         <h1 className='services-introduction__heading'>Find out all about our services</h1>
         <ButtonPair link-details={this.getButtonDetails()}/>
-        <div className='services-introduction__text text'>
-          <p>
-            Flexitarian single-origin coffee health goth Williamsburg, before they sold out fanny pack trust f
-            und banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a bird
-            on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress.
-          </p>
-          <p>
-            Williamsburg, before they sold out fanny pack trust fund banh mi.Flexitarian single-origin coffee
-            health goth  Flexitarian keytar biodiesel flannel Marfa tote bag. Quinoa aesthetic plaid put a
-            bird on it, Pinterest hoodie deep v brunch twee authentic normcore Portland letterpress.
-          </p>
-          <p>
-            Quinoa aesthetic plaid put a bird on it, Pinterest hoodie deep v brunch twee authentic normcore
-            Portland letterpress. Flexitarian single-origin coffee health goth Williamsburg, before they sold
-            out fanny pack trust fund banh mi. Flexitarian keytar biodiesel flannel Marfa tote bag. Flexitarian
-            single-origin coffee health goth Williamsburg, before they sold out.
-          </p>
+        <div className='services-introduction__text text' dangerouslySetInnerHTML={{__html: this.props['services-text']}} >
         </div>
       </article>
     )
