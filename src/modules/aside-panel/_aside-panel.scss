@@ -9,8 +9,6 @@
     margin-bottom: 0;
   }
 
-
-
   &__image,
   &__details {
     height: 100%;
@@ -42,6 +40,9 @@
     transition: all 0.1s;
     z-index: 1;
     &:hover {
+      opacity: 1;
+    }
+    &--always-shown {
       opacity: 1;
     }
   }

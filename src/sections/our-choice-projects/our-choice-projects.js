@@ -8,6 +8,7 @@ var OurChoiceProjects = React.createClass({
         <AsidePanel
           key={'proj' + x}
           layout-class='tile'
+          aside-type='signpost'
           heading={project.name}
           image-src={project.image}
           slug={project.url}

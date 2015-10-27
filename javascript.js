@@ -1,12 +1,33 @@
 var AsidePanel = React.createClass({displayName: "AsidePanel",
+  getButton: function() {
+    var button = null;
+    if (this.props['aside-type'] =='signpost') {
+      button = React.createElement("a", {className: "aside-panel__link button", href: this.props['slug']}, this.props['link-text'])
+    }
+    return button;
+  },
+  getImage: function() {
+    var image = null;
+    if (this.props['aside-type'] =='image') {
+      image = React.createElement("img", {className: "aside-panel__image", src: 'http://shadowcatfilms.com/' + this.props['image-src']})
+    }
+    return image;
+  },
+  hoverOverride: function() {
+    hoverOverride = '';
+    if (this.props['aside-type'] =='info') {
+      hoverOverride = 'aside-panel__details--always-shown';
+    }
+    return hoverOverride;
+  },
   render: function() {
     return (
       React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class']}, 
-        React.createElement("img", {className: "aside-panel__image", src: 'http://shadowcatfilms.com/' + this.props['image-src']}), 
-        React.createElement("div", {className: "aside-panel__details"}, 
+        this.getImage(), 
+        React.createElement("div", {className: 'aside-panel__details ' + this.hoverOverride()}, 
           React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
           React.createElement("p", {className: "aside-panel__text"}, this.props['text']), 
-          React.createElement("a", {className: "aside-panel__link button", href: this.props['slug']}, this.props['link-text'])
+          this.getButton()
         )
       )
     )
@@ -527,6 +548,7 @@ var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
         React.createElement(AsidePanel, {
           key: 'proj' + x, 
           "layout-class": "tile", 
+          "aside-type": "signpost", 
           heading: project.name, 
           "image-src": project.image, 
           slug: project.url, 
@@ -650,23 +672,19 @@ var TextDetails = React.createClass({displayName: "TextDetails",
         React.createElement("aside", {className: "text-details__aside"}, 
           React.createElement(AsidePanel, {
             heading: "This is a new aside", 
+            "aside-type": "image", 
             "image-src": "assets/img/business.jpg", 
-            slug: "null", 
-            "link-text": "null", 
             type: "", 
             text: "Meggings cray Carles Odd Future, aesthetic next level lumbersexual street art stumptown"}), 
           React.createElement(AsidePanel, {
             heading: "My new aside is also here", 
-            "image-src": "null", 
-            slug: "null", 
-            "link-text": "null", 
+            "aside-type": "info", 
             type: "", 
             text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest."}), 
           React.createElement(AsidePanel, {
             heading: "And another aside panel", 
+            "aside-type": "image", 
             "image-src": "assets/img/people1.jpg", 
-            slug: "null", 
-            "link-text": "null", 
             type: "", 
             text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch."})
         )

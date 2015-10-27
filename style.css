@@ -184,6 +184,8 @@ ul {
         padding: 7.5%; } }
     .aside-panel__details:hover {
       opacity: 1; }
+    .aside-panel__details--always-shown {
+      opacity: 1; }
   .aside-panel__heading {
     color: #48BED9;
     font-family: "Khand", sans-serif;
