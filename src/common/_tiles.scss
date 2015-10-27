@@ -1,0 +1,31 @@
+.tile.tile { // extra bit of specificity
+  padding-bottom: 100%;
+  @media (min-width: 400px) {
+    padding-bottom: 61.8%;
+  }
+  width: 100%;
+  &:last-child {
+    @media (min-width: 540px) {
+      margin-bottom: 1.25%;
+    }
+  }
+  @media (min-width: 540px) {
+    margin-right: 1.25%;
+    padding-bottom: 49.375%;
+    width: 49.375%;
+  }
+  @media (min-width: 880px) {
+    padding-bottom: 32.5%;
+    width: 32.5%;
+  }
+  &:nth-child(2n) {
+    @media (min-width: 400px) and (max-width: 879px) {
+      margin-right: 0;
+    }
+  }
+  &:nth-child(3n) {
+    @media (min-width: 880px) {
+      margin-right: 0;
+    }
+  }
+}

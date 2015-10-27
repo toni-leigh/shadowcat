@@ -7,6 +7,7 @@ var OurChoiceProjects = React.createClass({
       rows.push(
         <AsidePanel
           key={'proj' + x}
+          layout-class='tile'
           heading={project.name}
           image-src={project.image}
           slug={project.url}
@@ -23,7 +24,7 @@ var OurChoiceProjects = React.createClass({
     return (
       <article className='our-choice-projects content-is-centred'>
         <h1 className='our-choice-projects__heading'>Our choice projects</h1>
-        <div className='our-choice-projects__choices'>
+        <div className='our-choice-projects__choices tiles'>
           {this.buildPanels()}
         </div>
       </article>

@@ -1,7 +1,7 @@
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   render: function() {
     return (
-      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type']}, 
+      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class']}, 
         React.createElement("img", {className: "aside-panel__image", src: 'http://shadowcatfilms.com/' + this.props['image-src']}), 
         React.createElement("div", {className: "aside-panel__details"}, 
           React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
@@ -103,6 +103,15 @@ var InputText = React.createClass({displayName: "InputText",
   }
 });
 
+var InputTextarea = React.createClass({displayName: "InputTextarea",
+  render: function() {
+    return (
+      React.createElement("div", {className: "input-textarea"}
+      )
+    )
+  }
+});
+
 var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
   render: function() {
     return (
@@ -120,10 +129,10 @@ var Logo = React.createClass({displayName: "Logo",
   }
 });
 
-var InputTextarea = React.createClass({displayName: "InputTextarea",
+var Map = React.createClass({displayName: "Map",
   render: function() {
     return (
-      React.createElement("div", {className: "input-textarea"}
+      React.createElement("div", {className: "map"}
       )
     )
   }
@@ -195,10 +204,10 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
   }
 });
 
-var Map = React.createClass({displayName: "Map",
+var PageHeading = React.createClass({displayName: "PageHeading",
   render: function() {
     return (
-      React.createElement("div", {className: "map"}
+      React.createElement("div", {className: "page-heading"}
       )
     )
   }
@@ -208,15 +217,6 @@ var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple
   render: function() {
     return (
       React.createElement("div", {className: "section-heading-simple"}
-      )
-    )
-  }
-});
-
-var PageHeading = React.createClass({displayName: "PageHeading",
-  render: function() {
-    return (
-      React.createElement("div", {className: "page-heading"}
       )
     )
   }
@@ -390,15 +390,6 @@ var ButtonPair = React.createClass({displayName: "ButtonPair",
   }
 });
 
-var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
-  render: function() {
-    return (
-      React.createElement("div", {className: "choice-projects"}
-      )
-    )
-  }
-});
-
 var CallToAction = React.createClass({displayName: "CallToAction",
   render: function() {
     return (
@@ -407,6 +398,15 @@ var CallToAction = React.createClass({displayName: "CallToAction",
           React.createElement("h1", {className: "call-to-action__heading"}, this.props.heading), 
           React.createElement("a", {className: "call-to-action__button button", href: this.props['button-slug'] + '.html'}, this.props['button-text'])
         )
+      )
+    )
+  }
+});
+
+var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
+  render: function() {
+    return (
+      React.createElement("div", {className: "choice-projects"}
       )
     )
   }
@@ -549,6 +549,7 @@ var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
       rows.push(
         React.createElement(AsidePanel, {
           key: 'proj' + x, 
+          "layout-class": "tile", 
           heading: project.name, 
           "image-src": project.image, 
           slug: project.url, 
@@ -565,7 +566,7 @@ var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
     return (
       React.createElement("article", {className: "our-choice-projects content-is-centred"}, 
         React.createElement("h1", {className: "our-choice-projects__heading"}, "Our choice projects"), 
-        React.createElement("div", {className: "our-choice-projects__choices"}, 
+        React.createElement("div", {className: "our-choice-projects__choices tiles"}, 
           this.buildPanels()
         )
       )
