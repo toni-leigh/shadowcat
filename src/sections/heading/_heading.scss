@@ -1,8 +1,7 @@
 .heading {
   background-position: center;
   background-size: cover;
-  height: 600px;
-  height: 75vh;
+  height: 500px;
   position: relative;
 
   &__tinted-overlay {
@@ -19,7 +18,7 @@
 
   &__content {
     display: table-cell;
-    height: 75vh;
+    height: 500px;
     vertical-align: middle;
   }
 
@@ -34,6 +33,6 @@
   &__strapline {
     color: $grey-very-light;
     font-family: $font__standout;
-    font-size: 16px;
+    font-size: 20px;
   }
 }

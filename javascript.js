@@ -103,15 +103,6 @@ var InputText = React.createClass({displayName: "InputText",
   }
 });
 
-var InputTextarea = React.createClass({displayName: "InputTextarea",
-  render: function() {
-    return (
-      React.createElement("div", {className: "input-textarea"}
-      )
-    )
-  }
-});
-
 var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
   render: function() {
     return (
@@ -129,10 +120,10 @@ var Logo = React.createClass({displayName: "Logo",
   }
 });
 
-var Map = React.createClass({displayName: "Map",
+var InputTextarea = React.createClass({displayName: "InputTextarea",
   render: function() {
     return (
-      React.createElement("div", {className: "map"}
+      React.createElement("div", {className: "input-textarea"}
       )
     )
   }
@@ -204,10 +195,10 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
   }
 });
 
-var PageHeading = React.createClass({displayName: "PageHeading",
+var Map = React.createClass({displayName: "Map",
   render: function() {
     return (
-      React.createElement("div", {className: "page-heading"}
+      React.createElement("div", {className: "map"}
       )
     )
   }
@@ -217,6 +208,15 @@ var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple
   render: function() {
     return (
       React.createElement("div", {className: "section-heading-simple"}
+      )
+    )
+  }
+});
+
+var PageHeading = React.createClass({displayName: "PageHeading",
+  render: function() {
+    return (
+      React.createElement("div", {className: "page-heading"}
       )
     )
   }
@@ -298,6 +298,30 @@ var Service = React.createClass({displayName: "Service",
           background: "assets/backgrounds/sea2.jpg", 
           title: "Documentaries", 
           strapline: "This is the page that talks all about the documentaries"}), 
+        React.createElement("div", {className: "content-is-centred background background--grey-very-light"}, 
+          React.createElement(Text, null), 
+          React.createElement(AsidePanel, {
+            heading: "This is a new aside", 
+            "image-src": "assets/img/business.jpg", 
+            slug: "null", 
+            "link-text": "null", 
+            type: "", 
+            text: "Meggings cray Carles Odd Future, aesthetic next level lumbersexual street art stumptown"}), 
+          React.createElement(AsidePanel, {
+            heading: "My new aside is also here", 
+            "image-src": "null", 
+            slug: "null", 
+            "link-text": "null", 
+            type: "", 
+            text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest."}), 
+          React.createElement(AsidePanel, {
+            heading: "And another aside panel", 
+            "image-src": "assets/img/people1.jpg", 
+            slug: "null", 
+            "link-text": "null", 
+            type: "", 
+            text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch."})
+        ), 
         React.createElement(Contact, null), 
         React.createElement(Footer, null)
       )
@@ -586,7 +610,32 @@ var Testimonials = React.createClass({displayName: "Testimonials",
 var Text = React.createClass({displayName: "Text",
   render: function() {
     return (
-      React.createElement("div", {className: "text"}
+      React.createElement("div", {className: "text"}, 
+        React.createElement("p", null, 
+          "Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly" + ' ' +
+          "art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard," + ' ' +
+          "banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel,"
+        ), 
+        React.createElement("p", null, 
+          "Chillwave Wes Anderson listicle fap wayfarers Echo Park paleo readymade lumbersexual tofu +1 you probably" + ' ' +
+          "havent heard of them. Meggings flannel seitan tilde actually, hoodie cardigan master cleanse occupy"
+        ), 
+        React.createElement("h2", null, "Ethical Banksy dreamcatcher."), 
+        React.createElement("p", null, 
+          "Tofu lo-fi kitsch raw denim umami distillery. Single-origin coffee ugh art party craft beer, next level" + ' ' +
+          "shabby chic McSweeneys iPhone chambray cray narwhal. Listicle fingerstache shabby chic Tumblr keffiyeh swag." + ' ' +
+          "Leggings semiotics Pinterest artisan, Thundercats fashion axe Echo Park Pitchfork yr food truck put a" + ' ' +
+          "bird on it tilde."
+        ), 
+        React.createElement("h2", null, "Health goth shabby"), 
+        React.createElement("p", null, 
+          "Chic mumblecore cred. Gastropub asymmetrical twee High Life, tote bag squid scenester heirloom. Twee mlkshk" + ' ' +
+          "fanny pack church-key sustainable. Gastropub put a bird on it meh direct trade"
+        ), 
+        React.createElement("p", null, 
+          "Blue Bottle tattooed, sustainable salvia American Apparel literally organic. Direct trade selvage umami" + ' ' +
+          "beard chambray, Tumblr fap Etsy McSweeneys fanny pack tattooed swag High Life."
+        )
       )
     )
   }

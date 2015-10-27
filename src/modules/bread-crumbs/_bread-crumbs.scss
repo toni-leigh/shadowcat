@@ -3,17 +3,18 @@
     color: $grey-very-light;
     display: inline-block;
     font-family: $font__standout;
+    font-size: 20px;
     margin-right: 30px;
     position: relative;
     &:after {
-      border-bottom: 7px solid transparent;
+      border-bottom: 6px solid transparent;
       border-left: 10px solid $blue-dark;
-      border-top: 7px solid transparent;
+      border-top: 6px solid transparent;
       content: '';
       height: 0;
       right: -20px;
       position: absolute;
-      top: 4px;
+      top: 9px;
       width: 0;
     }
 
