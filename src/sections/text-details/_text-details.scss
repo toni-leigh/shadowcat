@@ -1,0 +1,35 @@
+.text-details {
+  @include base-padding();
+  @include clearfix();
+
+  &__text {
+    width: 100%;
+    @media (min-width: 1000px) {
+      width: 66.666% - 2.2222%;
+    }
+  }
+
+  &__aside {
+    width: 100%;
+    @media (min-width: 1000px) {
+      width: 33.333% - 1.1111%;
+    }
+  }
+
+  &--text-is-left {
+    .text-details__text {
+      float: left;
+    }
+    .text-details__aside {
+      float: right;
+    }
+  }
+
+  .text {
+    @media (min-width: 1000px) {
+      margin: 0;
+    }
+  }
+
+}
+

@@ -292,36 +292,13 @@ var Service = React.createClass({displayName: "Service",
 
   render: function() {
     return (
-      React.createElement("div", {className: "service"}, 
+      React.createElement("div", {className: "service background background--grey-very-light"}, 
         React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
         React.createElement(Heading, {
           background: "assets/backgrounds/sea2.jpg", 
           title: "Documentaries", 
           strapline: "This is the page that talks all about the documentaries"}), 
-        React.createElement("div", {className: "content-is-centred background background--grey-very-light"}, 
-          React.createElement(Text, null), 
-          React.createElement(AsidePanel, {
-            heading: "This is a new aside", 
-            "image-src": "assets/img/business.jpg", 
-            slug: "null", 
-            "link-text": "null", 
-            type: "", 
-            text: "Meggings cray Carles Odd Future, aesthetic next level lumbersexual street art stumptown"}), 
-          React.createElement(AsidePanel, {
-            heading: "My new aside is also here", 
-            "image-src": "null", 
-            slug: "null", 
-            "link-text": "null", 
-            type: "", 
-            text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest."}), 
-          React.createElement(AsidePanel, {
-            heading: "And another aside panel", 
-            "image-src": "assets/img/people1.jpg", 
-            slug: "null", 
-            "link-text": "null", 
-            type: "", 
-            text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch."})
-        ), 
+        React.createElement(TextDetails, null), 
         React.createElement(Contact, null), 
         React.createElement(Footer, null)
       )
@@ -636,6 +613,62 @@ var Text = React.createClass({displayName: "Text",
         React.createElement("p", null, 
           "Blue Bottle tattooed, sustainable salvia American Apparel literally organic. Direct trade selvage umami" + ' ' +
           "beard chambray, Tumblr fap Etsy McSweeneys fanny pack tattooed swag High Life."
+        ), 
+        React.createElement("p", null, 
+          "Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly" + ' ' +
+          "art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard," + ' ' +
+          "banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel,"
+        ), 
+        React.createElement("h2", null, "Ethical Banksy dreamcatcher."), 
+        React.createElement("p", null, 
+          "Chillwave Wes Anderson listicle fap wayfarers Echo Park paleo readymade lumbersexual tofu +1 you probably" + ' ' +
+          "havent heard of them. Meggings flannel seitan tilde actually, hoodie cardigan master cleanse occupy"
+        ), 
+        React.createElement("p", null, 
+          "Tofu lo-fi kitsch raw denim umami distillery. Single-origin coffee ugh art party craft beer, next level" + ' ' +
+          "shabby chic McSweeneys iPhone chambray cray narwhal. Listicle fingerstache shabby chic Tumblr keffiyeh swag." + ' ' +
+          "Leggings semiotics Pinterest artisan, Thundercats fashion axe Echo Park Pitchfork yr food truck put a" + ' ' +
+          "bird on it tilde."
+        ), 
+
+        React.createElement("p", null, 
+          "Chic mumblecore cred. Gastropub asymmetrical twee High Life, tote bag squid scenester heirloom. Twee mlkshk" + ' ' +
+          "fanny pack church-key sustainable. Gastropub put a bird on it meh direct trade"
+        )
+      )
+    )
+  }
+});
+
+var TextDetails = React.createClass({displayName: "TextDetails",
+  render: function() {
+    return (
+      React.createElement("div", {className: "text-details text-details--text-is-left content-is-centred"}, 
+        React.createElement("div", {className: "text-details__text"}, 
+          React.createElement(Text, null)
+        ), 
+        React.createElement("aside", {className: "text-details__aside"}, 
+          React.createElement(AsidePanel, {
+            heading: "This is a new aside", 
+            "image-src": "assets/img/business.jpg", 
+            slug: "null", 
+            "link-text": "null", 
+            type: "", 
+            text: "Meggings cray Carles Odd Future, aesthetic next level lumbersexual street art stumptown"}), 
+          React.createElement(AsidePanel, {
+            heading: "My new aside is also here", 
+            "image-src": "null", 
+            slug: "null", 
+            "link-text": "null", 
+            type: "", 
+            text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest."}), 
+          React.createElement(AsidePanel, {
+            heading: "And another aside panel", 
+            "image-src": "assets/img/people1.jpg", 
+            slug: "null", 
+            "link-text": "null", 
+            type: "", 
+            text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch."})
         )
       )
     )

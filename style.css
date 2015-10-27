@@ -49,9 +49,11 @@ ul {
   padding-left: 3.125%;
   padding-right: 3.125%;
   width: 100%; }
-  @media (min-width: 1280px) {
+  @media (min-width: 1200px) {
     .content-is-centred {
       margin: 0 auto;
+      padding-left: 40px;
+      padding-right: 40px;
       width: 1280px; } }
 
 .background {
@@ -147,9 +149,9 @@ ul {
   display: inline-block;
   margin-bottom: 1.25%;
   overflow: hidden;
-  padding-bottom: 33.3%;
+  padding-bottom: 100%;
   position: relative;
-  width: 33.3%; }
+  width: 100%; }
   .aside-panel:last-child {
     margin-bottom: 0; }
   .aside-panel__image,
@@ -417,6 +419,33 @@ ul {
   height: 56.25vw;
   max-height: 675px;
   width: 100%; }
+
+.text-details {
+  padding-bottom: 72px;
+  padding-top: 50px; }
+  .text-details:before,
+  .text-details:after {
+    content: "";
+    display: table; }
+  .text-details:after {
+    clear: both; }
+  .text-details__text {
+    width: 100%; }
+    @media (min-width: 1000px) {
+      .text-details__text {
+        width: 64.4438%; } }
+  .text-details__aside {
+    width: 100%; }
+    @media (min-width: 1000px) {
+      .text-details__aside {
+        width: 32.2219%; } }
+  .text-details--text-is-left .text-details__text {
+    float: left; }
+  .text-details--text-is-left .text-details__aside {
+    float: right; }
+  @media (min-width: 1000px) {
+    .text-details .text {
+      margin: 0; } }
 
 .button-pair {
   margin-bottom: 50px;

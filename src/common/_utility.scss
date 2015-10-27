@@ -2,8 +2,10 @@
   padding-left: 3.125%;
   padding-right: 3.125%;
   width: 100%;
-  @media (min-width: 1280px) {
+  @media (min-width: 1200px) {
     margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
     width: 1280px;
   }
 }
