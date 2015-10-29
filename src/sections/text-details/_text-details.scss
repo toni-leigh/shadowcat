@@ -3,8 +3,10 @@
   @include clearfix();
 
   &__text {
+    margin-bottom: $general-padding__top;
     width: 100%;
     @media (min-width: 1000px) {
+      margin-bottom: 0;
       width: 66.666% - 2.2222%;
     }
   }
@@ -13,6 +15,50 @@
     width: 100%;
     @media (min-width: 1000px) {
       width: 33.333% - 1.1111%;
+    }
+
+    &-panel {
+      margin-bottom: 1.25%;
+      width: 100%;
+      @media (min-width: 480px) {
+        margin-bottom: 0;
+        margin-right: 1.25%;
+        padding-bottom: 49.375%;
+        width: 49.375%;
+        &:first-of-type {
+          margin-bottom: 1.25%;
+          margin-right: 0;
+          padding-bottom: 49.375%;
+          width: 100%;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 800px) {
+        margin-bottom: 0;
+        margin-right: 1.25%;
+        padding-bottom: 32.5%;
+        width: 32.5%;
+        &:first-of-type {
+          margin-bottom: 0;
+          margin-right: 1.25%;
+          padding-bottom: 32.5%;
+          width: 32.3%;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 1000px) {
+        margin-bottom: 1.25%;
+        padding-bottom: 100%;
+        width: 100%;
+        &:first-of-type {
+          padding-bottom: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 

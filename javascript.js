@@ -106,19 +106,19 @@ var ContactDetail = React.createClass({displayName: "ContactDetail",
   }
 });
 
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
-      React.createElement("div", {className: "image-thumbnail"}
+      React.createElement("div", {className: "input-text"}
       )
     )
   }
 });
 
-var InputText = React.createClass({displayName: "InputText",
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
-      React.createElement("div", {className: "input-text"}
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -671,17 +671,20 @@ var TextDetails = React.createClass({displayName: "TextDetails",
         ), 
         React.createElement("aside", {className: "text-details__aside"}, 
           React.createElement(AsidePanel, {
+            "layout-class": "text-details__aside-panel", 
             heading: "This is a new aside", 
-            "aside-type": "image", 
-            "image-src": "assets/img/business.jpg", 
+            "aside-type": "info", 
             type: "", 
             text: "Meggings cray Carles Odd Future, aesthetic next level lumbersexual street art stumptown"}), 
           React.createElement(AsidePanel, {
+            "layout-class": "text-details__aside-panel", 
             heading: "My new aside is also here", 
-            "aside-type": "info", 
+            "aside-type": "image", 
+            "image-src": "assets/img/business.jpg", 
             type: "", 
             text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest."}), 
           React.createElement(AsidePanel, {
+            "layout-class": "text-details__aside-panel", 
             heading: "And another aside panel", 
             "aside-type": "image", 
             "image-src": "assets/img/people1.jpg", 
