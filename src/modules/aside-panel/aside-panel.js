@@ -8,7 +8,7 @@ var AsidePanel = React.createClass({
   },
   getImage: function() {
     var image = null;
-    if (this.props['aside-type'] =='image') {
+    if (this.props['aside-type'] =='image' || this.props['aside-type'] =='signpost') {
       image = <img className='aside-panel__image' src={'http://shadowcatfilms.com/' + this.props['image-src']} />
     }
     return image;

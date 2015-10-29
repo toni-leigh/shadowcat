@@ -373,7 +373,6 @@ ul {
     font-size: 20px; }
 
 .header {
-  background-color: #fafafa;
   box-sizing: content-box;
   height: 98px;
   max-width: 1200px;
@@ -600,7 +599,7 @@ ul {
       margin-bottom: 0.25em;
       width: 100%; }
     .contact__form-input {
-      background-color: #2677bb;
+      background-color: rgba(255, 255, 255, 0.1);
       border: 2px solid #fafafa;
       border-radius: 3px;
       color: #fafafa;
@@ -752,5 +751,6 @@ ul {
   background: url("/assets/img/noise.png"), radial-gradient(circle at 50% 400px, #fff 0%, #e0e0e0 100%);
   width: 100%; }
 
+.home .header,
 .home .background--grey-very-light {
-  background-color: transparent; }
+  background: none; }
