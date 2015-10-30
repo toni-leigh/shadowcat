@@ -417,27 +417,11 @@ var Header = React.createClass({displayName: "Header",
 });
 
 var Heading = React.createClass({displayName: "Heading",
-  getInitialState: function() {
-    return {
-      breadCrumbs: [
-        {
-          name: 'Home',
-          slug: 'index'
-        },
-        {
-          name: 'Documentaries',
-          slug: null
-        }
-      ]
-    }
-  },
-
   render: function() {
     return (
       React.createElement("div", {className: "heading", style: { backgroundImage: 'url(' + this.props['background'] + ')'}}, 
         React.createElement("div", {className: "heading__tinted-overlay"}, 
           React.createElement("div", {className: "heading__content content-is-centred"}, 
-            React.createElement(BreadCrumbs, {"bread-crumbs": this.state.breadCrumbs}), 
             React.createElement("h1", {className: "heading__title"}, this.props['title']), 
             React.createElement("span", {className: "heading__strapline"}, this.props['strapline'])
           )

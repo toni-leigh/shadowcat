@@ -360,6 +360,7 @@ ul {
   .heading__content {
     display: table-cell;
     height: 500px;
+    text-align: center;
     vertical-align: middle; }
   .heading__title {
     color: #fafafa;
