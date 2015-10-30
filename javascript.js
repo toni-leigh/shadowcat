@@ -1,3 +1,76 @@
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
+          React.createElement(VideoSpotlight, {src: "http://player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, {"services-text": this.state.node_details.node_html}), 
+          React.createElement(OurChoiceProjects, {projects: this.state.home_projects}), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, {"blog-posts": this.state.home_blog_posts}), 
+          React.createElement(Contact, null), 
+          React.createElement(Footer, null)
+        )
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "service background background--grey-very-light"}, 
+        React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
+        React.createElement(Heading, {
+          background: "assets/backgrounds/sea2.jpg", 
+          title: "Documentaries", 
+          strapline: "This is the page that talks all about the documentaries"}), 
+        React.createElement(TextDetails, null), 
+        React.createElement(Contact, null), 
+        React.createElement(Footer, null)
+      )
+    )
+  }
+});
+
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   getButton: function() {
     var button = null;
@@ -88,28 +161,10 @@ var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   }
 });
 
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-submit"}
-      )
-    )
-  }
-});
-
 var ContactDetail = React.createClass({displayName: "ContactDetail",
   render: function() {
     return (
       React.createElement("div", {className: "contact-detail"}
-      )
-    )
-  }
-});
-
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -128,6 +183,24 @@ var InputTextarea = React.createClass({displayName: "InputTextarea",
   render: function() {
     return (
       React.createElement("div", {className: "input-textarea"}
+      )
+    )
+  }
+});
+
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-submit"}
+      )
+    )
+  }
+});
+
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -630,79 +703,6 @@ var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
     return (
       React.createElement("div", {className: "content-is-centred"}, 
         React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
-      )
-    )
-  }
-});
-
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  getInitialState: function() {
-    console.log(window.data)
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
-          React.createElement(VideoSpotlight, {src: "http://player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, {"services-text": this.state.node_details.node_html}), 
-          React.createElement(OurChoiceProjects, {projects: this.state.home_projects}), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, {"blog-posts": this.state.home_blog_posts}), 
-          React.createElement(Contact, null), 
-          React.createElement(Footer, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  getInitialState: function() {
-    console.log(window.data)
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("div", {className: "service background background--grey-very-light"}, 
-        React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
-        React.createElement(Heading, {
-          background: "assets/backgrounds/sea2.jpg", 
-          title: "Documentaries", 
-          strapline: "This is the page that talks all about the documentaries"}), 
-        React.createElement(TextDetails, null), 
-        React.createElement(Contact, null), 
-        React.createElement(Footer, null)
       )
     )
   }

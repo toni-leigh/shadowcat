@@ -475,10 +475,11 @@ ul {
             margin-right: 0; } }
       @media (min-width: 1000px) {
         .text-details__aside-panel {
-          margin-bottom: 1.25%;
+          margin-bottom: 10%;
           padding-bottom: 100%;
           width: 100%; }
           .text-details__aside-panel:first-of-type {
+            margin-bottom: 10%;
             padding-bottom: 100%;
             width: 100%; } }
   .text-details--text-is-left .text-details__text {
