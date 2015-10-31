@@ -150,6 +150,15 @@ var Logo = React.createClass({displayName: "Logo",
   }
 });
 
+var Map = React.createClass({displayName: "Map",
+  render: function() {
+    return (
+      React.createElement("div", {className: "map"}
+      )
+    )
+  }
+});
+
 var Navigation = React.createClass({displayName: "Navigation",
   buildList: function() {
     var navItems = this.props['nav-items'];
@@ -211,15 +220,6 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
         React.createElement("a", {className: this.navLinkClass(), href: this.navUrl()}, 
           this.props.name
         )
-      )
-    )
-  }
-});
-
-var Map = React.createClass({displayName: "Map",
-  render: function() {
-    return (
-      React.createElement("div", {className: "map"}
       )
     )
   }
@@ -319,9 +319,13 @@ var Service = React.createClass({displayName: "Service",
           background: "assets/backgrounds/sea2.jpg", 
           title: "Documentaries", 
           strapline: "This is the page that talks all about the documentaries"}), 
-        React.createElement(TextDetails, null), 
+        React.createElement(TextDetails, {"align-text": "left"}), 
         React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
         React.createElement(Testimonials, null), 
+        React.createElement(CallToAction, {heading: "Looking for our documentary products?", "button-text": "View Products", "button-slug": "products"}), 
+        React.createElement(ImageFixed, {src: ""}), 
+        React.createElement(TextDetails, {"align-text": "right"}), 
+        React.createElement(ImageFixed, {src: ""}), 
         React.createElement(Contact, null), 
         React.createElement(Footer, null)
       )
@@ -695,22 +699,22 @@ var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   }
 });
 
+var Video = React.createClass({displayName: "Video",
+  render: function() {
+    return (
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
+      )
+    )
+  }
+});
+
 var VideoPanel = React.createClass({displayName: "VideoPanel",
   render: function() {
     return (
       React.createElement("div", {className: "video-panel background background--blacker"}, 
         React.createElement(SectionHeadingWithStrapline, {heading: "Documentaries Showreel Video", strapline: "A collection of excerpts from our documentary films"}), 
         React.createElement(Video, {src: this.props.src})
-      )
-    )
-  }
-});
-
-var Video = React.createClass({displayName: "Video",
-  render: function() {
-    return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
       )
     )
   }
