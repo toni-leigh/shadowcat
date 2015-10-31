@@ -61,19 +61,19 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
@@ -88,19 +88,19 @@ var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   }
 });
 
-var ContactDetail = React.createClass({displayName: "ContactDetail",
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
     return (
-      React.createElement("div", {className: "contact-detail"}
+      React.createElement("div", {className: "button-submit"}
       )
     )
   }
 });
 
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+var ContactDetail = React.createClass({displayName: "ContactDetail",
   render: function() {
     return (
-      React.createElement("div", {className: "button-submit"}
+      React.createElement("div", {className: "contact-detail"}
       )
     )
   }
@@ -146,15 +146,6 @@ var Logo = React.createClass({displayName: "Logo",
   render: function() {
     return (
       React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
-    )
-  }
-});
-
-var Map = React.createClass({displayName: "Map",
-  render: function() {
-    return (
-      React.createElement("div", {className: "map"}
-      )
     )
   }
 });
@@ -220,6 +211,15 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
         React.createElement("a", {className: this.navLinkClass(), href: this.navUrl()}, 
           this.props.name
         )
+      )
+    )
+  }
+});
+
+var Map = React.createClass({displayName: "Map",
+  render: function() {
+    return (
+      React.createElement("div", {className: "map"}
       )
     )
   }
@@ -321,6 +321,7 @@ var Service = React.createClass({displayName: "Service",
           strapline: "This is the page that talks all about the documentaries"}), 
         React.createElement(TextDetails, null), 
         React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
+        React.createElement(Testimonials, null), 
         React.createElement(Contact, null), 
         React.createElement(Footer, null)
       )
@@ -402,6 +403,15 @@ var CallToAction = React.createClass({displayName: "CallToAction",
   }
 });
 
+var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
+  render: function() {
+    return (
+      React.createElement("div", {className: "choice-projects"}
+      )
+    )
+  }
+});
+
 var Contact = React.createClass({displayName: "Contact",
   render: function() {
     return (
@@ -450,15 +460,6 @@ var Contact = React.createClass({displayName: "Contact",
   }
 });
 
-var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
-  render: function() {
-    return (
-      React.createElement("div", {className: "choice-projects"}
-      )
-    )
-  }
-});
-
 var Footer = React.createClass({displayName: "Footer",
   render: function() {
     return (
@@ -500,6 +501,15 @@ var Heading = React.createClass({displayName: "Heading",
             React.createElement("span", {className: "heading__strapline"}, this.props['strapline'])
           )
         )
+      )
+    )
+  }
+});
+
+var ImageFixed = React.createClass({displayName: "ImageFixed",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-fixed"}
       )
     )
   }
@@ -574,19 +584,13 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
   }
 });
 
-var ImageFixed = React.createClass({displayName: "ImageFixed",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-fixed"}
-      )
-    )
-  }
-});
-
 var Testimonials = React.createClass({displayName: "Testimonials",
   render: function() {
     return (
-      React.createElement("div", {className: "testimonials"}
+      React.createElement("div", {className: "background background--grey-very-light"}, 
+        React.createElement("div", {className: "testimonials content-is-centred"}, 
+          React.createElement(SectionHeadingWithStrapline, {heading: "Projects & Testimonials", strapline: "See our three choice projects"})
+        )
       )
     )
   }
@@ -691,22 +695,22 @@ var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   }
 });
 
-var Video = React.createClass({displayName: "Video",
-  render: function() {
-    return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
-      )
-    )
-  }
-});
-
 var VideoPanel = React.createClass({displayName: "VideoPanel",
   render: function() {
     return (
       React.createElement("div", {className: "video-panel background background--blacker"}, 
         React.createElement(SectionHeadingWithStrapline, {heading: "Documentaries Showreel Video", strapline: "A collection of excerpts from our documentary films"}), 
         React.createElement(Video, {src: this.props.src})
+      )
+    )
+  }
+});
+
+var Video = React.createClass({displayName: "Video",
+  render: function() {
+    return (
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
       )
     )
   }

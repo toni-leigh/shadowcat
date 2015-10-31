@@ -511,6 +511,10 @@ ul {
   max-height: 675px;
   width: 100%; }
 
+.testimonials {
+  padding-bottom: 72px;
+  padding-top: 50px; }
+
 .button-pair {
   margin-bottom: 50px;
   text-align: center; }

@@ -14,6 +14,7 @@ var Service = React.createClass({
           strapline='This is the page that talks all about the documentaries' />
         <TextDetails />
         <VideoPanel src='http://player.vimeo.com/video/67992157' />
+        <Testimonials />
         <Contact />
         <Footer />
       </div>
