@@ -68,6 +68,8 @@ ul {
   right: 0; }
   .background--black {
     background-color: #050505; }
+  .background--blacker {
+    background-color: #000; }
   .background--blue {
     background-color: #3d91d7; }
     .background--blue-dark {
@@ -421,6 +423,12 @@ ul {
         margin-left: 30px; } }
   .header .logo {
     float: left; }
+
+.video-panel {
+  padding-bottom: 72px;
+  padding-top: 50px;
+  background-image: none;
+  color: #fafafa; }
 
 .video {
   border: none;

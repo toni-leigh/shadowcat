@@ -19,6 +19,10 @@
     background-color: $black;
   }
 
+  &--blacker {
+    background-color: #000;
+  }
+
   &--blue {
     background-color: $blue-light;
     &-dark {

@@ -1,3 +1,6 @@
 .video-panel {
+  @include base-padding();
 
+  background-image: none;
+  color: $grey-very-light;
 }
