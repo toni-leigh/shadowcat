@@ -42,7 +42,15 @@ p {
     }
   }
 
+  h1 {
+    font-family: $font__standout;
+    font-size: 30px;
+    margin-bottom: $general-padding__strapline-spacing;
+  }
+
   h2 {
     font-family: $font__standout;
+    font-size: 24px;
+    margin-bottom: $general-padding__strapline-spacing;
   }
 }

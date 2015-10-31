@@ -1,7 +1,7 @@
 // variables and mixins
 @import "common/_colours";
-@import "common/_fonts-and-text";
 @import "common/_variables";
+@import "common/_fonts-and-text";
 @import "common/_reset";
 
 // common
@@ -31,7 +31,8 @@
 // page sections
 @import "sections/heading/_heading";
 @import "sections/header/_header";
-@import "sections/video-spotlight/_video-spotlight";
+@import "sections/video-panel/_video-panel";
+@import "sections/video/_video";
 @import "sections/text-details/_text-details";
 @import "sections/text/_text";
 @import "sections/aside/_aside";

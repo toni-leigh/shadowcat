@@ -24,8 +24,14 @@ p {
     .text a:hover {
       color: #2677bb;
       text-decoration: underline; }
+  .text h1 {
+    font-family: "Khand", sans-serif;
+    font-size: 30px;
+    margin-bottom: 24px; }
   .text h2 {
-    font-family: "Khand", sans-serif; }
+    font-family: "Khand", sans-serif;
+    font-size: 24px;
+    margin-bottom: 24px; }
 
 * {
   box-sizing: border-box; }
@@ -416,7 +422,7 @@ ul {
   .header .logo {
     float: left; }
 
-.video-spotlight {
+.video {
   border: none;
   box-shadow: 0 0 50px 0 rgba(89, 89, 89, 0.2);
   height: 56.25vw;
@@ -489,6 +495,13 @@ ul {
   @media (min-width: 1000px) {
     .text-details .text {
       margin: 0; } }
+
+.video {
+  border: none;
+  box-shadow: 0 0 50px 0 rgba(89, 89, 89, 0.2);
+  height: 56.25vw;
+  max-height: 675px;
+  width: 100%; }
 
 .button-pair {
   margin-bottom: 50px;

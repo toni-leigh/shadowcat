@@ -1,7 +1,8 @@
 var Text = React.createClass({
   render: function() {
     return (
-      <div className='text'>
+      <section className='text'>
+        <h1>This is the main heading up here</h1>
         <p>
           Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly
           art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard,
@@ -48,7 +49,7 @@ var Text = React.createClass({
           Chic mumblecore cred. Gastropub asymmetrical twee High Life, tote bag squid scenester heirloom. Twee mlkshk
           fanny pack church-key sustainable. Gastropub put a bird on it meh direct trade
         </p>
-      </div>
+      </section>
     )
   }
 });

@@ -16,15 +16,6 @@ var BlogPost = React.createClass({displayName: "BlogPost",
   }
 });
 
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
 var Home = React.createClass({displayName: "Home",
   getInitialState: function() {
     console.log(window.data)
@@ -36,7 +27,7 @@ var Home = React.createClass({displayName: "Home",
       React.createElement("main", {className: "home"}, 
         React.createElement("div", {className: "home__top-wrapper"}, 
           React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
-          React.createElement(VideoSpotlight, {src: "http://player.vimeo.com/video/95396328"}), 
+          React.createElement(Video, {src: "http://player.vimeo.com/video/95396328"}), 
           React.createElement(ServicesIntroduction, {"services-text": this.state.node_details.node_html}), 
           React.createElement(OurChoiceProjects, {projects: this.state.home_projects}), 
           React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
@@ -44,6 +35,15 @@ var Home = React.createClass({displayName: "Home",
           React.createElement(Contact, null), 
           React.createElement(Footer, null)
         )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
       )
     )
   }
@@ -161,10 +161,28 @@ var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   }
 });
 
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-submit"}
+      )
+    )
+  }
+});
+
 var ContactDetail = React.createClass({displayName: "ContactDetail",
   render: function() {
     return (
       React.createElement("div", {className: "contact-detail"}
+      )
+    )
+  }
+});
+
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -183,24 +201,6 @@ var InputTextarea = React.createClass({displayName: "InputTextarea",
   render: function() {
     return (
       React.createElement("div", {className: "input-textarea"}
-      )
-    )
-  }
-});
-
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-submit"}
-      )
-    )
-  }
-});
-
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -594,7 +594,8 @@ var Testimonials = React.createClass({displayName: "Testimonials",
 var Text = React.createClass({displayName: "Text",
   render: function() {
     return (
-      React.createElement("div", {className: "text"}, 
+      React.createElement("section", {className: "text"}, 
+        React.createElement("h1", null, "This is the main heading up here"), 
         React.createElement("p", null, 
           "Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly" + ' ' +
           "art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard," + ' ' +
@@ -692,17 +693,18 @@ var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
 var Video = React.createClass({displayName: "Video",
   render: function() {
     return (
-      React.createElement("div", {className: "video"}
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
       )
     )
   }
 });
 
-var VideoSpotlight = React.createClass({displayName: "VideoSpotlight",
+var VideoPanel = React.createClass({displayName: "VideoPanel",
   render: function() {
     return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video-spotlight", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
+      React.createElement("div", {className: "video-panel"}, 
+        React.createElement(Video, {src: this.props.src})
       )
     )
   }
