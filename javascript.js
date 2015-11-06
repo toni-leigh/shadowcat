@@ -64,19 +64,19 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
@@ -324,7 +324,7 @@ var Service = React.createClass({displayName: "Service",
           strapline: this.state.node.short_desc}), 
         React.createElement(TextDetails, {"align-text": "left", heading: "Main Details Text", text: this.state.node_details.node_html, "aside-colours": ['blue-light','blue','grey']}), 
         React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
-        React.createElement(Testimonials, null), 
+        React.createElement(Testimonials, {projects: this.state.documentaries}), 
         React.createElement(CallToAction, {heading: "Looking for our documentary products?", "button-text": "View Products", "button-slug": "products"}), 
         React.createElement(ImageFixed, {src: ""}), 
         React.createElement(TextDetails, {"align-text": "right", heading: "Secondary Details Text", text: this.state.node_details.secondary_html, "aside-colours": ['grey','blue-light','blue']}), 
@@ -484,20 +484,6 @@ var Footer = React.createClass({displayName: "Footer",
   }
 });
 
-var Header = React.createClass({displayName: "Header",
-  render: function() {
-    return (
-      React.createElement("div", {className: "background background--grey-very-light"}, 
-        React.createElement("header", {className: "content-is-centred header"}, 
-          React.createElement(Logo, null), 
-          React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
-          React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
-        )
-      )
-    )
-  }
-});
-
 var Heading = React.createClass({displayName: "Heading",
   render: function() {
     return (
@@ -507,6 +493,20 @@ var Heading = React.createClass({displayName: "Heading",
             React.createElement("h1", {className: "heading__title"}, this.props['title']), 
             React.createElement("span", {className: "heading__strapline"}, this.props['strapline'])
           )
+        )
+      )
+    )
+  }
+});
+
+var Header = React.createClass({displayName: "Header",
+  render: function() {
+    return (
+      React.createElement("div", {className: "background background--grey-very-light"}, 
+        React.createElement("header", {className: "content-is-centred header"}, 
+          React.createElement(Logo, null), 
+          React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
+          React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
         )
       )
     )
@@ -591,12 +591,36 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
   }
 });
 
+var Testimonial = React.createClass({displayName: "Testimonial",
+  render: function() {
+    return (
+      React.createElement("div", {className: "testimonial"}
+      )
+    )
+  }
+});
+
 var Testimonials = React.createClass({displayName: "Testimonials",
+  buildPanels: function() {
+    var projects = this.props['projects'];
+    var rows = [];
+    var x = 0;
+    projects.forEach(function(project) {
+      rows.push(
+        React.createElement(Testimonial, {
+          key: 'testimonial' + x})
+      );
+      x ++;
+    });
+    return rows;
+  },
+
   render: function() {
     return (
       React.createElement("div", {className: "background background--grey-very-light"}, 
         React.createElement("div", {className: "testimonials content-is-centred"}, 
-          React.createElement(SectionHeadingWithStrapline, {heading: "Projects & Testimonials", strapline: "See our three choice projects"})
+          React.createElement(SectionHeadingWithStrapline, {heading: "Projects & Testimonials", strapline: "See our three choice projects"}), 
+          this.buildPanels()
         )
       )
     )
