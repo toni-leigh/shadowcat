@@ -1,3 +1,7 @@
+::selection {
+  background: #2677bb;
+  color: #fafafa; }
+
 p {
   color: #595959;
   font-size: 14px;
