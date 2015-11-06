@@ -1,3 +1,5 @@
+$aside-panel__border-width: 3px;
+
 .aside-panel {
   display: inline-block;
   margin-bottom: 1.25%;
@@ -30,7 +32,7 @@
   }
   &__details {
     background-color: rgba($grey-very-light, 0.8);
-    border: 3px solid $blue-dark;
+    border: $aside-panel__border-width solid $blue-dark;
     opacity: 0;
     padding: 5%;
     @media (min-width: 540px) {
@@ -87,6 +89,46 @@
         background-color: $green-dark;
         color: $grey-very-light;
       }
+    }
+  }
+
+  &.green {
+    border: $aside-panel__border-width solid $green-dark;
+    .aside-panel__details {
+      border: none;
+    }
+    .aside-panel__heading {
+      color: $green-dark;
+    }
+  }
+
+  &.grey {
+    border: $aside-panel__border-width solid $grey-mid;
+    .aside-panel__details {
+      border: none;
+    }
+    .aside-panel__heading {
+      color: $grey-mid;
+    }
+  }
+
+  &.blue-light {
+    border: $aside-panel__border-width solid $blue-light;
+    .aside-panel__details {
+      border: none;
+    }
+    .aside-panel__heading {
+      color: $blue-light;
+    }
+  }
+
+  &.blue {
+    border: $aside-panel__border-width solid $blue-dark;
+    .aside-panel__details {
+      border: none;
+    }
+    .aside-panel__heading {
+      color: $blue-dark;
     }
   }
 }

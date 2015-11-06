@@ -12,12 +12,12 @@ var Service = React.createClass({
           background='assets/backgrounds/sea2.jpg'
           title={this.state.node.name}
           strapline={this.state.node.short_desc} />
-        <TextDetails align-text='left' heading='Main Details Text' text={this.state.node_details.node_html}/>
+        <TextDetails align-text='left' heading='Main Details Text' text={this.state.node_details.node_html} aside-colours={['blue-light','blue','grey']}/>
         <VideoPanel src='http://player.vimeo.com/video/67992157' />
         <Testimonials />
         <CallToAction heading='Looking for our documentary products?' button-text='View Products' button-slug='products' />
         <ImageFixed src=''/>
-        <TextDetails align-text='right' heading='Secondary Details Text' text={this.state.node_details.secondary_html}/>
+        <TextDetails align-text='right' heading='Secondary Details Text' text={this.state.node_details.secondary_html} aside-colours={['grey','blue-light','blue']}/>
         <ImageFixed src=''/>
         <Contact />
         <Footer />

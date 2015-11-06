@@ -75,7 +75,7 @@ ul {
   .background--blacker {
     background-color: #000; }
   .background--blue {
-    background-color: #3d91d7; }
+    background-color: #67a9e0; }
     .background--blue-dark {
       background-color: #2677bb; }
   .background--grey-very-light {
@@ -233,6 +233,30 @@ ul {
     .aside-panel--video .aside-panel__link:hover {
       background-color: #3B7736;
       color: #fafafa; }
+  .aside-panel.green {
+    border: 3px solid #3B7736; }
+    .aside-panel.green .aside-panel__details {
+      border: none; }
+    .aside-panel.green .aside-panel__heading {
+      color: #3B7736; }
+  .aside-panel.grey {
+    border: 3px solid #595959; }
+    .aside-panel.grey .aside-panel__details {
+      border: none; }
+    .aside-panel.grey .aside-panel__heading {
+      color: #595959; }
+  .aside-panel.blue-light {
+    border: 3px solid #67a9e0; }
+    .aside-panel.blue-light .aside-panel__details {
+      border: none; }
+    .aside-panel.blue-light .aside-panel__heading {
+      color: #67a9e0; }
+  .aside-panel.blue {
+    border: 3px solid #2677bb; }
+    .aside-panel.blue .aside-panel__details {
+      border: none; }
+    .aside-panel.blue .aside-panel__heading {
+      color: #2677bb; }
 
 @media (min-width: 900px) {
   .navigation {
@@ -547,7 +571,7 @@ ul {
       .button-pair__button {
         width: auto; } }
     .button-pair__button:hover {
-      background-color: #3d91d7; }
+      background-color: #67a9e0; }
     .button-pair__button-2 {
       background-color: #3B7736;
       margin-bottom: 0; }

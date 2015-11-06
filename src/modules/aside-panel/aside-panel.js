@@ -6,6 +6,7 @@ var AsidePanel = React.createClass({
     }
     return button;
   },
+
   getImage: function() {
     var image = null;
     if (this.props['aside-type'] =='image' || this.props['aside-type'] =='signpost') {
@@ -13,6 +14,7 @@ var AsidePanel = React.createClass({
     }
     return image;
   },
+
   hoverOverride: function() {
     hoverOverride = '';
     if (this.props['aside-type'] =='info') {
@@ -20,9 +22,10 @@ var AsidePanel = React.createClass({
     }
     return hoverOverride;
   },
+
   render: function() {
     return (
-      <section className={'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class']}>
+      <section className={'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class'] + ' ' + this.props['colour']} >
         {this.getImage()}
         <div className={'aside-panel__details ' + this.hoverOverride()}>
           <h2 className='aside-panel__heading'>{this.props['heading']}</h2>

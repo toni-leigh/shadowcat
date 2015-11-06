@@ -6,6 +6,7 @@ var AsidePanel = React.createClass({displayName: "AsidePanel",
     }
     return button;
   },
+
   getImage: function() {
     var image = null;
     if (this.props['aside-type'] =='image' || this.props['aside-type'] =='signpost') {
@@ -13,6 +14,7 @@ var AsidePanel = React.createClass({displayName: "AsidePanel",
     }
     return image;
   },
+
   hoverOverride: function() {
     hoverOverride = '';
     if (this.props['aside-type'] =='info') {
@@ -20,9 +22,10 @@ var AsidePanel = React.createClass({displayName: "AsidePanel",
     }
     return hoverOverride;
   },
+
   render: function() {
     return (
-      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class']}, 
+      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class'] + ' ' + this.props['colour']}, 
         this.getImage(), 
         React.createElement("div", {className: 'aside-panel__details ' + this.hoverOverride()}, 
           React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
@@ -319,12 +322,12 @@ var Service = React.createClass({displayName: "Service",
           background: "assets/backgrounds/sea2.jpg", 
           title: this.state.node.name, 
           strapline: this.state.node.short_desc}), 
-        React.createElement(TextDetails, {"align-text": "left", heading: "Main Details Text", text: this.state.node_details.node_html}), 
+        React.createElement(TextDetails, {"align-text": "left", heading: "Main Details Text", text: this.state.node_details.node_html, "aside-colours": ['blue-light','blue','grey']}), 
         React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
         React.createElement(Testimonials, null), 
         React.createElement(CallToAction, {heading: "Looking for our documentary products?", "button-text": "View Products", "button-slug": "products"}), 
         React.createElement(ImageFixed, {src: ""}), 
-        React.createElement(TextDetails, {"align-text": "right", heading: "Secondary Details Text", text: this.state.node_details.secondary_html}), 
+        React.createElement(TextDetails, {"align-text": "right", heading: "Secondary Details Text", text: this.state.node_details.secondary_html, "aside-colours": ['grey','blue-light','blue']}), 
         React.createElement(ImageFixed, {src: ""}), 
         React.createElement(Contact, null), 
         React.createElement(Footer, null)
@@ -624,21 +627,24 @@ var TextDetails = React.createClass({displayName: "TextDetails",
             heading: "This is a new aside", 
             "aside-type": "info", 
             type: "", 
-            text: "Meggings cray Carles Odd Future, aesthetic next level lumbersexual street art stumptown"}), 
+            text: "Meggings cray Carles Odd Future, aesthetic next level lumbersexual street art stumptown", 
+            colour: this.props['aside-colours'][0]}), 
           React.createElement(AsidePanel, {
             "layout-class": "text-details__aside-panel", 
             heading: "My new aside is also here", 
             "aside-type": "image", 
             "image-src": "assets/img/business.jpg", 
             type: "", 
-            text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest."}), 
+            text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest.", 
+            colour: this.props['aside-colours'][1]}), 
           React.createElement(AsidePanel, {
             "layout-class": "text-details__aside-panel", 
             heading: "And another aside panel", 
             "aside-type": "image", 
             "image-src": "assets/img/people1.jpg", 
             type: "", 
-            text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch."})
+            text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch.", 
+            colour: this.props['aside-colours'][2]})
         )
       )
     )
