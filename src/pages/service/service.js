@@ -10,14 +10,14 @@ var Service = React.createClass({
         <Header page-slug='documentaries' nav-items={this.state.navItems} />
         <Heading
           background='assets/backgrounds/sea2.jpg'
-          title='Documentaries'
-          strapline='This is the page that talks all about the documentaries' />
-        <TextDetails align-text='left'/>
+          title={this.state.node.name}
+          strapline={this.state.node.short_desc} />
+        <TextDetails align-text='left' heading='Main Details Text' text={this.state.node_details.node_html}/>
         <VideoPanel src='http://player.vimeo.com/video/67992157' />
         <Testimonials />
         <CallToAction heading='Looking for our documentary products?' button-text='View Products' button-slug='products' />
         <ImageFixed src=''/>
-        <TextDetails align-text='right'/>
+        <TextDetails align-text='right' heading='Secondary Details Text' text={this.state.node_details.secondary_html}/>
         <ImageFixed src=''/>
         <Contact />
         <Footer />

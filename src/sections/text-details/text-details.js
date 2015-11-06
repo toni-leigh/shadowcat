@@ -3,7 +3,7 @@ var TextDetails = React.createClass({
     return (
       <div className={'text-details text-details--text-is-' + this.props['align-text'] + ' content-is-centred'}>
         <div className='text-details__text'>
-          <Text />
+          <Text heading={this.props['heading']} text={this.props['text']} />
         </div>
         <aside className='text-details__aside'>
           <AsidePanel
