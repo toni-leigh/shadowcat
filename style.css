@@ -1,5 +1,5 @@
-::selection {
-  background: #2677bb;
+*::selection {
+  background: #595959;
   color: #fafafa; }
 
 p {
@@ -504,6 +504,10 @@ ul {
     float: left; }
   .text-details--text-is-left .text-details__aside {
     float: right; }
+  .text-details--text-is-right .text-details__text {
+    float: right; }
+  .text-details--text-is-right .text-details__aside {
+    float: left; }
   @media (min-width: 1000px) {
     .text-details .text {
       margin: 0; } }

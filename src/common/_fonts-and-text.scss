@@ -10,8 +10,8 @@ $font__standout: 'Khand', sans-serif;
   font-weight: 400;
 }
 
-::selection {
-  background: $blue-dark;
+& *::selection {
+  background: $grey-mid;
   color: $grey-very-light;
 }
 

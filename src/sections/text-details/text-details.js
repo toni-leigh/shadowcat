@@ -1,7 +1,7 @@
 var TextDetails = React.createClass({
   render: function() {
     return (
-      <div className='text-details text-details--text-is-left content-is-centred'>
+      <div className={'text-details text-details--text-is-' + this.props['align-text'] + ' content-is-centred'}>
         <div className='text-details__text'>
           <Text />
         </div>

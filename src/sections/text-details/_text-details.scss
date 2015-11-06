@@ -72,6 +72,15 @@
     }
   }
 
+  &--text-is-right {
+    .text-details__text {
+      float: right;
+    }
+    .text-details__aside {
+      float: left;
+    }
+  }
+
   .text {
     @media (min-width: 1000px) {
       margin: 0;
