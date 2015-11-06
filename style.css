@@ -79,7 +79,7 @@ ul {
   .background--orange {
     background-color: #f67944; }
     .background--orange-dark {
-      background-color: #f45613; }
+      background-color: rgba(244, 86, 19, 0.6); }
 
 .button {
   border-radius: 3px;
