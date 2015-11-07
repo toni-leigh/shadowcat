@@ -192,6 +192,14 @@ ul {
         padding: 7.5%; } }
     .aside-panel__details:hover {
       opacity: 1; }
+      .aside-panel__details:hover .aside-panel__link {
+        bottom: 5%; }
+        @media (min-width: 400px) {
+          .aside-panel__details:hover .aside-panel__link {
+            bottom: 9.15%; } }
+        @media (min-width: 540px) {
+          .aside-panel__details:hover .aside-panel__link {
+            bottom: 7.5%; } }
     .aside-panel__details--always-shown {
       opacity: 1; }
   .aside-panel__heading {
@@ -201,17 +209,12 @@ ul {
   .aside-panel__link {
     background-color: transparent;
     border: 1px solid #2677bb;
-    bottom: 5%;
+    bottom: -10%;
     color: #2677bb;
     padding: 0 2em;
     position: absolute;
-    right: 5%; }
-    @media (min-width: 400px) {
-      .aside-panel__link {
-        bottom: 9.15%; } }
-    @media (min-width: 540px) {
-      .aside-panel__link {
-        bottom: 7.5%; } }
+    right: 5%;
+    transition: bottom 0.2s; }
     @media (min-width: 540px) {
       .aside-panel__link {
         right: 7.5%; } }

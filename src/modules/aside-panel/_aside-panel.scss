@@ -43,6 +43,15 @@ $aside-panel__border-width: 3px;
     z-index: 1;
     &:hover {
       opacity: 1;
+      .aside-panel__link {
+        bottom: 5%;
+        @media (min-width: 400px) {
+          bottom: 9.15%;
+        }
+        @media (min-width: 540px) {
+          bottom: 7.5%;
+        }
+      }
     }
     &--always-shown {
       opacity: 1;
@@ -56,13 +65,7 @@ $aside-panel__border-width: 3px;
   &__link {
     background-color: transparent;
     border: 1px solid $blue-dark;
-    bottom: 5%;
-    @media (min-width: 400px) {
-      bottom: 9.15%;
-    }
-    @media (min-width: 540px) {
-      bottom: 7.5%;
-    }
+    bottom: -10%;
     color: $blue-dark;
     padding: 0 2em;
     position: absolute;
@@ -70,6 +73,7 @@ $aside-panel__border-width: 3px;
     @media (min-width: 540px) {
       right: 7.5%;
     }
+    transition: bottom 0.2s;
     &:hover {
       background-color: $blue-dark;
       color: $grey-very-light;
