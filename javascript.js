@@ -64,19 +64,19 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
@@ -109,15 +109,6 @@ var ContactDetail = React.createClass({displayName: "ContactDetail",
   }
 });
 
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-thumbnail"}
-      )
-    )
-  }
-});
-
 var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
@@ -127,10 +118,10 @@ var InputText = React.createClass({displayName: "InputText",
   }
 });
 
-var InputTextarea = React.createClass({displayName: "InputTextarea",
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
-      React.createElement("div", {className: "input-textarea"}
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -145,10 +136,11 @@ var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
   }
 });
 
-var Logo = React.createClass({displayName: "Logo",
+var InputTextarea = React.createClass({displayName: "InputTextarea",
   render: function() {
     return (
-      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
+      React.createElement("div", {className: "input-textarea"}
+      )
     )
   }
 });
@@ -158,6 +150,14 @@ var Map = React.createClass({displayName: "Map",
     return (
       React.createElement("div", {className: "map"}
       )
+    )
+  }
+});
+
+var Logo = React.createClass({displayName: "Logo",
+  render: function() {
+    return (
+      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
     )
   }
 });
@@ -255,9 +255,11 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
   render: function() {
     return (
       React.createElement("article", {className: "project-summary"}, 
-        React.createElement("h1", {className: "project-summary__heading"}, this.props['project-summary'].name), 
-        React.createElement("div", {className: "project-summary__testimonials"}, 
-          this.getTestimonials()
+        React.createElement("div", {className: "project-summary__text"}, 
+          React.createElement("h1", {className: "project-summary__heading"}, this.props['project-summary'].name), 
+          React.createElement("div", {className: "project-summary__testimonials"}, 
+            this.getTestimonials()
+          )
         ), 
         React.createElement("img", {className: "project-summary__image", src: 'http://shadowcatfilms.com/' + this.props['project-summary'].image})
       )
@@ -285,10 +287,113 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
   }
 });
 
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
+          React.createElement(Video, {src: "http://player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, {"services-text":  /* this.state.node_details.node_html */ "<p>Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p><h2>Echo Park Pitchfork</h2><p>Hillwave Wes Anderson listicle fap wayfarers Echo Park paleo readymade lumbersexual tofu +1 you probably havent heard of them. Meggings flannel seitan tilde actually, hoodie cardigan master cleanse occupy.</p><p> Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p>" }), 
+          React.createElement(OurChoiceProjects, {projects: this.state.home_projects}), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, {"blog-posts": this.state.home_blog_posts}), 
+          React.createElement(Contact, null), 
+          React.createElement(Footer, null)
+        )
+      )
+    )
+  }
+});
+
 var Testimonial = React.createClass({displayName: "Testimonial",
   render: function() {
     return (
       React.createElement("div", {className: "testimonial"}
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
+var Service = React.createClass({displayName: "Service",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "service background background--grey-very-light"}, 
+        React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
+        React.createElement(Heading, {
+          background: "assets/backgrounds/sea2.jpg", 
+          title: this.state.node.name, 
+          strapline: this.state.node.short_desc}), 
+        React.createElement(TextDetails, {"align-text": "left", heading: "Main Details Text", text: this.state.node_details.node_html, "aside-colours": ['blue-light','blue','grey']}), 
+        React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
+        React.createElement(ServiceTestimonials, {projects: this.state.documentaries}), 
+        React.createElement(CallToAction, {heading: "Looking for our documentary products?", "button-text": "View Products", "button-slug": "products"}), 
+        React.createElement(ImageFixed, {src: ""}), 
+        React.createElement(TextDetails, {"align-text": "right", heading: "Secondary Details Text", text: this.state.node_details.secondary_html, "aside-colours": ['grey','blue-light','blue']}), 
+        React.createElement(ImageFixed, {src: ""}), 
+        React.createElement(Contact, null), 
+        React.createElement(Footer, null)
+      )
+    )
+  }
+});
+
+var CallToAction = React.createClass({displayName: "CallToAction",
+  render: function() {
+    return (
+      React.createElement("div", {className: "background background--orange-dark"}, 
+        React.createElement("article", {className: "content-is-centred call-to-action"}, 
+          React.createElement("h1", {className: "call-to-action__heading"}, this.props.heading), 
+          React.createElement("a", {className: "call-to-action__button button", href: this.props['button-slug'] + '.html'}, this.props['button-text'])
+        )
+      )
+    )
+  }
+});
+
+var ButtonPair = React.createClass({displayName: "ButtonPair",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-pair"}, 
+        React.createElement("a", {className: "button-pair__button button-pair__button-1 button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
+        React.createElement("a", {className: "button-pair__button button-pair__button-2 button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
       )
     )
   }
@@ -344,82 +449,10 @@ var BlogPostSmall = React.createClass({displayName: "BlogPostSmall",
   }
 });
 
-var ButtonPair = React.createClass({displayName: "ButtonPair",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-pair"}, 
-        React.createElement("a", {className: "button-pair__button button-pair__button-1 button", href: '/' + this.props['link-details'][1].slug + '.html'}, this.props['link-details'][1].name), 
-        React.createElement("a", {className: "button-pair__button button-pair__button-2 button", href: '/' + this.props['link-details'][2].slug + '.html'}, this.props['link-details'][2].name)
-      )
-    )
-  }
-});
-
-var CallToAction = React.createClass({displayName: "CallToAction",
-  render: function() {
-    return (
-      React.createElement("div", {className: "background background--orange-dark"}, 
-        React.createElement("article", {className: "content-is-centred call-to-action"}, 
-          React.createElement("h1", {className: "call-to-action__heading"}, this.props.heading), 
-          React.createElement("a", {className: "call-to-action__button button", href: this.props['button-slug'] + '.html'}, this.props['button-text'])
-        )
-      )
-    )
-  }
-});
-
 var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
   render: function() {
     return (
       React.createElement("div", {className: "choice-projects"}
-      )
-    )
-  }
-});
-
-var Contact = React.createClass({displayName: "Contact",
-  render: function() {
-    return (
-      React.createElement("div", {className: "background background--blue-dark"}, 
-        React.createElement("div", {className: "contact content-is-centred"}, 
-          React.createElement(SectionHeadingWithStrapline, {heading: "Get In Touch", strapline: "Please use any of the methods below to get in touch. We’d love to hear from you about anything."}), 
-          React.createElement("form", {className: "contact__form"}, 
-            React.createElement("label", {htmlFor: "name", className: "contact__form-label"}, "Name:"), 
-            React.createElement("input", {id: "name", className: "contact__form-input", type: "text", placeholder: "Enter your name"}), 
-            React.createElement("label", {htmlFor: "telephone", className: "contact__form-label"}, "Telephone:"), 
-            React.createElement("input", {id: "telephone", className: "contact__form-input", type: "text", placeholder: "Enter your telephone number"}), 
-            React.createElement("label", {htmlFor: "email", className: "contact__form-label"}, "Email:"), 
-            React.createElement("input", {id: "email", className: "contact__form-input", type: "text", placeholder: "you@example.com"}), 
-            React.createElement("label", {htmlFor: "message", className: "contact__form-label"}, "Message:"), 
-            React.createElement("textarea", {id: "message", className: "contact__form-input contact__form-textarea", type: "text", placeholder: "Your message"}
-            ), 
-            React.createElement("button", {className: "contact__form-submit button"}, "Send contact")
-          ), 
-          React.createElement("div", {className: "contact__details"}, 
-            React.createElement(Map, null), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Managing Director"), 
-              React.createElement("p", {className: "contact__detail-body"}, "Alysoun Sharpe")
-            ), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Telephone"), 
-              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
-            ), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Address"), 
-              React.createElement("p", {className: "contact__detail-body"}, 
-                "3 The Street,", React.createElement("br", null), 
-                "A Little Town Somewhere,", React.createElement("br", null), 
-                "That County,", React.createElement("br", null), 
-                "AB12 3CD"
-              )
-            ), 
-            React.createElement("div", {className: "contact__detail"}, 
-              React.createElement("span", {className: "contact__detail-heading"}, "Email"), 
-              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
-            )
-          )
-        )
       )
     )
   }
@@ -442,6 +475,20 @@ var Footer = React.createClass({displayName: "Footer",
   }
 });
 
+var Header = React.createClass({displayName: "Header",
+  render: function() {
+    return (
+      React.createElement("div", {className: "background background--grey-very-light"}, 
+        React.createElement("header", {className: "content-is-centred header"}, 
+          React.createElement(Logo, null), 
+          React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
+          React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
+        )
+      )
+    )
+  }
+});
+
 var Heading = React.createClass({displayName: "Heading",
   render: function() {
     return (
@@ -451,20 +498,6 @@ var Heading = React.createClass({displayName: "Heading",
             React.createElement("h1", {className: "heading__title"}, this.props['title']), 
             React.createElement("span", {className: "heading__strapline"}, this.props['strapline'])
           )
-        )
-      )
-    )
-  }
-});
-
-var Header = React.createClass({displayName: "Header",
-  render: function() {
-    return (
-      React.createElement("div", {className: "background background--grey-very-light"}, 
-        React.createElement("header", {className: "content-is-centred header"}, 
-          React.createElement(Logo, null), 
-          React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
-          React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
         )
       )
     )
@@ -484,41 +517,6 @@ var Lightbox = React.createClass({displayName: "Lightbox",
   render: function() {
     return (
       React.createElement("div", {className: "lightbox"}
-      )
-    )
-  }
-});
-
-var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
-  buildPanels: function() {
-    var projects = this.props['projects'];
-    var rows = [];
-    var x = 0;
-    projects.forEach(function(project) {
-      rows.push(
-        React.createElement(AsidePanel, {
-          key: 'proj' + x, 
-          "layout-class": "tile", 
-          "aside-type": "signpost", 
-          heading: project.name, 
-          "image-src": project.image, 
-          slug: project.url, 
-          "link-text": "View project", 
-          type: project.project_type, 
-          text: project.short_desc})
-      );
-      x ++;
-    });
-    return rows;
-  },
-
-  render: function() {
-    return (
-      React.createElement("article", {className: "our-choice-projects content-is-centred"}, 
-        React.createElement("h1", {className: "our-choice-projects__heading"}, "Our choice projects"), 
-        React.createElement("div", {className: "our-choice-projects__choices tiles"}, 
-          this.buildPanels()
-        )
       )
     )
   }
@@ -588,6 +586,60 @@ var Text = React.createClass({displayName: "Text",
   }
 });
 
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+  render: function() {
+    return (
+      React.createElement("div", {className: "thumbnail-gallery"}
+      )
+    )
+  }
+});
+
+var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
+  buildPanels: function() {
+    var projects = this.props['projects'];
+    var rows = [];
+    var x = 0;
+    projects.forEach(function(project) {
+      rows.push(
+        React.createElement(AsidePanel, {
+          key: 'proj' + x, 
+          "layout-class": "tile", 
+          "aside-type": "signpost", 
+          heading: project.name, 
+          "image-src": project.image, 
+          slug: project.url, 
+          "link-text": "View project", 
+          type: project.project_type, 
+          text: project.short_desc})
+      );
+      x ++;
+    });
+    return rows;
+  },
+
+  render: function() {
+    return (
+      React.createElement("article", {className: "our-choice-projects content-is-centred"}, 
+        React.createElement("h1", {className: "our-choice-projects__heading"}, "Our choice projects"), 
+        React.createElement("div", {className: "our-choice-projects__choices tiles"}, 
+          this.buildPanels()
+        )
+      )
+    )
+  }
+});
+
+var Video = React.createClass({displayName: "Video",
+  render: function() {
+    return (
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
+      )
+    )
+  }
+});
+
 var TextDetails = React.createClass({displayName: "TextDetails",
   render: function() {
     return (
@@ -625,25 +677,6 @@ var TextDetails = React.createClass({displayName: "TextDetails",
   }
 });
 
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
-  render: function() {
-    return (
-      React.createElement("div", {className: "thumbnail-gallery"}
-      )
-    )
-  }
-});
-
-var Video = React.createClass({displayName: "Video",
-  render: function() {
-    return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
-      )
-    )
-  }
-});
-
 var VideoPanel = React.createClass({displayName: "VideoPanel",
   render: function() {
     return (
@@ -655,80 +688,49 @@ var VideoPanel = React.createClass({displayName: "VideoPanel",
   }
 });
 
-var Blog = React.createClass({displayName: "Blog",
+var Contact = React.createClass({displayName: "Contact",
   render: function() {
     return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  getInitialState: function() {
-    console.log(window.data)
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
-          React.createElement(Video, {src: "http://player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, {"services-text":  /* this.state.node_details.node_html */ "<p>Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p><h2>Echo Park Pitchfork</h2><p>Hillwave Wes Anderson listicle fap wayfarers Echo Park paleo readymade lumbersexual tofu +1 you probably havent heard of them. Meggings flannel seitan tilde actually, hoodie cardigan master cleanse occupy.</p><p> Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p>" }), 
-          React.createElement(OurChoiceProjects, {projects: this.state.home_projects}), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, {"blog-posts": this.state.home_blog_posts}), 
-          React.createElement(Contact, null), 
-          React.createElement(Footer, null)
+      React.createElement("div", {className: "background background--blue-dark"}, 
+        React.createElement("div", {className: "contact content-is-centred"}, 
+          React.createElement(SectionHeadingWithStrapline, {heading: "Get In Touch", strapline: "Please use any of the methods below to get in touch. We’d love to hear from you about anything."}), 
+          React.createElement("form", {className: "contact__form"}, 
+            React.createElement("label", {htmlFor: "name", className: "contact__form-label"}, "Name:"), 
+            React.createElement("input", {id: "name", className: "contact__form-input", type: "text", placeholder: "Enter your name"}), 
+            React.createElement("label", {htmlFor: "telephone", className: "contact__form-label"}, "Telephone:"), 
+            React.createElement("input", {id: "telephone", className: "contact__form-input", type: "text", placeholder: "Enter your telephone number"}), 
+            React.createElement("label", {htmlFor: "email", className: "contact__form-label"}, "Email:"), 
+            React.createElement("input", {id: "email", className: "contact__form-input", type: "text", placeholder: "you@example.com"}), 
+            React.createElement("label", {htmlFor: "message", className: "contact__form-label"}, "Message:"), 
+            React.createElement("textarea", {id: "message", className: "contact__form-input contact__form-textarea", type: "text", placeholder: "Your message"}
+            ), 
+            React.createElement("button", {className: "contact__form-submit button"}, "Send contact")
+          ), 
+          React.createElement("div", {className: "contact__details"}, 
+            React.createElement(Map, null), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Managing Director"), 
+              React.createElement("p", {className: "contact__detail-body"}, "Alysoun Sharpe")
+            ), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Telephone"), 
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "tel:01234567890"}, "01234 567 890"))
+            ), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Address"), 
+              React.createElement("p", {className: "contact__detail-body"}, 
+                "3 The Street,", React.createElement("br", null), 
+                "A Little Town Somewhere,", React.createElement("br", null), 
+                "That County,", React.createElement("br", null), 
+                "AB12 3CD"
+              )
+            ), 
+            React.createElement("div", {className: "contact__detail"}, 
+              React.createElement("span", {className: "contact__detail-heading"}, "Email"), 
+              React.createElement("p", {className: "contact__detail-body"}, React.createElement("a", {href: "mailto:email@shadowcatfilms.co.uk"}, "email@shadowcatfilms.co.uk"))
+            )
+          )
         )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Service = React.createClass({displayName: "Service",
-  getInitialState: function() {
-    console.log(window.data)
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("div", {className: "service background background--grey-very-light"}, 
-        React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
-        React.createElement(Heading, {
-          background: "assets/backgrounds/sea2.jpg", 
-          title: this.state.node.name, 
-          strapline: this.state.node.short_desc}), 
-        React.createElement(TextDetails, {"align-text": "left", heading: "Main Details Text", text: this.state.node_details.node_html, "aside-colours": ['blue-light','blue','grey']}), 
-        React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
-        React.createElement(ServiceTestimonials, {projects: this.state.documentaries}), 
-        React.createElement(CallToAction, {heading: "Looking for our documentary products?", "button-text": "View Products", "button-slug": "products"}), 
-        React.createElement(ImageFixed, {src: ""}), 
-        React.createElement(TextDetails, {"align-text": "right", heading: "Secondary Details Text", text: this.state.node_details.secondary_html, "aside-colours": ['grey','blue-light','blue']}), 
-        React.createElement(ImageFixed, {src: ""}), 
-        React.createElement(Contact, null), 
-        React.createElement(Footer, null)
       )
     )
   }

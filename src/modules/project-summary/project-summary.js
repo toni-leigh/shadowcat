@@ -16,9 +16,11 @@ var ProjectSummary = React.createClass({
   render: function() {
     return (
       <article className='project-summary'>
-        <h1 className='project-summary__heading'>{this.props['project-summary'].name}</h1>
-        <div className='project-summary__testimonials'>
-          {this.getTestimonials()}
+        <div className='project-summary__text'>
+          <h1 className='project-summary__heading'>{this.props['project-summary'].name}</h1>
+          <div className='project-summary__testimonials'>
+            {this.getTestimonials()}
+          </div>
         </div>
         <img className='project-summary__image' src={'http://shadowcatfilms.com/' + this.props['project-summary'].image} />
       </article>
