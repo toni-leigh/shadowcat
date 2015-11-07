@@ -1,0 +1,30 @@
+.project-summary {
+  border: 3px solid #000;
+  margin-bottom: 40px;
+  padding: 3.12%;
+  width: 80%;
+
+  &:nth-of-type(2n + 1) {
+    float: right;
+    .project-summary__image {
+      float: right;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    float: left;
+    .project-summary__image {
+      float: left;
+    }
+  }
+
+  &:nth-of-type(1) {
+    border-color: $blue-light;
+  }
+  &:nth-of-type(2) {
+    border-color: $grey-mid;
+  }
+  &:nth-of-type(3) {
+    border-color: $blue-dark;
+  }
+}

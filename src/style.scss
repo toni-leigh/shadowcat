@@ -27,6 +27,8 @@
 @import "modules/aside-panel/_aside-panel";
 @import "modules/image-thumbnail/_image-thumbnail";
 @import "modules/navigation/_navigation";
+@import "modules/testimonial/_testimonial";
+@import "modules/project-summary/_project-summary";
 
 // page sections
 @import "sections/heading/_heading";
@@ -37,7 +39,7 @@
 @import "sections/text/_text";
 @import "sections/aside/_aside";
 @import "sections/video/_video";
-@import "sections/testimonials/_testimonials";
+@import "sections/service-testimonials/_service-testimonials";
 @import "sections/image-fixed/_image-fixed";
 @import "sections/button-pair/_button-pair";
 @import "sections/choice-projects/_choice-projects";
