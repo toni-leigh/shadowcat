@@ -1,5 +1,4 @@
 $project-summary__coloumn-breakpoint: 480px;
-$project-summary__alternation-breakpoint: 1000px;
 
 .project-summary {
   margin-bottom: 3.125%;
@@ -8,15 +7,14 @@ $project-summary__alternation-breakpoint: 1000px;
   }
   padding: 3.125%;
   width: 100%;
-  @media (min-width: $project-summary__alternation-breakpoint) {
-    width: 80%;
-  }
 
   &__details {
+    margin-bottom: 30px;
     p {
       display: none;
       &:first-child {
         display: block;
+        margin-bottom: 0;
       }
     }
   }

@@ -1,0 +1,38 @@
+.testimonial {
+  margin: 0 0 24px 0;
+  &__quote {
+    color: lighten($grey-mid, 10);
+    font-family: georgia;
+    font-size: 16px;
+    @media (min-width: 640px) {
+      font-size: 18px;
+    }
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 0.65em;
+
+    &:before,
+    &:after {
+      color: $blue-dark;
+      font-size: 30px;
+      line-height: 0;
+      position: relative;
+      top: 5px;
+    }
+
+    &:before {
+      content: '\201C';
+      margin-right: 5px;
+    }
+    &:after {
+      content: '\201D';
+      margin-left: 5px;
+    }
+  }
+
+  &__credit {
+    display: block;
+    text-align: right;
+    width: 100%;
+  }
+}

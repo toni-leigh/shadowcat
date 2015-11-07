@@ -5,7 +5,8 @@ var ProjectSummary = React.createClass({
     var x = 0;
     testimonials.forEach(function(testimonial) {
       rows.push(
-        <div key={'project-summary' + x}
+        <Testimonial
+          key={'project-summary' + x}
           testimonial={testimonial} />
       );
       x ++;

@@ -323,7 +323,8 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
     var x = 0;
     testimonials.forEach(function(testimonial) {
       rows.push(
-        React.createElement("div", {key: 'project-summary' + x, 
+        React.createElement(Testimonial, {
+          key: 'project-summary' + x, 
           testimonial: testimonial})
       );
       x ++;
@@ -372,7 +373,10 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
 var Testimonial = React.createClass({displayName: "Testimonial",
   render: function() {
     return (
-      React.createElement("div", {className: "testimonial"}
+      React.createElement("blockquote", {className: "testimonial"}, 
+        React.createElement("div", {className: "testimonial__quote", dangerouslySetInnerHTML: {__html: this.props['testimonial'].node_html}}
+        ), 
+        React.createElement("span", {className: "testimonial__credit"}, this.props['testimonial'].credit)
       )
     )
   }
