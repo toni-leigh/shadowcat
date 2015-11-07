@@ -27,11 +27,9 @@ p {
       text-decoration: underline; }
   .text h1 {
     font-family: "Khand", sans-serif;
-    font-size: 30px;
     margin-bottom: 24px; }
   .text h2 {
     font-family: "Khand", sans-serif;
-    font-size: 24px;
     margin-bottom: 24px; }
 
 * {
@@ -419,6 +417,7 @@ ul {
         display: block;
         margin-bottom: 0; }
   .project-summary__heading {
+    font-family: "Khand", sans-serif;
     font-size: 24px;
     margin-bottom: 1em; }
   .project-summary__image {

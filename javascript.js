@@ -215,19 +215,19 @@ var InputTextarea = React.createClass({displayName: "InputTextarea",
   }
 });
 
+var Logo = React.createClass({displayName: "Logo",
+  render: function() {
+    return (
+      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
+    )
+  }
+});
+
 var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
   render: function() {
     return (
       React.createElement("div", {className: "key-value-detail"}
       )
-    )
-  }
-});
-
-var Logo = React.createClass({displayName: "Logo",
-  render: function() {
-    return (
-      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
     )
   }
 });
