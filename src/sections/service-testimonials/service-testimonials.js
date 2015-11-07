@@ -1,5 +1,6 @@
 var ServiceTestimonials = React.createClass({
   buildPanels: function() {
+    var _this = this;
     var projects = this.props['projects'];
     var rows = [];
     var x = 0;
@@ -7,7 +8,8 @@ var ServiceTestimonials = React.createClass({
       rows.push(
         <ProjectSummary
           key={'testimonial' + x}
-          project-summary={project} />
+          project-summary={project}
+          project-type={_this.props['project-type']} />
       );
       x ++;
     });

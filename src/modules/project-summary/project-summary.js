@@ -15,14 +15,17 @@ var ProjectSummary = React.createClass({
 
   render: function() {
     return (
-      <article className='project-summary'>
+      <article className={'project-summary project-summary--' + this.props['project-type']}>
         <div className='project-summary__text'>
           <h1 className='project-summary__heading'>{this.props['project-summary'].name}</h1>
+          <div className='project-summary__details' dangerouslySetInnerHTML={{__html: this.props['project-summary'].node_html}}></div>
           <div className='project-summary__testimonials'>
             {this.getTestimonials()}
           </div>
         </div>
-        <img className='project-summary__image' src={'http://shadowcatfilms.com/' + this.props['project-summary'].image} />
+        <aside className='project-summary__aside'>
+          <img className='project-summary__image' src={'http://shadowcatfilms.com/' + this.props['project-summary'].image} />
+        </aside>
       </article>
     )
   }
