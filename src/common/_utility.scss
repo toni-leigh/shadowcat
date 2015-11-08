@@ -37,7 +37,7 @@
   &--orange {
     background-color: $orange-light;
     &-dark {
-      background-color: rgba($orange-dark, 0.6);
+      background-color: $orange-dark--less-intense;
     }
   }
 }

@@ -1,4 +1,4 @@
-$cta__background: $orange-dark;
+$cta__background: $orange-dark--less-intense;
 $cta__contrast: $grey-very-light;
 
 .call-to-action {
@@ -17,6 +17,7 @@ $cta__contrast: $grey-very-light;
 
     &:hover {
       background-color: $cta__contrast;
+      box-shadow: 0 0 5px 0 $cta__contrast;
       color: $cta__background;
     }
   }
