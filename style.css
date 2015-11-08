@@ -408,6 +408,7 @@ ul {
 
 .project-summary {
   margin-bottom: 3.125%;
+  opacity: 0;
   padding: 3.125%;
   position: relative;
   transition: all 0.4s;
@@ -472,10 +473,12 @@ ul {
 
 .project-summary-pos-1--animate,
 .project-summary-pos-3--animate {
+  opacity: 1;
   right: 0; }
 
 .project-summary-pos-2--animate {
-  left: 0; }
+  left: 0;
+  opacity: 1; }
 
 .heading {
   background-position: center;

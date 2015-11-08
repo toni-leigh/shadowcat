@@ -15,7 +15,7 @@ var ProjectSummary = React.createClass({
   },
 
   componentDidMount: function() {
-    window.AnimationTriggers.add('project-summary-' + this.props['position']);
+    window.AnimationTriggers.add('project-summary-' + this.props['position'], 450);
   },
 
   render: function() {

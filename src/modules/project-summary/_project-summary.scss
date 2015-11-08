@@ -5,6 +5,7 @@ $project-summary__coloumn-breakpoint: 480px;
   &:last-of-type {
     margin-bottom: 0;
   }
+  opacity: 0;
   padding: 3.125%;
   position: relative;
   transition: all 0.4s;
@@ -95,8 +96,10 @@ $project-summary__coloumn-breakpoint: 480px;
 
 .project-summary-pos-1--animate,
 .project-summary-pos-3--animate {
+  opacity: 1;
   right: 0;
 }
 .project-summary-pos-2--animate {
   left: 0;
+  opacity: 1;
 }

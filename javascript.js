@@ -1,15 +1,13 @@
 AnimationTriggers = {
   triggers: [],
 
-  triggerOffset: 350,
-
-  add: function(key) {
+  add: function(key, scrollPositionOffset) {
     var trigger = document.querySelectorAll('.animtrig-' + key)[0];
     scrollPoint = this.getOffSet(trigger);
     this.triggers.push({
       target: trigger,
       classAttr: key + '--animate',
-      scrollPoint: (scrollPoint - this.triggerOffset)
+      scrollPoint: (scrollPoint - scrollPositionOffset)
     });
     console.log(this.triggers);
   },
@@ -226,6 +224,15 @@ var Map = React.createClass({displayName: "Map",
   }
 });
 
+var PageHeading = React.createClass({displayName: "PageHeading",
+  render: function() {
+    return (
+      React.createElement("div", {className: "page-heading"}
+      )
+    )
+  }
+});
+
 var Navigation = React.createClass({displayName: "Navigation",
   buildList: function() {
     var navItems = this.props['nav-items'];
@@ -292,15 +299,6 @@ var NavigationLink = React.createClass({displayName: "NavigationLink",
   }
 });
 
-var PageHeading = React.createClass({displayName: "PageHeading",
-  render: function() {
-    return (
-      React.createElement("div", {className: "page-heading"}
-      )
-    )
-  }
-});
-
 var ProjectSummary = React.createClass({displayName: "ProjectSummary",
   getTestimonials: function() {
     var testimonials = this.props['project-summary'].testimonials;
@@ -318,7 +316,7 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
   },
 
   componentDidMount: function() {
-    window.AnimationTriggers.add('project-summary-' + this.props['position']);
+    window.AnimationTriggers.add('project-summary-' + this.props['position'], 450);
   },
 
   render: function() {
@@ -736,6 +734,17 @@ var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction
   }
 });
 
+var Text = React.createClass({displayName: "Text",
+  render: function() {
+    return (
+      React.createElement("section", {className: "text"}, 
+        React.createElement("h1", null, this.props['heading']), 
+        React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props['text']}})
+      )
+    )
+  }
+});
+
 var TextDetails = React.createClass({displayName: "TextDetails",
   render: function() {
     return (
@@ -768,17 +777,6 @@ var TextDetails = React.createClass({displayName: "TextDetails",
             text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch.", 
             colour: this.props['aside-colours'][2]})
         )
-      )
-    )
-  }
-});
-
-var Text = React.createClass({displayName: "Text",
-  render: function() {
-    return (
-      React.createElement("section", {className: "text"}, 
-        React.createElement("h1", null, this.props['heading']), 
-        React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props['text']}})
       )
     )
   }
