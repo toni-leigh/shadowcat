@@ -21,9 +21,13 @@ var OurChoiceProjects = React.createClass({
     return rows;
   },
 
+  componentDidMount: function() {
+    window.AnimationTriggers.add('our-choice-projects', 200);
+  },
+
   render: function() {
     return (
-      <article className='our-choice-projects content-is-centred'>
+      <article className='animtrig-our-choice-projects our-choice-projects content-is-centred'>
         <h1 className='our-choice-projects__heading'>Our choice projects</h1>
         <div className='our-choice-projects__choices tiles'>
           {this.buildPanels()}

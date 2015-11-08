@@ -941,6 +941,29 @@ ul {
     font-size: 36px;
     margin-bottom: 24px;
     text-align: center; }
+  @media (min-width: 880px) {
+    .our-choice-projects .aside-panel {
+      opacity: 0; } }
+
+@media (min-width: 880px) {
+  .our-choice-projects--animate .aside-panel:nth-of-type(3) {
+    animation: choice-project-fade-in 0.15s ease-in 0s forwards; }
+  .our-choice-projects--animate .aside-panel:nth-of-type(5) {
+    animation: choice-project-fade-in 0.15s ease-in 0.15s forwards; }
+  .our-choice-projects--animate .aside-panel:nth-of-type(4) {
+    animation: choice-project-fade-in 0.15s ease-in 0.3s forwards; }
+  .our-choice-projects--animate .aside-panel:nth-of-type(2) {
+    animation: choice-project-fade-in 0.15s ease-in 0.45s forwards; }
+  .our-choice-projects--animate .aside-panel:nth-of-type(1) {
+    animation: choice-project-fade-in 0.15s ease-in 0.6s forwards; }
+  .our-choice-projects--animate .aside-panel:nth-of-type(6) {
+    animation: choice-project-fade-in 0.15s ease-in 0.75s forwards; } }
+
+@keyframes choice-project-fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .services-introduction {
   padding-bottom: 72px;
