@@ -16,10 +16,14 @@ var ServiceTestimonials = React.createClass({
     return rows;
   },
 
+  componentDidMount: function() {
+    window.AnimationTriggers.add('service-testimonials');
+  },
+
   render: function() {
     return (
       <section className='background background--grey-very-light'>
-        <div className='service-testimonials content-is-centred'>
+        <div className='animtrig-service-testimonials service-testimonials content-is-centred'>
           <SectionHeadingWithStrapline heading='Projects &amp; Testimonials' strapline='See our three choice projects' />
           {this.buildPanels()}
         </div>
