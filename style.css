@@ -684,7 +684,8 @@ ul {
     text-transform: uppercase; }
     .call-to-action__button:hover {
       background-color: #fafafa;
-      color: #f45613; }
+      box-shadow: 0 0 5px 0 #fafafa;
+      color: rgba(244, 86, 19, 0.6); }
   .call-to-action__heading {
     color: #fafafa;
     font-size: 30px;

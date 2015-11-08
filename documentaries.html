@@ -13,18 +13,7 @@
     <div id='react-service'></div>
   </body>
   <script>
-    window.jsonpCallback = function(data) {
-      window.data = data;
-    }
-    var head = document.head;
-    var script = document.createElement("script");
-    script.setAttribute("src", "http://shadowcatfilms.com/api/documentaries");
-    head.appendChild(script);
-    window.onload = function() {
-      React.render(
-        React.createElement(Service),
-        document.getElementById('react-service')
-      );
-    }
+    window.Utilities.apiCall('documentaries');
+    window.Utilities.loadReact('service');
   </script>
 </html>
