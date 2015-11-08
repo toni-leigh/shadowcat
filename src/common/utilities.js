@@ -1,15 +1,13 @@
 AnimationTriggers = {
   triggers: [],
 
-  triggerOffset: 350,
-
-  add: function(key) {
+  add: function(key, scrollPositionOffset) {
     var trigger = document.querySelectorAll('.animtrig-' + key)[0];
     scrollPoint = this.getOffSet(trigger);
     this.triggers.push({
       target: trigger,
       classAttr: key + '--animate',
-      scrollPoint: (scrollPoint - this.triggerOffset)
+      scrollPoint: (scrollPoint - scrollPositionOffset)
     });
     console.log(this.triggers);
   },
