@@ -1,7 +1,12 @@
 var TextDetails = React.createClass({
+
+  componentDidMount: function() {
+    window.AnimationTriggers.add('text-details-' + this.props['position'], 200);
+  },
+
   render: function() {
     return (
-      <div className={'text-details text-details--text-is-' + this.props['align-text'] + ' content-is-centred'}>
+      <div className={'animtrig-text-details-' + this.props['position'] + ' text-details text-details--text-is-' + this.props['align-text'] + ' content-is-centred'}>
         <div className='text-details__text'>
           <Text heading={this.props['heading']} text={this.props['text']} />
         </div>
