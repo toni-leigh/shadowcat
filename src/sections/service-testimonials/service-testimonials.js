@@ -7,17 +7,14 @@ var ServiceTestimonials = React.createClass({
     projects.forEach(function(project) {
       rows.push(
         <ProjectSummary
-          key={'testimonial' + x}
+          key={'ps-' + x}
+          position={'pos-' + (x + 1)}
           project-summary={project}
           project-type={_this.props['project-type']} />
       );
       x ++;
     });
     return rows;
-  },
-
-  componentDidMount: function() {
-    window.AnimationTriggers.add('service-testimonials');
   },
 
   render: function() {

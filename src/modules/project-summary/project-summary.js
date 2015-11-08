@@ -14,9 +14,13 @@ var ProjectSummary = React.createClass({
     return rows;
   },
 
+  componentDidMount: function() {
+    window.AnimationTriggers.add('project-summary-' + this.props['position']);
+  },
+
   render: function() {
     return (
-      <article className={'project-summary project-summary--' + this.props['project-type']}>
+      <article className={'animtrig-project-summary-' + this.props['position'] + ' project-summary project-summary--' + this.props['project-type']}>
         <div className='project-summary__text'>
           <h1 className='project-summary__heading'>{this.props['project-summary'].name}</h1>
           <div className='project-summary__details' dangerouslySetInnerHTML={{__html: this.props['project-summary'].node_html}}></div>
