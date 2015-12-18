@@ -3,23 +3,12 @@ AnimationTriggers = {
 
   add: function(key, scrollPositionOffset) {
     var trigger = document.querySelectorAll('.animtrig-' + key)[0];
-    scrollPoint = this.getOffSet(trigger);
+    scrollPoint = ScrollMeasures.getOffSet(trigger);
     this.triggers.push({
       target: trigger,
       classAttr: key + '--animate',
       scrollPoint: (scrollPoint - scrollPositionOffset)
     });
-    console.log(this.triggers);
-  },
-
-  bodyTop: function() {
-    return document.body.getBoundingClientRect().top
-  },
-
-  getOffSet: function(trigger) {
-    var elTop = trigger.getBoundingClientRect().top;
-    var bodyTop = this.bodyTop();
-    return Math.abs(bodyTop) + elTop;
   },
 
   scrollHandler: function() {
@@ -28,12 +17,24 @@ AnimationTriggers = {
     for (var x = 0; x < triggerCount; x ++) {
       var trigger = AnimationTriggers.triggers[x],
           classNotAdded = trigger.target.className.indexOf(trigger.classAttr) === -1,
-          scrollPointPassed = Math.abs(AnimationTriggers.bodyTop()) > trigger.scrollPoint;
+          scrollPointPassed = Math.abs(ScrollMeasures.bodyTop()) > trigger.scrollPoint;
 
       if (scrollPointPassed && classNotAdded) {
         trigger.target.className = trigger.target.className + ' ' + trigger.classAttr;
       }
     }
+  }
+}
+
+ScrollMeasures = {
+  bodyTop: function() {
+    return document.body.getBoundingClientRect().top
+  },
+
+  getOffSet: function(trigger) {
+    var elTop = trigger.getBoundingClientRect().top;
+    var bodyTop = this.bodyTop();
+    return Math.abs(bodyTop) + elTop;
   }
 }
 
