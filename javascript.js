@@ -26,13 +26,19 @@ AnimationTriggers = {
   }
 }
 
-// FixedImageLoader = {
-//   imageList: [],
+FixedImageLoader = {
+  imageList: [],
 
-//   loadImage: function() {
+  loadImage: function() {
+    // loop over each image in the array
 
-//   }
-// }
+    // if the curret position is greater than it's start point and less than the start point of the next
+
+    //   grab this image
+
+    // load the image into the fixed div
+  }
+}
 
 ScrollMeasures = {
   bodyTop: function() {
@@ -216,19 +222,19 @@ var KeyValueDetail = React.createClass({displayName: "KeyValueDetail",
   }
 });
 
+var Logo = React.createClass({displayName: "Logo",
+  render: function() {
+    return (
+      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
+    )
+  }
+});
+
 var Map = React.createClass({displayName: "Map",
   render: function() {
     return (
       React.createElement("div", {className: "map"}
       )
-    )
-  }
-});
-
-var Logo = React.createClass({displayName: "Logo",
-  render: function() {
-    return (
-      React.createElement("img", {className: "logo", src: "assets/img/logo.svg"})
     )
   }
 });
@@ -438,6 +444,7 @@ var Service = React.createClass({displayName: "Service",
   render: function() {
     return (
       React.createElement("div", {className: "service background background--grey-very-light"}, 
+        React.createElement(ImageFixed, null), 
         React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
         React.createElement(Heading, {
           background: "assets/backgrounds/sea2.jpg", 
@@ -647,7 +654,8 @@ var Heading = React.createClass({displayName: "Heading",
 var ImageFixed = React.createClass({displayName: "ImageFixed",
   render: function() {
     return (
-      React.createElement("div", {className: "image-fixed"}
+      React.createElement("div", {className: "image-fixed"}, 
+        React.createElement("img", {className: "js-image-fixed image-fixed__image", src: ""})
       )
     )
   }

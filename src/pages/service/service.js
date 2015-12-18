@@ -7,6 +7,7 @@ var Service = React.createClass({
   render: function() {
     return (
       <div className='service background background--grey-very-light'>
+        <ImageFixed />
         <Header page-slug='documentaries' nav-items={this.state.navItems} />
         <Heading
           background='assets/backgrounds/sea2.jpg'
