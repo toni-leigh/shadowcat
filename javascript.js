@@ -17,7 +17,7 @@ AnimationTriggers = {
     for (var x = 0; x < triggerCount; x ++) {
       var trigger = AnimationTriggers.triggers[x],
           classNotAdded = trigger.target.className.indexOf(trigger.classAttr) === -1,
-          scrollPointPassed = Math.abs(ScrollMeasures.bodyTop()) > trigger.scrollPoint;
+          scrollPointPassed = ScrollMeasures.bodyTop() > trigger.scrollPoint;
 
       if (scrollPointPassed && classNotAdded) {
         trigger.target.className = trigger.target.className + ' ' + trigger.classAttr;
