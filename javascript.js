@@ -78,6 +78,15 @@ var BlogPost = React.createClass({displayName: "BlogPost",
   }
 });
 
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
 var Home = React.createClass({displayName: "Home",
   getInitialState: function() {
     console.log(window.data)
@@ -145,15 +154,6 @@ var Service = React.createClass({displayName: "Service",
           src: "/assets/backgrounds/sea3.jpg"}), 
         React.createElement(Contact, null), 
         React.createElement(Footer, null)
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
       )
     )
   }
@@ -415,12 +415,13 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
   },
 
   componentDidMount: function() {
-    window.AnimationTriggers.add('project-summary-' + this.props['position'], 450);
+    window.AnimationTriggers.add('project-image-' + this.props['position'], 450);
+    window.AnimationTriggers.add('project-button-' + this.props['position'], 450);
   },
 
   render: function() {
     return (
-      React.createElement("article", {className: 'animtrig-project-summary-' + this.props['position'] + ' project-summary project-summary--' + this.props['project-type']}, 
+      React.createElement("article", {className: 'project-summary project-summary--' + this.props['project-type']}, 
         React.createElement("div", {className: "project-summary__text"}, 
           React.createElement("h1", {className: "project-summary__heading"}, this.props['project-summary'].name), 
           React.createElement("div", {className: "project-summary__details", dangerouslySetInnerHTML: {__html: this.props['project-summary'].node_html}}), 
@@ -429,7 +430,8 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
           )
         ), 
         React.createElement("aside", {className: "project-summary__aside"}, 
-          React.createElement("img", {className: "project-summary__image", src: 'http://shadowcatfilms.com/' + this.props['project-summary'].image})
+          React.createElement("img", {className: 'animtrig-project-image-' + this.props['position'] + ' project-summary__image', src: 'http://shadowcatfilms.com/' + this.props['project-summary'].image}), 
+          React.createElement("a", {href: "#", className: 'animtrig-project-button-' + this.props['position'] + ' button project-summary__button'}, "View project details")
         )
       )
     )
@@ -456,15 +458,6 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
   }
 });
 
-var Aside = React.createClass({displayName: "Aside",
-  render: function() {
-    return (
-      React.createElement("div", {className: "aside"}
-      )
-    )
-  }
-});
-
 var Testimonial = React.createClass({displayName: "Testimonial",
   render: function() {
     return (
@@ -472,6 +465,15 @@ var Testimonial = React.createClass({displayName: "Testimonial",
         React.createElement("div", {className: "testimonial__quote", dangerouslySetInnerHTML: {__html: this.props['testimonial'].node_html}}
         ), 
         React.createElement("span", {className: "testimonial__credit"}, this.props['testimonial'].credit)
+      )
+    )
+  }
+});
+
+var Aside = React.createClass({displayName: "Aside",
+  render: function() {
+    return (
+      React.createElement("div", {className: "aside"}
       )
     )
   }

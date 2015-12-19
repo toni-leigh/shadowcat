@@ -15,12 +15,13 @@ var ProjectSummary = React.createClass({
   },
 
   componentDidMount: function() {
-    window.AnimationTriggers.add('project-summary-' + this.props['position'], 450);
+    window.AnimationTriggers.add('project-image-' + this.props['position'], 450);
+    window.AnimationTriggers.add('project-button-' + this.props['position'], 450);
   },
 
   render: function() {
     return (
-      <article className={'animtrig-project-summary-' + this.props['position'] + ' project-summary project-summary--' + this.props['project-type']}>
+      <article className={'project-summary project-summary--' + this.props['project-type']}>
         <div className='project-summary__text'>
           <h1 className='project-summary__heading'>{this.props['project-summary'].name}</h1>
           <div className='project-summary__details' dangerouslySetInnerHTML={{__html: this.props['project-summary'].node_html}}></div>
@@ -29,7 +30,8 @@ var ProjectSummary = React.createClass({
           </div>
         </div>
         <aside className='project-summary__aside'>
-          <img className='project-summary__image' src={'http://shadowcatfilms.com/' + this.props['project-summary'].image} />
+          <img className={'animtrig-project-image-' + this.props['position'] + ' project-summary__image'} src={'http://shadowcatfilms.com/' + this.props['project-summary'].image} />
+          <a href='#' className={'animtrig-project-button-' + this.props['position'] + ' button project-summary__button'}>View project details</a>
         </aside>
       </article>
     )
