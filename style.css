@@ -233,6 +233,12 @@ ul {
     .aside-panel--video .aside-panel__link:hover {
       background-color: #3B7736;
       color: #fafafa; }
+  .aside-panel.green-light {
+    border: 3px solid #5B9756; }
+    .aside-panel.green-light .aside-panel__details {
+      border: none; }
+    .aside-panel.green-light .aside-panel__heading {
+      color: #5B9756; }
   .aside-panel.green {
     border: 3px solid #3B7736; }
     .aside-panel.green .aside-panel__details {
@@ -422,14 +428,11 @@ ul {
       .project-summary__aside {
         width: 32.2219%; } }
   .project-summary__button {
-    background-color: #2677bb;
     color: #fafafa;
     margin-top: 9.375%;
     padding: 0 20px;
     position: relative;
     transition: all 0.4s; }
-    .project-summary__button:hover {
-      background-color: #67a9e0; }
   .project-summary__details {
     margin-bottom: 30px; }
     .project-summary__details p {
@@ -479,6 +482,10 @@ ul {
       .project-summary--documentary:nth-of-type(2) .project-summary__text,
       .project-summary--video:nth-of-type(2) .project-summary__text {
         float: right; } }
+  .project-summary--documentary .project-summary__button {
+    background-color: #2677bb; }
+    .project-summary--documentary .project-summary__button:hover {
+      background-color: #67a9e0; }
   .project-summary--documentary .project-summary__text a {
     color: #2677bb; }
   .project-summary--documentary:nth-of-type(1) {
@@ -487,6 +494,10 @@ ul {
   .project-summary--documentary:nth-of-type(3) {
     background-color: #e2eef9;
     border: 1px solid #d5e7f6; }
+  .project-summary--video .project-summary__button {
+    background-color: #3B7736; }
+    .project-summary--video .project-summary__button:hover {
+      background-color: #5B9756; }
   .project-summary--video .project-summary__text a {
     color: #3B7736; }
   .project-summary--video:nth-of-type(1) {
@@ -1036,3 +1047,11 @@ ul {
 .home .header,
 .home .background--grey-very-light {
   background: none; }
+
+.documentaries .image-fixed__heading-wrapper,
+.documentaries .image-fixed__strapline {
+  background-color: #2677bb; }
+
+.video .image-fixed__heading-wrapper,
+.video .image-fixed__strapline {
+  background-color: #3B7736; }

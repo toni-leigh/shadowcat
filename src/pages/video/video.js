@@ -16,7 +16,7 @@ var Video = React.createClass({
           align-text='left'
           heading='Main Details Text'
           text={this.state.node_details.node_html}
-          aside-colours={['blue-light','blue','grey']}
+          aside-colours={['green-light','green','grey']}
           position='1' />
         <VideoPanel src='http://player.vimeo.com/video/67992157' />
         <ImageFixed
@@ -33,7 +33,7 @@ var Video = React.createClass({
           align-text='right'
           heading='Secondary Details Text'
           text={this.state.node_details.secondary_html}
-          aside-colours={['grey','blue-light','blue']}
+          aside-colours={['grey','green-light','green']}
           position='2' />
         <ImageFixed
           heading='Bicycle rights hammock flexitarian'

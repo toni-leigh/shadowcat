@@ -96,6 +96,16 @@ $aside-panel__border-width: 3px;
     }
   }
 
+  &.green-light {
+    border: $aside-panel__border-width solid $green-light;
+    .aside-panel__details {
+      border: none;
+    }
+    .aside-panel__heading {
+      color: $green-light;
+    }
+  }
+
   &.green {
     border: $aside-panel__border-width solid $green-dark;
     .aside-panel__details {
