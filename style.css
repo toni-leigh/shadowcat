@@ -453,33 +453,48 @@ ul {
     .project-summary__text a:hover {
       text-decoration: underline; }
   .project-summary--documentary:before,
-  .project-summary--documentary:after {
+  .project-summary--documentary:after,
+  .project-summary--video:before,
+  .project-summary--video:after {
     content: "";
     display: table; }
-  .project-summary--documentary:after {
+  .project-summary--documentary:after,
+  .project-summary--video:after {
     clear: both; }
-  .project-summary--documentary .project-summary__text a {
-    color: #2677bb; }
   .project-summary--documentary:nth-of-type(1) .project-summary__aside,
-  .project-summary--documentary:nth-of-type(3) .project-summary__aside {
+  .project-summary--documentary:nth-of-type(3) .project-summary__aside,
+  .project-summary--video:nth-of-type(1) .project-summary__aside,
+  .project-summary--video:nth-of-type(3) .project-summary__aside {
     float: right; }
   .project-summary--documentary:nth-of-type(1) .project-summary__text,
-  .project-summary--documentary:nth-of-type(3) .project-summary__text {
+  .project-summary--documentary:nth-of-type(3) .project-summary__text,
+  .project-summary--video:nth-of-type(1) .project-summary__text,
+  .project-summary--video:nth-of-type(3) .project-summary__text {
     float: left; }
+  .project-summary--documentary:nth-of-type(2),
+  .project-summary--video:nth-of-type(2) {
+    background-color: #e5e5e5;
+    border: 1px solid #dedede; }
+    @media (min-width: 480px) {
+      .project-summary--documentary:nth-of-type(2) .project-summary__text,
+      .project-summary--video:nth-of-type(2) .project-summary__text {
+        float: right; } }
+  .project-summary--documentary .project-summary__text a {
+    color: #2677bb; }
   .project-summary--documentary:nth-of-type(1) {
     background-color: #eaf3fb;
     border: 1px solid #e2eef9; }
-  .project-summary--documentary:nth-of-type(2) {
-    background-color: #e5e5e5;
-    border: 1px solid #dedede; }
-    .project-summary--documentary:nth-of-type(2) .project-summary__aside {
-      float: left; }
-    @media (min-width: 480px) {
-      .project-summary--documentary:nth-of-type(2) .project-summary__text {
-        float: right; } }
   .project-summary--documentary:nth-of-type(3) {
     background-color: #e2eef9;
     border: 1px solid #d5e7f6; }
+  .project-summary--video .project-summary__text a {
+    color: #3B7736; }
+  .project-summary--video:nth-of-type(1) {
+    background-color: #b8d5b6;
+    border: 1px solid #b2d2af; }
+  .project-summary--video:nth-of-type(3) {
+    background-color: #c6e4c3;
+    border: 1px solid #bcdfb9; }
 
 .animtrig-project-image-pos-1,
 .animtrig-project-image-pos-2,
