@@ -20,7 +20,7 @@ $project-summary__coloumn-breakpoint: 480px;
   &__button {
     background-color: $blue-dark;
     color: $grey-very-light;
-    margin-top: 3.125%;
+    margin-top: 3.125% * 3;
     padding: 0 20px;
     position: relative;
     transition: all 0.4s;
