@@ -34,11 +34,10 @@
 @import "sections/heading/_heading";
 @import "sections/header/_header";
 @import "sections/video-panel/_video-panel";
-@import "sections/video/_video";
 @import "sections/text-details/_text-details";
 @import "sections/text/_text";
 @import "sections/aside/_aside";
-@import "sections/video/_video";
+@import "sections/video-player/_video-player";
 @import "sections/service-testimonials/_service-testimonials";
 @import "sections/image-fixed/_image-fixed";
 @import "sections/button-pair/_button-pair";
@@ -54,7 +53,8 @@
 
 // pages
 @import "pages/home/_home";
-@import "pages/service/_service";
+@import "pages/documentaries/_documentaries";
+@import "pages/video/_video";
 @import "pages/project/_project";
 @import "pages/blog/_blog";
 @import "pages/blog-post/_blog-post";

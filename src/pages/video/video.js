@@ -1,4 +1,4 @@
-var Service = React.createClass({
+var Video = React.createClass({
   getInitialState: function() {
     console.log(window.data)
     return window.data;
@@ -6,8 +6,8 @@ var Service = React.createClass({
 
   render: function() {
     return (
-      <div className='service background'>
-        <Header page-slug='documentaries' nav-items={this.state.navItems} />
+      <div className='video background'>
+        <Header page-slug='video' nav-items={this.state.navItems} />
         <Heading
           background='assets/backgrounds/sea2.jpg'
           title={this.state.node.name}
@@ -23,8 +23,8 @@ var Service = React.createClass({
           heading='This is the fixed image heading'
           strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'
           src='/assets/backgrounds/On-location-in-Norway.jpg' />
-        <ServiceTestimonials projects={this.state.documentaries} project-type='documentary'/>
-        <CallToAction heading='Looking for our documentary products?' button-text='View Products' button-slug='products' />
+        <ServiceTestimonials projects={this.state.videos} project-type='video'/>
+        <CallToAction heading='Looking for our video products?' button-text='View Products' button-slug='products' />
         <ImageFixed
           heading='Craft beer dreamcatcher humblebrag'
           strapline='Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.'
