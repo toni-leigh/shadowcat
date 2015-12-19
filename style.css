@@ -78,7 +78,7 @@ ul {
   .background--orange {
     background-color: #f67944; }
     .background--orange-dark {
-      background-color: rgba(244, 86, 19, 0.6); }
+      background-color: #FF9470; }
 
 .button {
   border-radius: 3px;
@@ -694,14 +694,27 @@ ul {
     clear: both; }
 
 .image-fixed {
-  background-image: url("/assets/backgrounds/filming-in-the-desrt.jpg");
+  background-attachment: fixed;
   background-size: cover;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: -1; }
+  box-shadow: inset 0 0 15px 0 #595959;
+  display: none;
+  height: 100vh; }
+  @media (min-width: 720px) {
+    .image-fixed {
+      display: block; } }
+  .image-fixed__heading-wrapper {
+    background-color: rgba(38, 119, 187, 0.9);
+    color: #fafafa;
+    display: inline-block;
+    font-family: "Khand", sans-serif;
+    margin: 4vh 0 80vh;
+    padding: 10px 15px; }
+  .image-fixed__strapline {
+    background-color: rgba(38, 119, 187, 0.9);
+    color: #fafafa;
+    display: inline-block;
+    float: right;
+    padding: 8px 12px; }
 
 .button-pair {
   margin-bottom: 50px;
@@ -741,6 +754,11 @@ ul {
   padding-bottom: 72px;
   padding-top: 50px;
   text-align: center; }
+  .call-to-action__background:after {
+    background-color: #fafafa;
+    content: '';
+    height: 100%;
+    width: 100%; }
   .call-to-action__button {
     background-color: rgba(250, 250, 250, 0.2);
     border: 1px solid #fafafa;
@@ -752,7 +770,7 @@ ul {
     .call-to-action__button:hover {
       background-color: #fafafa;
       box-shadow: 0 0 5px 0 #fafafa;
-      color: rgba(244, 86, 19, 0.6); }
+      color: #FF9470; }
   .call-to-action__heading {
     color: #fafafa;
     font-size: 30px;

@@ -6,6 +6,15 @@ $cta__contrast: $grey-very-light;
   padding-top: $general-padding__top;
   text-align: center;
 
+  &__background {
+    &:after {
+      background-color: $grey-very-light;
+      content: '';
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   &__button {
     background-color: rgba($cta__contrast, 0.2);
     border: 1px solid $cta__contrast;

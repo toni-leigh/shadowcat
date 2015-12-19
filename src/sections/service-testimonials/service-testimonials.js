@@ -19,7 +19,7 @@ var ServiceTestimonials = React.createClass({
 
   render: function() {
     return (
-      <section className='background background--grey-very-light'>
+      <section className='background background--grey-very-light service-testimonials__background'>
         <div className='animtrig-service-testimonials service-testimonials content-is-centred'>
           <SectionHeadingWithStrapline heading='Projects &amp; Testimonials' strapline='See our three choice projects' />
           {this.buildPanels()}
