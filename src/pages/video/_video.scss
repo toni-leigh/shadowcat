@@ -3,4 +3,10 @@
   .image-fixed__strapline {
     background-color: $green-dark;
   }
+  .testimonial__quote {
+    &:before,
+    &:after {
+      color: $green-dark;
+    }
+  }
 }

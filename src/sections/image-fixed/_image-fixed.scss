@@ -10,7 +10,7 @@
 
   &__heading {
     &-wrapper {
-      background-color: rgba($blue-dark, 0.9);
+      background-color: rgba($grey-mid, 0.9);
       color: $grey-very-light;
       display: inline-block;
       font-family: $font__standout;
@@ -20,7 +20,7 @@
   }
 
   &__strapline {
-    background-color: rgba($blue-dark, 0.9);
+    background-color: rgba($grey-mid, 0.9);
     color: $grey-very-light;
     display: inline-block;
     float: right;
