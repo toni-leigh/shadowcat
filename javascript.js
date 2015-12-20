@@ -60,6 +60,98 @@ Utilities = {
 
 window.onscroll = AnimationTriggers.scrollHandler;
 
+var Documentaries = React.createClass({displayName: "Documentaries",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "documentaries background"}, 
+        React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
+        React.createElement(Heading, {
+          background: "assets/backgrounds/documentaries__header.jpg", 
+          title: this.state.node.name, 
+          strapline: this.state.node.short_desc}), 
+        React.createElement(TextDetails, {
+          "align-text": "left", 
+          heading: "Main Details Text", 
+          text: this.state.node_details.node_html, 
+          "aside-colours": ['blue-light','blue','grey'], 
+          "aside-images": ['assets/img/documentaries__aside-1.jpg','assets/img/documentaries__aside-2.jpg'], 
+          position: "1"}), 
+        React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
+        React.createElement(ImageFixed, {
+          heading: "This is the fixed image heading", 
+          strapline: "Seitan try-hard retro, before they sold out letterpress vegan stumptown.", 
+          src: "/assets/backgrounds/documentaries__fixed-1.jpg"}), 
+        React.createElement(ServiceTestimonials, {projects: this.state.documentaries, "project-type": "documentary"}), 
+        React.createElement(CallToAction, {heading: "Looking for our documentary products?", "button-text": "View Products", "button-slug": "products"}), 
+        React.createElement(ImageFixed, {
+          heading: "Craft beer dreamcatcher humblebrag", 
+          strapline: "Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.", 
+          src: "/assets/backgrounds/documentaries__fixed-2.jpg"}), 
+        React.createElement(TextDetails, {
+          "align-text": "right", 
+          heading: "Secondary Details Text", 
+          text: this.state.node_details.secondary_html, 
+          "aside-colours": ['grey','blue-light','blue'], 
+          "aside-images": ['assets/img/documentaries__aside-3.jpg','assets/img/documentaries__aside-4.jpg'], 
+          position: "2"}), 
+        React.createElement(ImageFixed, {
+          heading: "Bicycle rights hammock flexitarian", 
+          strapline: "Chartreuse raw denim aesthetic, knausgaard ugh green juice chillwave kale chips disrupt lo-fi salvia vice.", 
+          src: "/assets/backgrounds/documentaries__fixed-3.jpg"}), 
+        React.createElement(Contact, null), 
+        React.createElement(Footer, null)
+      )
+    )
+  }
+});
+
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var Home = React.createClass({displayName: "Home",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("main", {className: "home"}, 
+        React.createElement("div", {className: "home__top-wrapper"}, 
+          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
+          React.createElement(VideoPlayer, {src: "http://player.vimeo.com/video/95396328"}), 
+          React.createElement(ServicesIntroduction, {"services-text":  /* this.state.node_details.node_html */ "<p>Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p><h2>Echo Park Pitchfork</h2><p>Hillwave Wes Anderson listicle fap wayfarers Echo Park paleo readymade lumbersexual tofu +1 you probably havent heard of them. Meggings flannel seitan tilde actually, hoodie cardigan master cleanse occupy.</p><p> Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p>" }), 
+          React.createElement(OurChoiceProjects, {projects: this.state.home_projects}), 
+          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
+          React.createElement(BlogSmall, {"blog-posts": this.state.home_blog_posts}), 
+          React.createElement(Contact, null), 
+          React.createElement(Footer, null)
+        )
+      )
+    )
+  }
+});
+
+var Project = React.createClass({displayName: "Project",
+  render: function() {
+    return (
+      React.createElement("div", {className: "project"}
+      )
+    )
+  }
+});
+
 var AsidePanel = React.createClass({displayName: "AsidePanel",
   getButton: function() {
     var button = null;
@@ -99,6 +191,83 @@ var AsidePanel = React.createClass({displayName: "AsidePanel",
   }
 });
 
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
+var Video = React.createClass({displayName: "Video",
+  getInitialState: function() {
+    console.log(window.data)
+    return window.data;
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "video background"}, 
+        React.createElement(Header, {"page-slug": "video", "nav-items": this.state.navItems}), 
+        React.createElement(Heading, {
+          background: "assets/backgrounds/video-production__header.jpg", 
+          title: this.state.node.name, 
+          strapline: this.state.node.short_desc}), 
+        React.createElement(TextDetails, {
+          "align-text": "left", 
+          heading: "Main Details Text", 
+          text: this.state.node_details.node_html, 
+          "aside-colours": ['green-light','green','grey'], 
+          "aside-images": ['assets/img/video-production__aside-1.jpg','assets/img/video-production__aside-2.jpg'], 
+          position: "1"}), 
+        React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
+        React.createElement(ImageFixed, {
+          heading: "This is the fixed image heading", 
+          strapline: "Seitan try-hard retro, before they sold out letterpress vegan stumptown.", 
+          src: "/assets/backgrounds/video-production__fixed-1.jpg"}), 
+        React.createElement(ServiceTestimonials, {projects: this.state.videos, "project-type": "video"}), 
+        React.createElement(CallToAction, {heading: "Looking for our video products?", "button-text": "View Products", "button-slug": "products"}), 
+        React.createElement(ImageFixed, {
+          heading: "Craft beer dreamcatcher humblebrag", 
+          strapline: "Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.", 
+          src: "/assets/backgrounds/video-production__fixed-2.jpg"}), 
+        React.createElement(TextDetails, {
+          "align-text": "right", 
+          heading: "Secondary Details Text", 
+          text: this.state.node_details.secondary_html, 
+          "aside-colours": ['grey','green-light','green'], 
+          "aside-images": ['assets/img/video-production__aside-3.jpg','assets/img/video-production__aside-4.jpg'], 
+          position: "2"}), 
+        React.createElement(ImageFixed, {
+          heading: "Bicycle rights hammock flexitarian", 
+          strapline: "Chartreuse raw denim aesthetic, knausgaard ugh green juice chillwave kale chips disrupt lo-fi salvia vice.", 
+          src: "/assets/backgrounds/video-production__fixed-3.jpg"}), 
+        React.createElement(Contact, null), 
+        React.createElement(Footer, null)
+      )
+    )
+  }
+});
+
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-small"}
+      )
+    )
+  }
+});
+
+var ButtonCta = React.createClass({displayName: "ButtonCta",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-cta"}
+      )
+    )
+  }
+});
+
 var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   buildCrumbs: function() {
     var crumbs = this.props['bread-crumbs'];
@@ -126,46 +295,10 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-cta"}
-      )
-    )
-  }
-});
-
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-large"}
-      )
-    )
-  }
-});
-
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-small"}
-      )
-    )
-  }
-});
-
 var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
     return (
       React.createElement("div", {className: "button-submit"}
-      )
-    )
-  }
-});
-
-var ContactDetail = React.createClass({displayName: "ContactDetail",
-  render: function() {
-    return (
-      React.createElement("div", {className: "contact-detail"}
       )
     )
   }
@@ -180,10 +313,10 @@ var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   }
 });
 
-var InputText = React.createClass({displayName: "InputText",
+var ContactDetail = React.createClass({displayName: "ContactDetail",
   render: function() {
     return (
-      React.createElement("div", {className: "input-text"}
+      React.createElement("div", {className: "contact-detail"}
       )
     )
   }
@@ -193,6 +326,15 @@ var InputTextarea = React.createClass({displayName: "InputTextarea",
   render: function() {
     return (
       React.createElement("div", {className: "input-textarea"}
+      )
+    )
+  }
+});
+
+var InputText = React.createClass({displayName: "InputText",
+  render: function() {
+    return (
+      React.createElement("div", {className: "input-text"}
       )
     )
   }
@@ -339,6 +481,15 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
   }
 });
 
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-large"}
+      )
+    )
+  }
+});
+
 var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple",
   render: function() {
     return (
@@ -354,165 +505,6 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
       React.createElement("div", {className: "section-header"}, 
         React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
         React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
-      )
-    )
-  }
-});
-
-var Testimonial = React.createClass({displayName: "Testimonial",
-  render: function() {
-    return (
-      React.createElement("blockquote", {className: "testimonial"}, 
-        React.createElement("div", {className: "testimonial__quote", dangerouslySetInnerHTML: {__html: this.props['testimonial'].node_html}}
-        ), 
-        React.createElement("span", {className: "testimonial__credit"}, this.props['testimonial'].credit)
-      )
-    )
-  }
-});
-
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
-      )
-    )
-  }
-});
-
-var Documentaries = React.createClass({displayName: "Documentaries",
-  getInitialState: function() {
-    console.log(window.data)
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("div", {className: "documentaries background"}, 
-        React.createElement(Header, {"page-slug": "documentaries", "nav-items": this.state.navItems}), 
-        React.createElement(Heading, {
-          background: "assets/backgrounds/sea2.jpg", 
-          title: this.state.node.name, 
-          strapline: this.state.node.short_desc}), 
-        React.createElement(TextDetails, {
-          "align-text": "left", 
-          heading: "Main Details Text", 
-          text: this.state.node_details.node_html, 
-          "aside-colours": ['blue-light','blue','grey'], 
-          position: "1"}), 
-        React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
-        React.createElement(ImageFixed, {
-          heading: "This is the fixed image heading", 
-          strapline: "Seitan try-hard retro, before they sold out letterpress vegan stumptown.", 
-          src: "/assets/backgrounds/On-location-in-Norway.jpg"}), 
-        React.createElement(ServiceTestimonials, {projects: this.state.documentaries, "project-type": "documentary"}), 
-        React.createElement(CallToAction, {heading: "Looking for our documentary products?", "button-text": "View Products", "button-slug": "products"}), 
-        React.createElement(ImageFixed, {
-          heading: "Craft beer dreamcatcher humblebrag", 
-          strapline: "Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.", 
-          src: "/assets/backgrounds/sea1.jpg"}), 
-        React.createElement(TextDetails, {
-          "align-text": "right", 
-          heading: "Secondary Details Text", 
-          text: this.state.node_details.secondary_html, 
-          "aside-colours": ['grey','blue-light','blue'], 
-          position: "2"}), 
-        React.createElement(ImageFixed, {
-          heading: "Bicycle rights hammock flexitarian", 
-          strapline: "Chartreuse raw denim aesthetic, knausgaard ugh green juice chillwave kale chips disrupt lo-fi salvia vice.", 
-          src: "/assets/backgrounds/sea3.jpg"}), 
-        React.createElement(Contact, null), 
-        React.createElement(Footer, null)
-      )
-    )
-  }
-});
-
-var Home = React.createClass({displayName: "Home",
-  getInitialState: function() {
-    console.log(window.data)
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("main", {className: "home"}, 
-        React.createElement("div", {className: "home__top-wrapper"}, 
-          React.createElement(Header, {"page-slug": "home", "nav-items": this.state.navItems}), 
-          React.createElement(VideoPlayer, {src: "http://player.vimeo.com/video/95396328"}), 
-          React.createElement(ServicesIntroduction, {"services-text":  /* this.state.node_details.node_html */ "<p>Hashtag trust fund Odd Future deep v lumbersexual, biodiesel retro forage occupy butcher. Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p><h2>Echo Park Pitchfork</h2><p>Hillwave Wes Anderson listicle fap wayfarers Echo Park paleo readymade lumbersexual tofu +1 you probably havent heard of them. Meggings flannel seitan tilde actually, hoodie cardigan master cleanse occupy.</p><p> Pork belly art party banjo single-origin coffee flannel, actually sriracha mixtape. Shoreditch mixtape skateboard, banjo migas plaid hoodie Schlitz Brooklyn kitsch trust fund slow-carb. Brooklyn cronut biodiesel.</p>" }), 
-          React.createElement(OurChoiceProjects, {projects: this.state.home_projects}), 
-          React.createElement(CallToAction, {heading: "Looking for our spotlight product?", "button-text": "Get a DVD Copy", "button-slug": "products"}), 
-          React.createElement(BlogSmall, {"blog-posts": this.state.home_blog_posts}), 
-          React.createElement(Contact, null), 
-          React.createElement(Footer, null)
-        )
-      )
-    )
-  }
-});
-
-var Project = React.createClass({displayName: "Project",
-  render: function() {
-    return (
-      React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var Video = React.createClass({displayName: "Video",
-  getInitialState: function() {
-    console.log(window.data)
-    return window.data;
-  },
-
-  render: function() {
-    return (
-      React.createElement("div", {className: "video background"}, 
-        React.createElement(Header, {"page-slug": "video", "nav-items": this.state.navItems}), 
-        React.createElement(Heading, {
-          background: "assets/backgrounds/sea2.jpg", 
-          title: this.state.node.name, 
-          strapline: this.state.node.short_desc}), 
-        React.createElement(TextDetails, {
-          "align-text": "left", 
-          heading: "Main Details Text", 
-          text: this.state.node_details.node_html, 
-          "aside-colours": ['green-light','green','grey'], 
-          position: "1"}), 
-        React.createElement(VideoPanel, {src: "http://player.vimeo.com/video/67992157"}), 
-        React.createElement(ImageFixed, {
-          heading: "This is the fixed image heading", 
-          strapline: "Seitan try-hard retro, before they sold out letterpress vegan stumptown.", 
-          src: "/assets/backgrounds/On-location-in-Norway.jpg"}), 
-        React.createElement(ServiceTestimonials, {projects: this.state.videos, "project-type": "video"}), 
-        React.createElement(CallToAction, {heading: "Looking for our video products?", "button-text": "View Products", "button-slug": "products"}), 
-        React.createElement(ImageFixed, {
-          heading: "Craft beer dreamcatcher humblebrag", 
-          strapline: "Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.", 
-          src: "/assets/backgrounds/sea1.jpg"}), 
-        React.createElement(TextDetails, {
-          "align-text": "right", 
-          heading: "Secondary Details Text", 
-          text: this.state.node_details.secondary_html, 
-          "aside-colours": ['grey','green-light','green'], 
-          position: "2"}), 
-        React.createElement(ImageFixed, {
-          heading: "Bicycle rights hammock flexitarian", 
-          strapline: "Chartreuse raw denim aesthetic, knausgaard ugh green juice chillwave kale chips disrupt lo-fi salvia vice.", 
-          src: "/assets/backgrounds/sea3.jpg"}), 
-        React.createElement(Contact, null), 
-        React.createElement(Footer, null)
       )
     )
   }
@@ -592,10 +584,13 @@ var CallToAction = React.createClass({displayName: "CallToAction",
   }
 });
 
-var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
+var Testimonial = React.createClass({displayName: "Testimonial",
   render: function() {
     return (
-      React.createElement("div", {className: "choice-projects"}
+      React.createElement("blockquote", {className: "testimonial"}, 
+        React.createElement("div", {className: "testimonial__quote", dangerouslySetInnerHTML: {__html: this.props['testimonial'].node_html}}
+        ), 
+        React.createElement("span", {className: "testimonial__credit"}, this.props['testimonial'].credit)
       )
     )
   }
@@ -649,23 +644,6 @@ var Contact = React.createClass({displayName: "Contact",
   }
 });
 
-var Footer = React.createClass({displayName: "Footer",
-  render: function() {
-    return (
-      React.createElement("div", {className: "background background--black"}, 
-        React.createElement("footer", {className: "footer content-is-centred"}, 
-          React.createElement("ul", {className: "footer__social"}, 
-            React.createElement("li", {className: "footer__social-link facebook"}, React.createElement("a", {href: "#"}, "Facebook")), 
-            React.createElement("li", {className: "footer__social-link twitter"}, React.createElement("a", {href: "#"}, "Twitter")), 
-            React.createElement("li", {className: "footer__social-link youtube"}, React.createElement("a", {href: "#"}, "Youtube"))
-          ), 
-          React.createElement("span", {className: "footer__copywrite"}, "© 2015 Shadowcat Films")
-        )
-      )
-    )
-  }
-});
-
 var Header = React.createClass({displayName: "Header",
   render: function() {
     return (
@@ -674,6 +652,28 @@ var Header = React.createClass({displayName: "Header",
           React.createElement(Logo, null), 
           React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
           React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
+        )
+      )
+    )
+  }
+});
+
+var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
+  render: function() {
+    return (
+      React.createElement("div", {className: "choice-projects"}
+      )
+    )
+  }
+});
+
+var ImageFixed = React.createClass({displayName: "ImageFixed",
+  render: function() {
+    return (
+      React.createElement("div", {className: "image-fixed", style: { backgroundImage: 'url("' + this['props'].src + '")'}}, 
+        React.createElement("div", {className: "content-is-centred"}, 
+          React.createElement("h2", {className: "image-fixed__heading"}, React.createElement("span", {className: "image-fixed__heading-wrapper"}, this['props'].heading)), 
+          React.createElement("span", {className: "image-fixed__strapline"}, this['props'].strapline)
         )
       )
     )
@@ -695,23 +695,27 @@ var Heading = React.createClass({displayName: "Heading",
   }
 });
 
-var ImageFixed = React.createClass({displayName: "ImageFixed",
+var Lightbox = React.createClass({displayName: "Lightbox",
   render: function() {
     return (
-      React.createElement("div", {className: "image-fixed", style: { backgroundImage: 'url("' + this['props'].src + '")'}}, 
-        React.createElement("div", {className: "content-is-centred"}, 
-          React.createElement("h2", {className: "image-fixed__heading"}, React.createElement("span", {className: "image-fixed__heading-wrapper"}, this['props'].heading)), 
-          React.createElement("span", {className: "image-fixed__strapline"}, this['props'].strapline)
-        )
+      React.createElement("div", {className: "lightbox"}
       )
     )
   }
 });
 
-var Lightbox = React.createClass({displayName: "Lightbox",
+var Footer = React.createClass({displayName: "Footer",
   render: function() {
     return (
-      React.createElement("div", {className: "lightbox"}
+      React.createElement("div", {className: "background background--black"}, 
+        React.createElement("footer", {className: "footer content-is-centred"}, 
+          React.createElement("ul", {className: "footer__social"}, 
+            React.createElement("li", {className: "footer__social-link facebook"}, React.createElement("a", {href: "#"}, "Facebook")), 
+            React.createElement("li", {className: "footer__social-link twitter"}, React.createElement("a", {href: "#"}, "Twitter")), 
+            React.createElement("li", {className: "footer__social-link youtube"}, React.createElement("a", {href: "#"}, "Youtube"))
+          ), 
+          React.createElement("span", {className: "footer__copywrite"}, "© 2015 Shadowcat Films")
+        )
       )
     )
   }
@@ -756,6 +760,17 @@ var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
   }
 });
 
+var Text = React.createClass({displayName: "Text",
+  render: function() {
+    return (
+      React.createElement("section", {className: "text"}, 
+        React.createElement("h1", null, this.props['heading']), 
+        React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props['text']}})
+      )
+    )
+  }
+});
+
 var ServiceTestimonials = React.createClass({displayName: "ServiceTestimonials",
   buildPanels: function() {
     var _this = this;
@@ -787,42 +802,6 @@ var ServiceTestimonials = React.createClass({displayName: "ServiceTestimonials",
   }
 });
 
-var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction",
-  getButtonDetails: function() {
-    return {
-      1: {
-        name: 'Documentaries',
-        slug: 'documentaries'
-      },
-      2: {
-        name: 'Video Production',
-        slug: 'video-production'
-      }
-    };
-  },
-  render: function() {
-    return (
-      React.createElement("article", {className: "services-introduction content-is-centred"}, 
-        React.createElement("h1", {className: "services-introduction__heading"}, "Find out all about our services"), 
-        React.createElement(ButtonPair, {"link-details": this.getButtonDetails()}), 
-        React.createElement("div", {className: "services-introduction__text text", dangerouslySetInnerHTML: {__html: this.props['services-text']}}
-        )
-      )
-    )
-  }
-});
-
-var Text = React.createClass({displayName: "Text",
-  render: function() {
-    return (
-      React.createElement("section", {className: "text"}, 
-        React.createElement("h1", null, this.props['heading']), 
-        React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props['text']}})
-      )
-    )
-  }
-});
-
 var TextDetails = React.createClass({displayName: "TextDetails",
 
   componentDidMount: function() {
@@ -848,7 +827,7 @@ var TextDetails = React.createClass({displayName: "TextDetails",
               "layout-class": "text-details__aside-panel", 
               heading: "My new aside is also here", 
               "aside-type": "image", 
-              "image-src": "assets/img/business.jpg", 
+              "image-src": this.props['aside-images'][0], 
               type: "", 
               text: "Plaid High Life you probably haven't heard of them polaroid, try-hard cornhole Pinterest.", 
               colour: this.props['aside-colours'][1]}), 
@@ -856,7 +835,7 @@ var TextDetails = React.createClass({displayName: "TextDetails",
               "layout-class": "text-details__aside-panel", 
               heading: "And another aside panel", 
               "aside-type": "image", 
-              "image-src": "assets/img/people1.jpg", 
+              "image-src": this.props['aside-images'][1], 
               type: "", 
               text: "Cornhole quinoa Wes Anderson, typewriter chillwave forage yr heirloom squid fashion axe you probably haven't heard of them viral brunch.", 
               colour: this.props['aside-colours'][2]})
@@ -867,10 +846,36 @@ var TextDetails = React.createClass({displayName: "TextDetails",
   }
 });
 
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction",
+  getButtonDetails: function() {
+    return {
+      1: {
+        name: 'Documentaries',
+        slug: 'documentaries'
+      },
+      2: {
+        name: 'Video Production',
+        slug: 'video-production'
+      }
+    };
+  },
   render: function() {
     return (
-      React.createElement("div", {className: "thumbnail-gallery"}
+      React.createElement("article", {className: "services-introduction content-is-centred"}, 
+        React.createElement("h1", {className: "services-introduction__heading"}, "Find out all about our services"), 
+        React.createElement(ButtonPair, {"link-details": this.getButtonDetails()}), 
+        React.createElement("div", {className: "services-introduction__text text", dangerouslySetInnerHTML: {__html: this.props['services-text']}}
+        )
+      )
+    )
+  }
+});
+
+var VideoPlayer = React.createClass({displayName: "VideoPlayer",
+  render: function() {
+    return (
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video-player", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
       )
     )
   }
@@ -887,11 +892,10 @@ var VideoPanel = React.createClass({displayName: "VideoPanel",
   }
 });
 
-var VideoPlayer = React.createClass({displayName: "VideoPlayer",
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   render: function() {
     return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video-player", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
+      React.createElement("div", {className: "thumbnail-gallery"}
       )
     )
   }
