@@ -819,11 +819,12 @@ ul {
   padding-top: 50px; }
   .blog-small__post {
     margin-bottom: 1.55em; }
-    .blog-small__post-heading {
+    .blog-small__post-heading.blog-small__post-heading {
       border-bottom: 2px solid #2677bb;
       display: inline-block;
       font-family: "Khand", sans-serif;
-      font-size: 24px; }
+      font-size: 24px;
+      margin-bottom: 16px; }
     .blog-small__post-date {
       color: #3B7736;
       display: block;
