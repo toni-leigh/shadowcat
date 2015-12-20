@@ -131,4 +131,13 @@
       }
     }
   }
+  &__map {
+    border: none;
+    height: 60vw;
+    margin-bottom: 20px;
+    width: 100%;
+    @media (min-width: 800px) {
+      height: #{(48.0625 / 100 * 60)}vw;
+    }
+  }
 }

@@ -969,6 +969,14 @@ ul {
       .contact__detail-body a {
         color: #fafafa;
         text-decoration: none; }
+  .contact__map {
+    border: none;
+    height: 60vw;
+    margin-bottom: 20px;
+    width: 100%; }
+    @media (min-width: 800px) {
+      .contact__map {
+        height: 28.8375vw; } }
 
 .footer {
   color: #fafafa;

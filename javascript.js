@@ -144,19 +144,19 @@ var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   }
 });
 
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
   render: function() {
     return (
-      React.createElement("div", {className: "button-small"}
+      React.createElement("div", {className: "button-submit"}
       )
     )
   }
 });
 
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
   render: function() {
     return (
-      React.createElement("div", {className: "button-submit"}
+      React.createElement("div", {className: "button-small"}
       )
     )
   }
@@ -218,7 +218,10 @@ var Logo = React.createClass({displayName: "Logo",
 var Map = React.createClass({displayName: "Map",
   render: function() {
     return (
-      React.createElement("div", {className: "map"}
+      React.createElement("iframe", {
+        className: 'map ' + this.props['parent-element'] + '__map', 
+        frameborder: "0", 
+        src: "https://www.google.com/maps/embed/v1/place?zoom=13&key=AIzaSyBgYZX_kaXMWqE-HVoXAqJQmrDhFZZ9ReU&q=" + this.props['address'].replace(/ /g, '+'), allowfullscreen: true}
       )
     )
   }
@@ -624,7 +627,9 @@ var Contact = React.createClass({displayName: "Contact",
             React.createElement("button", {className: "contact__form-submit button"}, "Send contact")
           ), 
           React.createElement("div", {className: "contact__details"}, 
-            React.createElement(Map, null), 
+            React.createElement(Map, {
+              address: "16 Monkridge Court, South Gosforth, Newcastle, NE3 1YW", 
+              "parent-element": "contact"}), 
             React.createElement("div", {className: "contact__detail"}, 
               React.createElement("span", {className: "contact__detail-heading"}, "Managing Director"), 
               React.createElement("p", {className: "contact__detail-body"}, "Alysoun Sharpe")

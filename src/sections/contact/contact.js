@@ -17,7 +17,9 @@ var Contact = React.createClass({
             <button className='contact__form-submit button'>Send contact</button>
           </form>
           <div className='contact__details'>
-            <Map />
+            <Map
+              address='16 Monkridge Court, South Gosforth, Newcastle, NE3 1YW'
+              parent-element='contact' />
             <div className='contact__detail'>
               <span className='contact__detail-heading'>Managing Director</span>
               <p className='contact__detail-body'>Alysoun Sharpe</p>
