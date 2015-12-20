@@ -3,10 +3,6 @@
   background-position: top;
   background-size: cover;
   box-shadow: inset 0 0 15px 0 $black;
-  display: none;
-  @media (min-width: 720px) {
-    display: block;
-  }
   height: 100vh;
 
   &__heading {
