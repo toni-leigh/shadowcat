@@ -26,7 +26,10 @@
   &__title {
     color: $grey-very-light;
     font-family: $font__standout;
-    font-size: 64px;
+    font-size: 36px;
+    @media (min-width: 540px) {
+      font-size: 64px;
+    }
     line-height: 1.5em;
     text-transform: uppercase;
   }

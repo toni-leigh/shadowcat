@@ -549,9 +549,12 @@ ul {
   .heading__title {
     color: #fafafa;
     font-family: "Khand", sans-serif;
-    font-size: 64px;
+    font-size: 36px;
     line-height: 1.5em;
     text-transform: uppercase; }
+    @media (min-width: 540px) {
+      .heading__title {
+        font-size: 64px; } }
   .heading__strapline {
     color: #fafafa;
     font-family: "Khand", sans-serif;
