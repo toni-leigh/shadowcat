@@ -134,7 +134,7 @@
   &__map {
     border: none;
     height: 60vw;
-    margin-bottom: 20px;
+    margin-bottom: $general-padding__strapline-spacing;
     width: 100%;
     @media (min-width: 800px) {
       height: #{(48.0625 / 100 * 60)}vw;

@@ -979,7 +979,7 @@ ul {
   .contact__map {
     border: none;
     height: 60vw;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     width: 100%; }
     @media (min-width: 800px) {
       .contact__map {
