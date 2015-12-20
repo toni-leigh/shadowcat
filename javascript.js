@@ -60,6 +60,24 @@ Utilities = {
 
 window.onscroll = AnimationTriggers.scrollHandler;
 
+var Blog = React.createClass({displayName: "Blog",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog"}
+      )
+    )
+  }
+});
+
+var BlogPost = React.createClass({displayName: "BlogPost",
+  render: function() {
+    return (
+      React.createElement("div", {className: "blog-post"}
+      )
+    )
+  }
+});
+
 var Documentaries = React.createClass({displayName: "Documentaries",
   getInitialState: function() {
     console.log(window.data)
@@ -110,15 +128,6 @@ var Documentaries = React.createClass({displayName: "Documentaries",
   }
 });
 
-var Blog = React.createClass({displayName: "Blog",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog"}
-      )
-    )
-  }
-});
-
 var Home = React.createClass({displayName: "Home",
   getInitialState: function() {
     console.log(window.data)
@@ -147,54 +156,6 @@ var Project = React.createClass({displayName: "Project",
   render: function() {
     return (
       React.createElement("div", {className: "project"}
-      )
-    )
-  }
-});
-
-var AsidePanel = React.createClass({displayName: "AsidePanel",
-  getButton: function() {
-    var button = null;
-    if (this.props['aside-type'] =='signpost') {
-      button = React.createElement("a", {className: "aside-panel__link button", href: this.props['slug']}, this.props['link-text'])
-    }
-    return button;
-  },
-
-  getImage: function() {
-    var image = null;
-    if (this.props['aside-type'] =='image' || this.props['aside-type'] =='signpost') {
-      image = React.createElement("img", {className: "aside-panel__image", src: 'http://shadowcatfilms.com/' + this.props['image-src']})
-    }
-    return image;
-  },
-
-  hoverOverride: function() {
-    hoverOverride = '';
-    if (this.props['aside-type'] =='info') {
-      hoverOverride = 'aside-panel__details--always-shown';
-    }
-    return hoverOverride;
-  },
-
-  render: function() {
-    return (
-      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class'] + ' ' + this.props['colour']}, 
-        this.getImage(), 
-        React.createElement("div", {className: 'aside-panel__details ' + this.hoverOverride()}, 
-          React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
-          React.createElement("p", {className: "aside-panel__text"}, this.props['text']), 
-          this.getButton()
-        )
-      )
-    )
-  }
-});
-
-var BlogPost = React.createClass({displayName: "BlogPost",
-  render: function() {
-    return (
-      React.createElement("div", {className: "blog-post"}
       )
     )
   }
@@ -250,19 +211,40 @@ var Video = React.createClass({displayName: "Video",
   }
 });
 
-var ButtonSmall = React.createClass({displayName: "ButtonSmall",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-small"}
-      )
-    )
-  }
-});
+var AsidePanel = React.createClass({displayName: "AsidePanel",
+  getButton: function() {
+    var button = null;
+    if (this.props['aside-type'] =='signpost') {
+      button = React.createElement("a", {className: "aside-panel__link button", href: this.props['slug']}, this.props['link-text'])
+    }
+    return button;
+  },
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+  getImage: function() {
+    var image = null;
+    if (this.props['aside-type'] =='image' || this.props['aside-type'] =='signpost') {
+      image = React.createElement("img", {className: "aside-panel__image", src: 'http://shadowcatfilms.com/' + this.props['image-src']})
+    }
+    return image;
+  },
+
+  hoverOverride: function() {
+    hoverOverride = '';
+    if (this.props['aside-type'] =='info') {
+      hoverOverride = 'aside-panel__details--always-shown';
+    }
+    return hoverOverride;
+  },
+
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("section", {className: 'aside-panel aside-panel--' + this.props['type'] + ' ' + this.props['layout-class'] + ' ' + this.props['colour']}, 
+        this.getImage(), 
+        React.createElement("div", {className: 'aside-panel__details ' + this.hoverOverride()}, 
+          React.createElement("h2", {className: "aside-panel__heading"}, this.props['heading']), 
+          React.createElement("p", {className: "aside-panel__text"}, this.props['text']), 
+          this.getButton()
+        )
       )
     )
   }
@@ -295,19 +277,37 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "button-submit"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
 });
 
-var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "image-thumbnail"}
+      React.createElement("div", {className: "button-large"}
+      )
+    )
+  }
+});
+
+var ButtonSmall = React.createClass({displayName: "ButtonSmall",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-small"}
+      )
+    )
+  }
+});
+
+var ButtonSubmit = React.createClass({displayName: "ButtonSubmit",
+  render: function() {
+    return (
+      React.createElement("div", {className: "button-submit"}
       )
     )
   }
@@ -322,10 +322,10 @@ var ContactDetail = React.createClass({displayName: "ContactDetail",
   }
 });
 
-var InputTextarea = React.createClass({displayName: "InputTextarea",
+var ImageThumbnail = React.createClass({displayName: "ImageThumbnail",
   render: function() {
     return (
-      React.createElement("div", {className: "input-textarea"}
+      React.createElement("div", {className: "image-thumbnail"}
       )
     )
   }
@@ -335,6 +335,15 @@ var InputText = React.createClass({displayName: "InputText",
   render: function() {
     return (
       React.createElement("div", {className: "input-text"}
+      )
+    )
+  }
+});
+
+var InputTextarea = React.createClass({displayName: "InputTextarea",
+  render: function() {
+    return (
+      React.createElement("div", {className: "input-textarea"}
       )
     )
   }
@@ -481,15 +490,6 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
-  render: function() {
-    return (
-      React.createElement("div", {className: "button-large"}
-      )
-    )
-  }
-});
-
 var SectionHeadingSimple = React.createClass({displayName: "SectionHeadingSimple",
   render: function() {
     return (
@@ -505,6 +505,18 @@ var SectionHeadingWithStrapline = React.createClass({displayName: "SectionHeadin
       React.createElement("div", {className: "section-header"}, 
         React.createElement("h1", {className: "section-header__heading"}, this.props.heading), 
         React.createElement("h2", {className: "section-header__strapline"}, this.props.strapline)
+      )
+    )
+  }
+});
+
+var Testimonial = React.createClass({displayName: "Testimonial",
+  render: function() {
+    return (
+      React.createElement("blockquote", {className: "testimonial"}, 
+        React.createElement("div", {className: "testimonial__quote", dangerouslySetInnerHTML: {__html: this.props['testimonial'].node_html}}
+        ), 
+        React.createElement("span", {className: "testimonial__credit"}, this.props['testimonial'].credit)
       )
     )
   }
@@ -584,13 +596,10 @@ var CallToAction = React.createClass({displayName: "CallToAction",
   }
 });
 
-var Testimonial = React.createClass({displayName: "Testimonial",
+var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
   render: function() {
     return (
-      React.createElement("blockquote", {className: "testimonial"}, 
-        React.createElement("div", {className: "testimonial__quote", dangerouslySetInnerHTML: {__html: this.props['testimonial'].node_html}}
-        ), 
-        React.createElement("span", {className: "testimonial__credit"}, this.props['testimonial'].credit)
+      React.createElement("div", {className: "choice-projects"}
       )
     )
   }
@@ -644,6 +653,23 @@ var Contact = React.createClass({displayName: "Contact",
   }
 });
 
+var Footer = React.createClass({displayName: "Footer",
+  render: function() {
+    return (
+      React.createElement("div", {className: "background background--black"}, 
+        React.createElement("footer", {className: "footer content-is-centred"}, 
+          React.createElement("ul", {className: "footer__social"}, 
+            React.createElement("li", {className: "footer__social-link facebook"}, React.createElement("a", {href: "#"}, "Facebook")), 
+            React.createElement("li", {className: "footer__social-link twitter"}, React.createElement("a", {href: "#"}, "Twitter")), 
+            React.createElement("li", {className: "footer__social-link youtube"}, React.createElement("a", {href: "#"}, "Youtube"))
+          ), 
+          React.createElement("span", {className: "footer__copywrite"}, "© 2015 Shadowcat Films")
+        )
+      )
+    )
+  }
+});
+
 var Header = React.createClass({displayName: "Header",
   render: function() {
     return (
@@ -652,28 +678,6 @@ var Header = React.createClass({displayName: "Header",
           React.createElement(Logo, null), 
           React.createElement("div", {className: "header__business-name"}, "Shadowcat Films"), 
           React.createElement(Navigation, {"nav-items": this.props['nav-items'], selected: this.props['page-slug']})
-        )
-      )
-    )
-  }
-});
-
-var ChoiceProjects = React.createClass({displayName: "ChoiceProjects",
-  render: function() {
-    return (
-      React.createElement("div", {className: "choice-projects"}
-      )
-    )
-  }
-});
-
-var ImageFixed = React.createClass({displayName: "ImageFixed",
-  render: function() {
-    return (
-      React.createElement("div", {className: "image-fixed", style: { backgroundImage: 'url("' + this['props'].src + '")'}}, 
-        React.createElement("div", {className: "content-is-centred"}, 
-          React.createElement("h2", {className: "image-fixed__heading"}, React.createElement("span", {className: "image-fixed__heading-wrapper"}, this['props'].heading)), 
-          React.createElement("span", {className: "image-fixed__strapline"}, this['props'].strapline)
         )
       )
     )
@@ -695,27 +699,23 @@ var Heading = React.createClass({displayName: "Heading",
   }
 });
 
-var Lightbox = React.createClass({displayName: "Lightbox",
+var ImageFixed = React.createClass({displayName: "ImageFixed",
   render: function() {
     return (
-      React.createElement("div", {className: "lightbox"}
+      React.createElement("div", {className: "image-fixed", style: { backgroundImage: 'url("' + this['props'].src + '")'}}, 
+        React.createElement("div", {className: "content-is-centred"}, 
+          React.createElement("h2", {className: "image-fixed__heading"}, React.createElement("span", {className: "image-fixed__heading-wrapper"}, this['props'].heading)), 
+          React.createElement("span", {className: "image-fixed__strapline"}, this['props'].strapline)
+        )
       )
     )
   }
 });
 
-var Footer = React.createClass({displayName: "Footer",
+var Lightbox = React.createClass({displayName: "Lightbox",
   render: function() {
     return (
-      React.createElement("div", {className: "background background--black"}, 
-        React.createElement("footer", {className: "footer content-is-centred"}, 
-          React.createElement("ul", {className: "footer__social"}, 
-            React.createElement("li", {className: "footer__social-link facebook"}, React.createElement("a", {href: "#"}, "Facebook")), 
-            React.createElement("li", {className: "footer__social-link twitter"}, React.createElement("a", {href: "#"}, "Twitter")), 
-            React.createElement("li", {className: "footer__social-link youtube"}, React.createElement("a", {href: "#"}, "Youtube"))
-          ), 
-          React.createElement("span", {className: "footer__copywrite"}, "© 2015 Shadowcat Films")
-        )
+      React.createElement("div", {className: "lightbox"}
       )
     )
   }
@@ -760,17 +760,6 @@ var OurChoiceProjects = React.createClass({displayName: "OurChoiceProjects",
   }
 });
 
-var Text = React.createClass({displayName: "Text",
-  render: function() {
-    return (
-      React.createElement("section", {className: "text"}, 
-        React.createElement("h1", null, this.props['heading']), 
-        React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props['text']}})
-      )
-    )
-  }
-});
-
 var ServiceTestimonials = React.createClass({displayName: "ServiceTestimonials",
   buildPanels: function() {
     var _this = this;
@@ -797,6 +786,42 @@ var ServiceTestimonials = React.createClass({displayName: "ServiceTestimonials",
           React.createElement(SectionHeadingWithStrapline, {heading: "Projects & Testimonials", strapline: "See our three choice projects"}), 
           this.buildPanels()
         )
+      )
+    )
+  }
+});
+
+var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction",
+  getButtonDetails: function() {
+    return {
+      1: {
+        name: 'Documentaries',
+        slug: 'documentaries'
+      },
+      2: {
+        name: 'Video Production',
+        slug: 'video-production'
+      }
+    };
+  },
+  render: function() {
+    return (
+      React.createElement("article", {className: "services-introduction content-is-centred"}, 
+        React.createElement("h1", {className: "services-introduction__heading"}, "Find out all about our services"), 
+        React.createElement(ButtonPair, {"link-details": this.getButtonDetails()}), 
+        React.createElement("div", {className: "services-introduction__text text", dangerouslySetInnerHTML: {__html: this.props['services-text']}}
+        )
+      )
+    )
+  }
+});
+
+var Text = React.createClass({displayName: "Text",
+  render: function() {
+    return (
+      React.createElement("section", {className: "text"}, 
+        React.createElement("h1", null, this.props['heading']), 
+        React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props['text']}})
       )
     )
   }
@@ -846,36 +871,10 @@ var TextDetails = React.createClass({displayName: "TextDetails",
   }
 });
 
-var ServicesIntroduction = React.createClass({displayName: "ServicesIntroduction",
-  getButtonDetails: function() {
-    return {
-      1: {
-        name: 'Documentaries',
-        slug: 'documentaries'
-      },
-      2: {
-        name: 'Video Production',
-        slug: 'video-production'
-      }
-    };
-  },
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
   render: function() {
     return (
-      React.createElement("article", {className: "services-introduction content-is-centred"}, 
-        React.createElement("h1", {className: "services-introduction__heading"}, "Find out all about our services"), 
-        React.createElement(ButtonPair, {"link-details": this.getButtonDetails()}), 
-        React.createElement("div", {className: "services-introduction__text text", dangerouslySetInnerHTML: {__html: this.props['services-text']}}
-        )
-      )
-    )
-  }
-});
-
-var VideoPlayer = React.createClass({displayName: "VideoPlayer",
-  render: function() {
-    return (
-      React.createElement("div", {className: "content-is-centred"}, 
-        React.createElement("iframe", {className: "video-player", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
+      React.createElement("div", {className: "thumbnail-gallery"}
       )
     )
   }
@@ -892,10 +891,11 @@ var VideoPanel = React.createClass({displayName: "VideoPanel",
   }
 });
 
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+var VideoPlayer = React.createClass({displayName: "VideoPlayer",
   render: function() {
     return (
-      React.createElement("div", {className: "thumbnail-gallery"}
+      React.createElement("div", {className: "content-is-centred"}, 
+        React.createElement("iframe", {className: "video-player", src: this.props.src, frameBorder: "0", webkitAllowFullScreen: true, mozAllowFullScreen: true, allowFullScreen: true})
       )
     )
   }
