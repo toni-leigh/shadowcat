@@ -34,7 +34,7 @@ p {
 * {
   box-sizing: border-box; }
   *:focus {
-    outline: 2px solid #050505; }
+    outline: 1px dotted #595959; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -755,7 +755,6 @@ ul {
   background-position: top;
   background-size: cover;
   box-shadow: inset 0 0 15px 0 #050505;
-  display: block;
   height: 100vh; }
   .image-fixed__heading-wrapper {
     background-color: rgba(89, 89, 89, 0.9);
