@@ -1,13 +1,19 @@
 .section-header__heading {
   font-family: $font__standout;
   font-size: 30px;
-  margin-bottom: $general-padding__strapline-spacing;
+  margin-bottom: $general-padding__strapline-spacing / 2;
+  @media (min-width: 640px) {
+    margin-bottom: $general-padding__strapline-spacing;
+  }
   text-align: center;
 }
 
 .section-header__strapline {
   font-size: 18px;
   font-weight: lighter;
-  margin-bottom: $general-padding__top;
+  margin-bottom: $general-padding__top / 2;
+  @media (min-width: 640px) {
+    margin-bottom: $general-padding__top;
+  }
   text-align: center;
 }

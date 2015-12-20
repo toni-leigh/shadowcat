@@ -1,6 +1,10 @@
 .contact {
-  padding-bottom: $general-padding__bottom - $general-padding__strapline-spacing;
-  padding-top: $general-padding__top;
+  padding-bottom: ($general-padding__bottom - $general-padding__strapline-spacing) / 2;
+  padding-top: $general-padding__top / 2;
+  @media (min-width: 640px) {
+    padding-bottom: $general-padding__bottom - $general-padding__strapline-spacing;
+    padding-top: $general-padding__top;
+  }
   @include clearfix();
 
   color: $grey-very-light;

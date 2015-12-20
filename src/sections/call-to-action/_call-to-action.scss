@@ -2,8 +2,7 @@ $cta__background: $orange-dark--less-intense;
 $cta__contrast: $grey-very-light;
 
 .call-to-action {
-  padding-bottom: $general-padding__bottom;
-  padding-top: $general-padding__top;
+  @include base-padding();
   text-align: center;
 
   &__background {

@@ -3,8 +3,12 @@ $general-padding__bottom: 72px;
 $general-padding__strapline-spacing: 24px;
 
 @mixin base-padding() {
-  padding-bottom: $general-padding__bottom;
-  padding-top: $general-padding__top;
+  padding-bottom: $general-padding__bottom / 2;
+  padding-top: $general-padding__top / 2;
+  @media (min-width: 640px) {
+    padding-bottom: $general-padding__bottom;
+    padding-top: $general-padding__top;
+  }
 }
 
 @mixin clearfix() {

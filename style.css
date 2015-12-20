@@ -143,14 +143,20 @@ ul {
 .section-header__heading {
   font-family: "Khand", sans-serif;
   font-size: 30px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   text-align: center; }
+  @media (min-width: 640px) {
+    .section-header__heading {
+      margin-bottom: 24px; } }
 
 .section-header__strapline {
   font-size: 18px;
   font-weight: lighter;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   text-align: center; }
+  @media (min-width: 640px) {
+    .section-header__strapline {
+      margin-bottom: 50px; } }
 
 .aside-panel {
   display: inline-block;
@@ -595,14 +601,22 @@ ul {
     float: left; }
 
 .video-panel {
-  padding-bottom: 72px;
-  padding-top: 50px;
+  padding-bottom: 36px;
+  padding-top: 25px;
   background-image: none;
   color: #fafafa; }
+  @media (min-width: 640px) {
+    .video-panel {
+      padding-bottom: 72px;
+      padding-top: 50px; } }
 
 .text-details {
-  padding-bottom: 72px;
-  padding-top: 50px; }
+  padding-bottom: 36px;
+  padding-top: 25px; }
+  @media (min-width: 640px) {
+    .text-details {
+      padding-bottom: 72px;
+      padding-top: 50px; } }
   .text-details:before,
   .text-details:after {
     content: "";
@@ -717,8 +731,12 @@ ul {
   width: 100%; }
 
 .service-testimonials {
-  padding-bottom: 72px;
-  padding-top: 50px; }
+  padding-bottom: 36px;
+  padding-top: 25px; }
+  @media (min-width: 640px) {
+    .service-testimonials {
+      padding-bottom: 72px;
+      padding-top: 50px; } }
   .service-testimonials:before,
   .service-testimonials:after {
     content: "";
@@ -784,9 +802,13 @@ ul {
         background-color: #5B9756; }
 
 .call-to-action {
-  padding-bottom: 72px;
-  padding-top: 50px;
+  padding-bottom: 36px;
+  padding-top: 25px;
   text-align: center; }
+  @media (min-width: 640px) {
+    .call-to-action {
+      padding-bottom: 72px;
+      padding-top: 50px; } }
   .call-to-action__background:after {
     background-color: #fafafa;
     content: '';
@@ -835,9 +857,13 @@ ul {
         display: block; }
 
 .contact {
-  padding-bottom: 48px;
-  padding-top: 50px;
+  padding-bottom: 24px;
+  padding-top: 25px;
   color: #fafafa; }
+  @media (min-width: 640px) {
+    .contact {
+      padding-bottom: 48px;
+      padding-top: 50px; } }
   .contact:before,
   .contact:after {
     content: "";
@@ -1028,9 +1054,13 @@ ul {
     opacity: 1; } }
 
 .services-introduction {
-  padding-bottom: 72px;
-  padding-top: 50px;
+  padding-bottom: 36px;
+  padding-top: 25px;
   color: #595959; }
+  @media (min-width: 640px) {
+    .services-introduction {
+      padding-bottom: 72px;
+      padding-top: 50px; } }
   .services-introduction__heading {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
