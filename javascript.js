@@ -126,19 +126,19 @@ var BreadCrumbs = React.createClass({displayName: "BreadCrumbs",
   }
 });
 
-var ButtonCta = React.createClass({displayName: "ButtonCta",
+var ButtonLarge = React.createClass({displayName: "ButtonLarge",
   render: function() {
     return (
-      React.createElement("div", {className: "button-cta"}
+      React.createElement("div", {className: "button-large"}
       )
     )
   }
 });
 
-var ButtonLarge = React.createClass({displayName: "ButtonLarge",
+var ButtonCta = React.createClass({displayName: "ButtonCta",
   render: function() {
     return (
-      React.createElement("div", {className: "button-large"}
+      React.createElement("div", {className: "button-cta"}
       )
     )
   }
