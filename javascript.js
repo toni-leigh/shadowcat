@@ -725,21 +725,21 @@ var TextDetails = React.createClass({displayName: "TextDetails",
   }
 });
 
-var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
-  render: function() {
-    return (
-      React.createElement("div", {className: "thumbnail-gallery"}
-      )
-    )
-  }
-});
-
 var VideoPanel = React.createClass({displayName: "VideoPanel",
   render: function() {
     return (
       React.createElement("div", {className: "video-panel background background--blacker"}, 
         React.createElement(SectionHeadingWithStrapline, {heading: "Documentaries Showreel Video", strapline: "A collection of excerpts from our documentary films"}), 
         React.createElement(VideoPlayer, {src: this.props.src})
+      )
+    )
+  }
+});
+
+var ThumbnailGallery = React.createClass({displayName: "ThumbnailGallery",
+  render: function() {
+    return (
+      React.createElement("div", {className: "thumbnail-gallery"}
       )
     )
   }

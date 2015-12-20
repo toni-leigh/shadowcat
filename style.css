@@ -565,19 +565,22 @@ ul {
 
 .header {
   box-sizing: content-box;
-  height: 98px;
+  height: 49px;
   max-width: 1200px;
   padding-top: 3.125%;
   padding-bottom: 3.125%;
   position: relative;
   width: 93.5%; }
+  @media (min-width: 640px) {
+    .header {
+      height: 98px; } }
   .header__business-name {
     color: #050505;
     display: none;
+    height: 49px;
     font-family: "Khand", sans-serif;
     font-size: 28px;
-    height: 98px;
-    line-height: 98px;
+    line-height: 49px;
     margin-left: 20px;
     text-transform: uppercase;
     vertical-align: middle;
@@ -600,11 +603,21 @@ ul {
     @media (min-width: 1140px) {
       .header__business-name {
         font-size: 38px; } }
+    @media (min-width: 640px) {
+      .header__business-name {
+        height: 98px; } }
+    @media (min-width: 640px) {
+      .header__business-name {
+        line-height: 98px; } }
     @media (min-width: 1211px) {
       .header__business-name {
         margin-left: 30px; } }
   .header .logo {
-    float: left; }
+    float: left;
+    height: 49px; }
+    @media (min-width: 640px) {
+      .header .logo {
+        height: 98px; } }
 
 .video-panel {
   padding-bottom: 36px;
