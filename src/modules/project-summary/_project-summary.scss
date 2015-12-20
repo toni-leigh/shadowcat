@@ -19,7 +19,10 @@ $project-summary__coloumn-breakpoint: 480px;
 
   &__button {
     color: $grey-very-light;
-    margin-top: 3.125% * 3;
+    margin-top: 3.125%;
+    @media (min-width: $project-summary__coloumn-breakpoint) {
+      margin-top: 3.125% * 3;
+    }
     padding: 0 20px;
     position: relative;
     transition: all 0.4s;

@@ -335,7 +335,7 @@ var ProjectSummary = React.createClass({displayName: "ProjectSummary",
         ), 
         React.createElement("aside", {className: "project-summary__aside"}, 
           React.createElement("img", {className: 'animtrig-project-image-' + this.props['position'] + ' project-summary__image', src: 'http://shadowcatfilms.com/' + this.props['project-summary'].image}), 
-          React.createElement("a", {href: "#", className: 'animtrig-project-button-' + this.props['position'] + ' button project-summary__button'}, "View project details")
+          React.createElement("a", {href: "#", className: 'animtrig-project-button-' + this.props['position'] + ' button project-summary__button'}, "View project")
         )
       )
     )

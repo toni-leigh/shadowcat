@@ -31,7 +31,7 @@ var ProjectSummary = React.createClass({
         </div>
         <aside className='project-summary__aside'>
           <img className={'animtrig-project-image-' + this.props['position'] + ' project-summary__image'} src={'http://shadowcatfilms.com/' + this.props['project-summary'].image} />
-          <a href='#' className={'animtrig-project-button-' + this.props['position'] + ' button project-summary__button'}>View project details</a>
+          <a href='#' className={'animtrig-project-button-' + this.props['position'] + ' button project-summary__button'}>View project</a>
         </aside>
       </article>
     )

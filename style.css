@@ -432,10 +432,13 @@ ul {
         width: 32.2219%; } }
   .project-summary__button {
     color: #fafafa;
-    margin-top: 9.375%;
+    margin-top: 3.125%;
     padding: 0 20px;
     position: relative;
     transition: all 0.4s; }
+    @media (min-width: 480px) {
+      .project-summary__button {
+        margin-top: 9.375%; } }
   .project-summary__details {
     margin-bottom: 30px; }
     .project-summary__details p {
