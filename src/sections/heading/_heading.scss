@@ -1,7 +1,10 @@
 .heading {
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 250px;
+  @media (min-width: 640px) {
+    height: 500px;
+  }
   position: relative;
 
   &__tinted-overlay {
@@ -18,7 +21,10 @@
 
   &__content {
     display: table-cell;
-    height: 500px;
+    height: 250px;
+    @media (min-width: 640px) {
+      height: 500px;
+    }
     text-align: center;
     vertical-align: middle;
   }

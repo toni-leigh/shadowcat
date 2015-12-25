@@ -532,8 +532,11 @@ ul {
 .heading {
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 250px;
   position: relative; }
+  @media (min-width: 640px) {
+    .heading {
+      height: 500px; } }
   .heading__tinted-overlay {
     background-color: rgba(0, 0, 0, 0.55);
     bottom: 0;
@@ -546,9 +549,12 @@ ul {
     z-index: 1; }
   .heading__content {
     display: table-cell;
-    height: 500px;
+    height: 250px;
     text-align: center;
     vertical-align: middle; }
+    @media (min-width: 640px) {
+      .heading__content {
+        height: 500px; } }
   .heading__title {
     color: #fafafa;
     font-family: "Khand", sans-serif;
