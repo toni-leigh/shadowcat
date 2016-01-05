@@ -1,19 +1,20 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var react = require('gulp-react');
-var sass = require('gulp-sass');
+var gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    react = require('gulp-react'),
+    sass = require('gulp-sass'),
 
-var jsxToJs = function() {
-  gulp.src('src/**/*.js')
-    .pipe(react())
-    .pipe(concat('javascript.js'))
-    .pipe(gulp.dest('./'));
-}
-var scssToCss = function() {
-  gulp.src('src/style.scss')
-    .pipe(sass('style.css').on('error', sass.logError))
-    .pipe(gulp.dest('./'));
-}
+    jsxToJs = function() {
+      gulp.src('src/**/*.js')
+        .pipe(react())
+        .pipe(concat('javascript.js'))
+        .pipe(gulp.dest('./'));
+    },
+
+    scssToCss = function() {
+      gulp.src('src/style.scss')
+        .pipe(sass('style.css').on('error', sass.logError))
+        .pipe(gulp.dest('./'));
+    };
 
 gulp.task('jsxToJs', jsxToJs);
 gulp.task('styles', scssToCss);
