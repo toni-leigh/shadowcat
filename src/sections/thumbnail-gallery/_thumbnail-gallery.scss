@@ -1,3 +1,4 @@
 .thumbnail-gallery {
-
+  @include base-padding();
+  @include clearfix();
 }

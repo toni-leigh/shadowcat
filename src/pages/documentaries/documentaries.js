@@ -1,6 +1,6 @@
 var Documentaries = React.createClass({
   getInitialState: function() {
-    console.log(window.data)
+    console.log(window.data);
     return window.data;
   },
 
@@ -25,6 +25,11 @@ var Documentaries = React.createClass({
           strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'
           src='/assets/backgrounds/documentaries__fixed-1.jpg' />
         <ServiceTestimonials projects={this.state.documentaries} project-type='documentary'/>
+        <ThumbnailGallery
+          colour='blue'
+          gallery-heading='Documentaries Gallery'
+          gallery-strapline='Before they sold out mustache irony art party. Austin etsy gastropub fixie cred mlkshk shabby chic'
+          images={this.state.images} />
         <CallToAction heading='Looking for our documentary products?' button-text='View Products' button-slug='products' />
         <ImageFixed
           heading='Craft beer dreamcatcher humblebrag'

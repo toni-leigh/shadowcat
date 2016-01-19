@@ -25,6 +25,11 @@ var Video = React.createClass({
           strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'
           src='/assets/backgrounds/video-production__fixed-1.jpg' />
         <ServiceTestimonials projects={this.state.videos} project-type='video'/>
+        <ThumbnailGallery
+          colour='green'
+          gallery-heading='Video Production Gallery'
+          gallery-strapline='Chambray 8-bit blog, green juice single-origin coffee scenester dreamcatcher ugh butcher. Cray VHS distillery'
+          images={this.state.images} />
         <CallToAction heading='Looking for our video products?' button-text='View Products' button-slug='products' />
         <ImageFixed
           heading='Craft beer dreamcatcher humblebrag'

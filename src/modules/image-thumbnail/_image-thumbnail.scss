@@ -1,3 +1,93 @@
-.image-thumbnail {
+$image-thumbnail__break-point-cell-width-2: 400px;
+$image-thumbnail__break-point-cell-width-3: 720px;
+$image-thumbnail__break-point-mid-2-and-3: $image-thumbnail__break-point-cell-width-2
+                                           +
+                                           ( ( $image-thumbnail__break-point-cell-width-3
+                                               - $image-thumbnail__break-point-cell-width-2 )
+                                             / 2 );
 
+
+$image-thumbnail__hover-growth-ratio: 18%;
+$image-thumbnail__hover-border-colour: $grey-very-light;
+
+
+.image-thumbnail {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  margin-bottom: 1.25%;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  @media (min-width: $image-thumbnail__break-point-cell-width-2) {
+    margin-right: 1.25%;
+    padding-bottom: 49.375%;
+    width: 49.375%;
+  }
+  @media (min-width: $image-thumbnail__break-point-cell-width-3) {
+    padding-bottom: 32.5%;
+    width: 32.5%;
+  }
+  &:nth-of-type(2n+1) {
+    @media (min-width: $image-thumbnail__break-point-cell-width-2) and (max-width: $image-thumbnail__break-point-cell-width-3 - 1) {
+      margin-right: 0;
+    }
+  }
+  &:nth-of-type(3n+1) {
+    @media (min-width: $image-thumbnail__break-point-cell-width-3) {
+      margin-right: 0;
+    }
+  }
+
+  &__blue {
+    .image-thumbnail__viewer {
+      &:hover {
+      }
+    }
+  }
+
+  &__green {
+    .image-thumbnail__viewer {
+      &:hover {
+      }
+    }
+  }
+
+  &__viewer {
+    background-size: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    &:hover {
+      @media (min-width:$image-thumbnail__break-point-cell-width-2) {
+        box-shadow: inset 0 0 0 5px $image-thumbnail__hover-border-colour;
+        padding-bottom: 100 + $image-thumbnail__hover-growth-ratio;
+        margin: 0 - $image-thumbnail__hover-growth-ratio / 2;
+        width: 100 + $image-thumbnail__hover-growth-ratio;
+        z-index: 2;
+      }
+      @media (min-width: $image-thumbnail__break-point-mid-2-and-3) {
+        box-shadow: inset 0 0 0 8px $image-thumbnail__hover-border-colour;
+      }
+      @media (min-width: $image-thumbnail__break-point-cell-width-3) {
+        box-shadow: inset 0 0 0 12px $image-thumbnail__hover-border-colour;
+      }
+    }
+  }
+
+  &:hover {
+    .icon {
+      display: block;
+    }
+  }
+
+  .icon {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
 }
