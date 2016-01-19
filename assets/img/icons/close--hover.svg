@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>Close Hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Close-Hover" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-221" fill="#EE5252" sketch:type="MSShapeGroup" x="0" y="0" width="64" height="64" rx="32"></rect>
+            <g id="Cross" transform="translate(15.012346, 15.209877)" fill="#FFFFFF" sketch:type="MSShapeGroup">
+                <path d="M10.2212183,16.7048482 L4.63403822,22.2920283 C4.01648902,22.9095775 4.01752076,23.9099904 4.63519303,24.5276627 L9.10282374,28.9952934 C9.72003902,29.6125086 10.7214236,29.6134827 11.3384581,28.9964482 L16.9256382,23.4092681 L22.5128182,28.9964482 C23.1303674,29.6139974 24.1307803,29.6129656 24.7484526,28.9952934 L29.2160833,24.5276627 C29.8332986,23.9104474 29.8342726,22.9090628 29.2172381,22.2920283 L23.630058,16.7048482 L29.2172381,11.1176681 C29.8347873,10.5001189 29.8337556,9.49970608 29.2160833,8.88203381 L24.7484526,4.4144031 C24.1312373,3.79718782 23.1298527,3.79621381 22.5128182,4.41324829 L16.9256382,10.0004284 L11.3384581,4.41324829 C10.7209089,3.79569909 9.720496,3.79673083 9.10282374,4.4144031 L4.63519303,8.88203381 C4.01797775,9.49924909 4.01700374,10.5006337 4.63403822,11.1176681 L10.2212183,16.7048482 L10.2212183,16.7048482 Z" id="Cross-Small"></path>
+            </g>
+        </g>
+    </g>
+</svg>

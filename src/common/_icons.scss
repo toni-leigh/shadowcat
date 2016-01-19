@@ -1,0 +1,48 @@
+.icon.icon {
+  cursor: pointer;
+}
+
+.arrow {
+  &-left {
+    &--blue {
+      background-image: url('/assets/img/icons/arrow-left--blue.svg');
+    }
+    &--green {
+      background-image: url('/assets/img/icons/arrow-left--green.svg');
+    }
+  }
+  &-right {
+    &--blue {
+      background-image: url('/assets/img/icons/arrow-right--blue.svg');
+    }
+    &--green {
+      background-image: url('/assets/img/icons/arrow-right--green.svg');
+    }
+  }
+}
+
+.full-screen {
+  &--blue {
+    background-image: url('/assets/img/icons/full-screen--blue.svg');
+    height: 44px;
+    width: 44px;
+  }
+  &--green {
+    background-image: url('/assets/img/icons/full-screen--green.svg');
+    height: 44px;
+    width: 44px;
+  }
+}
+
+.close {
+  background-image: url('/assets/img/icons/close.svg');
+  background-repeat: no-repeat;
+  height: 64px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 64px;
+  &:hover {
+    background-image: url('/assets/img/icons/close--hover.svg');
+  }
+}
