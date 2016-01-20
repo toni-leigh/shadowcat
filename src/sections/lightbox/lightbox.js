@@ -6,6 +6,7 @@ var Lightbox = React.createClass({
   render: function() {
     return (
       <div className={'lightbox ' + this.getLightboxShownClass()}>
+        <i className='icon close' onClick={this.props['is-shown-callback']} />
       </div>
     )
   }

@@ -36,7 +36,8 @@ var ThumbnailGallery = React.createClass({
           strapline={this.props['gallery-strapline']} />
         {this.buildThumbnails()}
         <Lightbox
-          is-shown={this.state.lightboxIsShown} />
+          is-shown={this.state.lightboxIsShown}
+          is-shown-callback={this.setLightboxShownState} />
       </div>
     )
   }
