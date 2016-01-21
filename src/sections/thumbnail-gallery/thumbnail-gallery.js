@@ -9,7 +9,8 @@ var ThumbnailGallery = React.createClass({
       rows.push(
         <ImageThumbnail
           colour={props['colour']}
-          image-src={"http://shadowcatfilms.co.uk/user_img/" + image.user_id + "/" + image.image_filename + "t400" + image.image_ext}
+          image={image}
+          image-index={x}
           key={'proj' + x}
           is-shown-callback={callback} />
       );
@@ -20,11 +21,16 @@ var ThumbnailGallery = React.createClass({
 
   getInitialState: function() {
     return {
-      lightboxIsShown: false
+      lightboxIsShown: false,
+      lightboxImage: this.props['images'][0]
     }
   },
 
-  setLightboxShownState: function() {
+  setLightboxShownState: function(clicked) {
+    var imageIndex = parseInt(clicked.currentTarget.dataset.imageIndex,10);
+    if (!isNaN(imageIndex)) {
+      this.state.lightboxImage = this.props['images'][imageIndex];
+    }
     this.state.lightboxIsShown ? this.setState({lightboxIsShown: false}) : this.setState({lightboxIsShown: true});
   },
 
@@ -37,7 +43,8 @@ var ThumbnailGallery = React.createClass({
         {this.buildThumbnails()}
         <Lightbox
           is-shown={this.state.lightboxIsShown}
-          is-shown-callback={this.setLightboxShownState} />
+          is-shown-callback={this.setLightboxShownState}
+          image={this.state.lightboxImage} />
       </div>
     )
   }
