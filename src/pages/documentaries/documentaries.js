@@ -15,7 +15,7 @@ var Documentaries = React.createClass({
         <TextDetails
           align-text='left'
           heading='Main Details Text'
-          text={this.state.node_details.node_html}
+          text={this.state.node.details.node_html}
           aside-colours={['blue-light','blue','grey']}
           aside-images={['assets/img/documentaries__aside-1.jpg','assets/img/documentaries__aside-2.jpg']}
           position='1' />
@@ -29,7 +29,7 @@ var Documentaries = React.createClass({
           colour='blue'
           gallery-heading='Documentaries Gallery'
           gallery-strapline='Before they sold out mustache irony art party. Austin etsy gastropub fixie cred mlkshk shabby chic'
-          images={this.state.images} />
+          images={this.state.node.images} />
         <CallToAction heading='Looking for our documentary products?' button-text='View Products' button-slug='products' />
         <ImageFixed
           heading='Craft beer dreamcatcher humblebrag'
@@ -38,7 +38,7 @@ var Documentaries = React.createClass({
         <TextDetails
           align-text='right'
           heading='Secondary Details Text'
-          text={this.state.node_details.secondary_html}
+          text={this.state.node.details.secondary_html}
           aside-colours={['grey','blue-light','blue']}
           aside-images={['assets/img/documentaries__aside-3.jpg','assets/img/documentaries__aside-4.jpg']}
           position='2' />

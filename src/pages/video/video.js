@@ -15,7 +15,7 @@ var Video = React.createClass({
         <TextDetails
           align-text='left'
           heading='Main Details Text'
-          text={this.state.node_details.node_html}
+          text={this.state.node.details.node_html}
           aside-colours={['green-light','green','grey']}
           aside-images={['assets/img/video-production__aside-1.jpg','assets/img/video-production__aside-2.jpg']}
           position='1' />
@@ -29,7 +29,7 @@ var Video = React.createClass({
           colour='green'
           gallery-heading='Video Production Gallery'
           gallery-strapline='Chambray 8-bit blog, green juice single-origin coffee scenester dreamcatcher ugh butcher. Cray VHS distillery'
-          images={this.state.images} />
+          images={this.state.node.images} />
         <CallToAction heading='Looking for our video products?' button-text='View Products' button-slug='products' />
         <ImageFixed
           heading='Craft beer dreamcatcher humblebrag'
@@ -38,7 +38,7 @@ var Video = React.createClass({
         <TextDetails
           align-text='right'
           heading='Secondary Details Text'
-          text={this.state.node_details.secondary_html}
+          text={this.state.node.details.secondary_html}
           aside-colours={['grey','green-light','green']}
           aside-images={['assets/img/video-production__aside-3.jpg','assets/img/video-production__aside-4.jpg']}
           position='2' />
