@@ -13,6 +13,10 @@ $orange-light: #f67944;
 $orange-dark: darken($orange-light, 10);
 $orange-dark--less-intense: #FF9470;
 
+$purple: #9053dE;
+$purple-dark: darken($purple, 10);
+$purple-light: lighten($purple-dark, 15);
+
 $red: #ff3050;
 
 $cta-dark: $orange-dark;

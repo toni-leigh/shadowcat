@@ -145,4 +145,24 @@ $aside-panel__border-width: 3px;
       color: $blue-dark;
     }
   }
+
+  &.purple-light {
+    border: $aside-panel__border-width solid $purple-light;
+    .aside-panel__details {
+      border: none;
+    }
+    .aside-panel__heading {
+      color: $purple-light;
+    }
+  }
+
+  &.purple {
+    border: $aside-panel__border-width solid $purple-dark;
+    .aside-panel__details {
+      border: none;
+    }
+    .aside-panel__heading {
+      color: $purple-dark;
+    }
+  }
 }
