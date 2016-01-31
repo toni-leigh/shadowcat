@@ -18,6 +18,7 @@ var Documentaries = React.createClass({
           text={this.state.node.details.node_html}
           aside-colours={['blue-light','blue','grey']}
           aside-images={['assets/img/documentaries__aside-1.jpg','assets/img/documentaries__aside-2.jpg']}
+          aside-text={this.state.node.details.aside}
           position='1' />
         <VideoPanel
           src={'http://player.vimeo.com/video/67992157'}
@@ -31,7 +32,8 @@ var Documentaries = React.createClass({
           text={this.state.node.details.secondary_html}
           aside-colours={['grey','blue-light','blue']}
           aside-images={['assets/img/documentaries__aside-3.jpg','assets/img/documentaries__aside-4.jpg']}
-          position='2' />
+          aside-text={this.state.node.details.secondary_aside}
+          position='1' />
         <Contact />
         <Footer />
       </div>

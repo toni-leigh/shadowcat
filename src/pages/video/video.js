@@ -18,6 +18,7 @@ var Video = React.createClass({
           text={this.state.node.details.node_html}
           aside-colours={['green-light','green','grey']}
           aside-images={['assets/img/video-production__aside-1.jpg','assets/img/video-production__aside-2.jpg']}
+          aside-text={this.state.node.details.aside}
           position='1' />
         <VideoPanel
           src={'http://player.vimeo.com/video/67992157'}
@@ -31,7 +32,8 @@ var Video = React.createClass({
           text={this.state.node.details.secondary_html}
           aside-colours={['grey','green-light','green']}
           aside-images={['assets/img/video-production__aside-3.jpg','assets/img/video-production__aside-4.jpg']}
-          position='2' />
+          aside-text={this.state.node.details.secondary_aside}
+          position='1' />
         <Contact />
         <Footer />
       </div>
