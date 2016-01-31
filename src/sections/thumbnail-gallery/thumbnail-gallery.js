@@ -1,35 +1,35 @@
 var ThumbnailGallery = React.createClass({
   buildThumbnails: function() {
-    var props = this.props;
-    var images = props['images'];
-    var callback = this.setLightboxShownState;
-    var rows = [];
-    var x = 0;
-    images.forEach(function(image) {
-      rows.push(
+    var props = this.props,
+        callback = this.setLightboxShownState,
+        thumbnails = [],
+        x = 0;
+    props['images'].forEach(function(image) {
+      thumbnails.push(
         <ImageThumbnail
           colour={props['colour']}
           image={image}
           image-index={x}
           key={'proj' + x}
-          is-shown-callback={callback} />
+          thumbnail-gallery-callbacks__is-shown={callback} />
       );
       x ++;
     });
-    return rows;
+    return thumbnails;
   },
 
   getInitialState: function() {
     return {
       lightboxIsShown: false,
-      lightboxImage: this.props['images'][0]
+      image: '',
+      imageWidth: 300
     }
   },
 
   setLightboxShownState: function(clicked) {
     var imageIndex = parseInt(clicked.currentTarget.dataset.imageIndex,10);
     if (!isNaN(imageIndex)) {
-      this.state.lightboxImage = this.props['images'][imageIndex];
+      this.state.image = this.props['images'][imageIndex];
     }
     this.state.lightboxIsShown ? this.setState({lightboxIsShown: false}) : this.setState({lightboxIsShown: true});
   },
@@ -43,8 +43,8 @@ var ThumbnailGallery = React.createClass({
         {this.buildThumbnails()}
         <Lightbox
           is-shown={this.state.lightboxIsShown}
-          is-shown-callback={this.setLightboxShownState}
-          image={this.state.lightboxImage} />
+          thumbnail-gallery-callbacks__is-shown={this.setLightboxShownState}
+          image={this.state.image} />
       </div>
     )
   }

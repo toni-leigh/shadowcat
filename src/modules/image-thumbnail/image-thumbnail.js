@@ -5,7 +5,7 @@ var ImageThumbnail = React.createClass({
       <div
         className={'image-thumbnail image-thumbnail__' + this.props['colour']}
         data-image-index={this.props['image-index']}
-        onClick={this.props['is-shown-callback']} >
+        onClick={this.props['thumbnail-gallery-callbacks__is-shown']} >
         <div className='image-thumbnail__viewer' style={{backgroundImage: 'url(' + image_src + ')'}}>
           <i className={'icon full-screen--' + this.props['colour']} />
         </div>
