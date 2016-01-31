@@ -4,6 +4,7 @@ var ButtonPair = React.createClass({
       <div className='button-pair'>
         <a className='button-pair__button button-pair__button-1 button' href={'/' + this.props['link-details'][1].slug + '.html'}>{this.props['link-details'][1].name}</a>
         <a className='button-pair__button button-pair__button-2 button' href={'/' + this.props['link-details'][2].slug + '.html'}>{this.props['link-details'][2].name}</a>
+        <a className='button-pair__button button-pair__button-3 button' href={'/' + this.props['link-details'][3].slug + '.html'}>{this.props['link-details'][3].name}</a>
       </div>
     )
   }

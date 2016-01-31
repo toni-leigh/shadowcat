@@ -8,6 +8,10 @@ var ServicesIntroduction = React.createClass({
       2: {
         name: 'Video Production',
         slug: 'video-production'
+      },
+      3: {
+        name: 'Photography',
+        slug: 'photography'
       }
     };
   },

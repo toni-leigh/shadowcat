@@ -1,7 +1,7 @@
 $button-pair__text: $grey-very-light;
 $button-pair__background: $blue-dark;
 $button-pair__background--hover: $blue-light;
-$button-pair__vertical-breakpoint: 520px;
+$button-pair__vertical-breakpoint: 767px;
 
 .button-pair {
   margin-bottom: $general-padding__top;
@@ -10,10 +10,12 @@ $button-pair__vertical-breakpoint: 520px;
     background-color: $button-pair__background;
     color: $button-pair__text;
     font-size: 22px;
+    display: block;
     height: 70px;
     line-height: 70px;
-    margin-bottom: 20px;
-    @media (min-width: 520px) {
+    margin: 0 auto 20px;
+    @media (min-width: $button-pair__vertical-breakpoint) {
+      display: inline-block;
       margin-bottom: 0;
       margin-right: 30px;
     }
@@ -32,12 +34,18 @@ $button-pair__vertical-breakpoint: 520px;
     }
     &-2 {
       background-color: $green-dark;
+      &:hover {
+        background-color: $green-light;
+      }
+    }
+    &-3 {
+      background-color: $purple-dark;
       margin-bottom: 0;
       @media (min-width: $button-pair__vertical-breakpoint) {
         margin-right: 0;
       }
       &:hover {
-        background-color: $green-light;
+        background-color: $purple-light;
       }
     }
   }

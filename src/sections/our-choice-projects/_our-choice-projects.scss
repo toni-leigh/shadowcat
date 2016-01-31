@@ -21,19 +21,28 @@
         animation: choice-project-fade-in 0.3s ease-in 0s forwards;
       }
       &:nth-of-type(2) {
-        animation: choice-project-fade-in 0.3s ease-in 0s forwards;
+        animation: choice-project-fade-in 0.3s ease-in 0.15s forwards;
       }
       &:nth-of-type(3) {
-        animation: choice-project-fade-in 0.3s ease-in 0s forwards;
+        animation: choice-project-fade-in 0.3s ease-in 0.3s forwards;
       }
       &:nth-of-type(4) {
-        animation: choice-project-fade-in 0.3s ease-in 0.4s forwards;
+        animation: choice-project-fade-in 0.3s ease-in 0.45s forwards;
       }
       &:nth-of-type(5) {
-        animation: choice-project-fade-in 0.3s ease-in 0.4s forwards;
+        animation: choice-project-fade-in 0.3s ease-in 0.6s forwards;
       }
       &:nth-of-type(6) {
-        animation: choice-project-fade-in 0.3s ease-in 0.4s forwards;
+        animation: choice-project-fade-in 0.3s ease-in 0.75s forwards;
+      }
+      &:nth-of-type(7) {
+        animation: choice-project-fade-in 0.3s ease-in 0.9s forwards;
+      }
+      &:nth-of-type(8) {
+        animation: choice-project-fade-in 0.3s ease-in 1.05s forwards;
+      }
+      &:nth-of-type(9) {
+        animation: choice-project-fade-in 0.3s ease-in 1.2s forwards;
       }
     }
   }

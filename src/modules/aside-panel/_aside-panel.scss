@@ -79,6 +79,22 @@ $aside-panel__border-width: 3px;
       color: $grey-very-light;
     }
   }
+  &--photography {
+    .aside-panel__details {
+      border-color: $purple-dark;
+    }
+    .aside-panel__heading {
+      color: $purple-dark;
+    }
+    .aside-panel__link {
+      border-color: $purple-dark;
+      color: $purple-dark;
+      &:hover {
+        background-color: $purple-dark;
+        color: $grey-very-light;
+      }
+    }
+  }
   &--video {
     .aside-panel__details {
       border-color: $green-dark;
