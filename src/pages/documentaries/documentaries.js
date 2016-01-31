@@ -33,7 +33,7 @@ var Documentaries = React.createClass({
           aside-colours={['grey','blue-light','blue']}
           aside-images={['assets/img/documentaries__aside-3.jpg','assets/img/documentaries__aside-4.jpg']}
           aside-text={this.state.node.details.secondary_aside}
-          position='1' />
+          position='2' />
         <Contact />
         <Footer />
       </div>

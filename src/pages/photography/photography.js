@@ -34,7 +34,7 @@ var Photography = React.createClass({
           aside-colours={['grey','purple-light','purple']}
           aside-images={['assets/img/photography__aside-3.jpg','assets/img/photography__aside-4.jpg']}
           aside-text={this.state.node.details.secondary_aside}
-          position='1' />
+          position='2' />
         <Contact />
         <Footer />
       </div>
