@@ -1,0 +1,12 @@
+.photography {
+  .image-fixed__heading-wrapper,
+  .image-fixed__strapline {
+    background-color: $purple-dark;
+  }
+  .testimonial__quote {
+    &:before,
+    &:after {
+      color: $purple-dark;
+    }
+  }
+}
