@@ -19,22 +19,12 @@ var Video = React.createClass({
           aside-colours={['green-light','green','grey']}
           aside-images={['assets/img/video-production__aside-1.jpg','assets/img/video-production__aside-2.jpg']}
           position='1' />
-        <VideoPanel src='http://player.vimeo.com/video/67992157' />
-        <ImageFixed
-          heading='This is the fixed image heading'
-          strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'
-          src='/assets/backgrounds/video-production__fixed-1.jpg' />
+        <VideoPanel
+          src={'http://player.vimeo.com/video/67992157'}
+          heading={this.state.node.details.video_heading}
+          strapline={this.state.node.details.video_strapline} />
         <ServiceTestimonials projects={this.state.videos} project-type='video'/>
-        <ThumbnailGallery
-          colour='green'
-          gallery-heading='Video Production Gallery'
-          gallery-strapline='Chambray 8-bit blog, green juice single-origin coffee scenester dreamcatcher ugh butcher. Cray VHS distillery'
-          images={this.state.node.images} />
         <CallToAction heading='Looking for our video products?' button-text='View Products' button-slug='products' />
-        <ImageFixed
-          heading='Craft beer dreamcatcher humblebrag'
-          strapline='Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.'
-          src='/assets/backgrounds/video-production__fixed-2.jpg' />
         <TextDetails
           align-text='right'
           heading='Secondary Details Text'
@@ -42,10 +32,6 @@ var Video = React.createClass({
           aside-colours={['grey','green-light','green']}
           aside-images={['assets/img/video-production__aside-3.jpg','assets/img/video-production__aside-4.jpg']}
           position='2' />
-        <ImageFixed
-          heading='Bicycle rights hammock flexitarian'
-          strapline='Chartreuse raw denim aesthetic, knausgaard ugh green juice chillwave kale chips disrupt lo-fi salvia vice.'
-          src='/assets/backgrounds/video-production__fixed-3.jpg' />
         <Contact />
         <Footer />
       </div>

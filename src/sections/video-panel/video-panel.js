@@ -2,7 +2,7 @@ var VideoPanel = React.createClass({
   render: function() {
     return (
       <div className='video-panel background background--blacker'>
-        <SectionHeadingWithStrapline heading='Documentaries Showreel Video' strapline='A collection of excerpts from our documentary films' />
+        <SectionHeadingWithStrapline heading={this.props.heading} strapline={this.props.strapline} />
         <VideoPlayer src={this.props.src} />
       </div>
     )

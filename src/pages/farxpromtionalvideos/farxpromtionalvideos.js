@@ -19,6 +19,10 @@ var Farxpromtionalvideos = React.createClass({
           aside-colours={['green-light','green','grey']}
           aside-images={['assets/img/photography__aside-1.jpg','assets/img/photography__aside-2.jpg']}
           position='1' />
+        <VideoPanel
+          src={'http://player.vimeo.com/video/67992157'}
+          heading={this.state.node.details.video_heading}
+          strapline={this.state.node.details.video_strapline} />
         <ImageFixed
           heading='This is the fixed image heading'
           strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'

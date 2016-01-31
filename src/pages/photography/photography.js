@@ -19,21 +19,13 @@ var Photography = React.createClass({
           aside-colours={['purple-light','purple','grey']}
           aside-images={['assets/img/photography__aside-1.jpg','assets/img/photography__aside-2.jpg']}
           position='1' />
-        <ImageFixed
-          heading='This is the fixed image heading'
-          strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'
-          src='/assets/backgrounds/photography__fixed-1.jpg' />
-        <ServiceTestimonials projects={this.state.photography} project-type='photography'/>
         <ThumbnailGallery
-          colour='purple'
+          colour='green'
           gallery-heading='Photography Gallery'
           gallery-strapline='Chambray 8-bit blog, green juice single-origin coffee scenester dreamcatcher ugh butcher. Cray VHS distillery'
           images={this.state.node.images} />
+        <ServiceTestimonials projects={this.state.photography} project-type='photography'/>
         <CallToAction heading='Looking for our photography products?' button-text='View Products' button-slug='products' />
-        <ImageFixed
-          heading='Craft beer dreamcatcher humblebrag'
-          strapline='Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.'
-          src='/assets/backgrounds/photography__fixed-2.jpg' />
         <TextDetails
           align-text='right'
           heading='Secondary Details Text'
@@ -41,10 +33,6 @@ var Photography = React.createClass({
           aside-colours={['grey','purple-light','purple']}
           aside-images={['assets/img/photography__aside-3.jpg','assets/img/photography__aside-4.jpg']}
           position='2' />
-        <ImageFixed
-          heading='Bicycle rights hammock flexitarian'
-          strapline='Chartreuse raw denim aesthetic, knausgaard ugh green juice chillwave kale chips disrupt lo-fi salvia vice.'
-          src='/assets/backgrounds/photography__fixed-3.jpg' />
         <Contact />
         <Footer />
       </div>

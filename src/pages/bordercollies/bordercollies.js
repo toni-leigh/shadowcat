@@ -19,6 +19,10 @@ var Bordercollies = React.createClass({
           aside-colours={['blue-light','blue','grey']}
           aside-images={['assets/img/photography__aside-1.jpg','assets/img/photography__aside-2.jpg']}
           position='1' />
+        <VideoPanel
+          src={'http://player.vimeo.com/video/67992157'}
+          heading={this.state.node.details.video_heading}
+          strapline={this.state.node.details.video_strapline} />
         <ImageFixed
           heading='This is the fixed image heading'
           strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'
