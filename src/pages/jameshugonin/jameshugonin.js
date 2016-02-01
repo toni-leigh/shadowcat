@@ -9,7 +9,7 @@ var Jameshugonin = React.createClass({
       <div className='documentaries background'>
         <Header page-slug='photography' nav-items={this.state.navItems} />
         <Heading
-          background='assets/backgrounds/photography__header.jpg'
+          background={Utilities.formatImageSrc(this.state.node.images.header, 3)}
           title={this.state.node.name}
           strapline={this.state.node.short_desc} />
         <TextDetails
@@ -17,7 +17,7 @@ var Jameshugonin = React.createClass({
           heading='Main Details Text'
           text={this.state.node.details.node_html}
           aside-colours={['blue-light','blue','grey']}
-          aside-images={['assets/img/photography__aside-1.jpg','assets/img/photography__aside-2.jpg']}
+          aside-images={[Utilities.thumbnailImageSrc(this.state.node.images.fixed[2]),Utilities.thumbnailImageSrc(this.state.node.images.fixed[1])]}
           aside-text={this.state.node.details.aside}
           position='1' />
         <VideoPanel
@@ -27,7 +27,7 @@ var Jameshugonin = React.createClass({
         <ImageFixed
           heading='This is the fixed image heading'
           strapline='Seitan try-hard retro, before they sold out letterpress vegan stumptown.'
-          src='/assets/backgrounds/photography__fixed-1.jpg' />
+          src={Utilities.formatImageSrc(this.state.node.images.fixed[0], 3)} />
         <ThumbnailGallery
           colour='blue'
           gallery-heading='Photography Gallery'
@@ -37,19 +37,19 @@ var Jameshugonin = React.createClass({
         <ImageFixed
           heading='Craft beer dreamcatcher humblebrag'
           strapline='Roof party pop-up ugh, tumblr biodiesel organic keffiyeh scenester occupy vegan quinoa.'
-          src='/assets/backgrounds/photography__fixed-2.jpg' />
+          src={Utilities.formatImageSrc(this.state.node.images.fixed[1], 3)} />
         <TextDetails
           align-text='right'
           heading='Secondary Details Text'
           text={this.state.node.details.secondary_html}
           aside-colours={['grey','blue-light','blue']}
-          aside-images={['assets/img/photography__aside-3.jpg','assets/img/photography__aside-4.jpg']}
+          aside-images={[Utilities.thumbnailImageSrc(this.state.node.images.header),Utilities.thumbnailImageSrc(this.state.node.images.fixed[0])]}
           aside-text={this.state.node.details.secondary_aside}
           position='2' />
         <ImageFixed
           heading='Bicycle rights hammock flexitarian'
           strapline='Chartreuse raw denim aesthetic, knausgaard ugh green juice chillwave kale chips disrupt lo-fi salvia vice.'
-          src='/assets/backgrounds/photography__fixed-3.jpg' />
+          src={Utilities.formatImageSrc(this.state.node.images.fixed[2], 3)} />
         <Contact />
         <Footer />
       </div>

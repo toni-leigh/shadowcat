@@ -9,7 +9,7 @@ var Photography = React.createClass({
       <div className='photography background'>
         <Header page-slug='photography' nav-items={this.state.navItems} />
         <Heading
-          background='assets/backgrounds/photography__header.jpg'
+          background={Utilities.formatImageSrc(this.state.node.images.header, 3)}
           title={this.state.node.name}
           strapline={this.state.node.short_desc} />
         <TextDetails
@@ -17,7 +17,7 @@ var Photography = React.createClass({
           heading='Main Details Text'
           text={this.state.node.details.node_html}
           aside-colours={['purple-light','purple','grey']}
-          aside-images={['assets/img/photography__aside-1.jpg','assets/img/photography__aside-2.jpg']}
+          aside-images={[Utilities.thumbnailImageSrc(this.state.node.images.fixed[2]),Utilities.thumbnailImageSrc(this.state.node.images.fixed[1])]}
           aside-text={this.state.node.details.aside}
           position='1' />
         <ThumbnailGallery
@@ -32,7 +32,7 @@ var Photography = React.createClass({
           heading='Secondary Details Text'
           text={this.state.node.details.secondary_html}
           aside-colours={['grey','purple-light','purple']}
-          aside-images={['assets/img/photography__aside-3.jpg','assets/img/photography__aside-4.jpg']}
+          aside-images={[Utilities.thumbnailImageSrc(this.state.node.images.header),Utilities.thumbnailImageSrc(this.state.node.images.fixed[0])]}
           aside-text={this.state.node.details.secondary_aside}
           position='2' />
         <Contact />

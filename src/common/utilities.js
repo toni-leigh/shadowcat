@@ -94,8 +94,26 @@ Utilities = {
     @return {String} a fully formed URI for the image
   */
   formatImageSrc: function(image, scaleWidthsIndex) {
-    var imageFileName = image.image_filename + "s" + ImageScaler.scaledWidths[scaleWidthsIndex] + image.image_ext;
-    return "http://shadowcatfilms.co.uk/user_img/" + image.user_id + "/" + imageFileName;
+    if (typeof image !== "undefined") {
+      var imageFileName = image.image_filename + "s" + ImageScaler.scaledWidths[scaleWidthsIndex] + image.image_ext;
+      return "http://shadowcatfilms.co.uk/user_img/" + image.user_id + "/" + imageFileName;
+    } else {
+      return "";
+    }
+  },
+
+  /*
+    @param {Object} image, contains all the data for an image
+    @param {number} scaleWidthsIndex, the index of the scale width to use
+    @return {String} a fully formed URI for the image
+  */
+  thumbnailImageSrc: function(image) {
+    if (typeof image !== "undefined") {
+      var imageFileName = image.image_filename + "t400" + image.image_ext;
+      return "http://shadowcatfilms.co.uk/user_img/" + image.user_id + "/" + imageFileName;
+    } else {
+      return "";
+    }
   },
 
   /*
