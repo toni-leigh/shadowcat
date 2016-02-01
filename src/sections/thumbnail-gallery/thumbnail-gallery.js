@@ -4,7 +4,7 @@ var ThumbnailGallery = React.createClass({
         callback = this.setLightboxShownState,
         thumbnails = [],
         x = 0;
-    props['images'].forEach(function(image) {
+    props['images']['all'].forEach(function(image) {
       thumbnails.push(
         <ImageThumbnail
           colour={props['colour']}
