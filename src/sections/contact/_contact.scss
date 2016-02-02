@@ -80,6 +80,17 @@
     &-textarea {
       height: 200px;
       width: 100%;
+      &--is-valid {
+        background-color: rgba(255,255,255,0.1);
+        border: 2px solid $grey-very-light;
+      }
+      &--is-not-valid {
+        background-color: rgba($red,0.1);
+        border: 2px solid $red;
+        &:focus {
+          background-color: lighten($red, 30);
+        }
+      }
     }
     &-submit {
       background-color: rgba($grey-very-light, 0.4);
@@ -140,4 +151,50 @@
       height: #{(48.0625 / 100 * 60)}vw;
     }
   }
+  &__send-attempt {
+    background-color: $grey-very-light;
+    border-radius: 3px;
+    color: $black;
+    display: none;
+    line-height: 35px;
+    margin-bottom: 25px;
+    min-height: 57px;
+    opacity: 0;
+    padding: 11px 11px 11px 13px;
+    text-indent: 12px;
+    transition: 0.2s all ease;
+    width: 100%;
+
+    &:before {
+      content: '';
+      float: left;
+      height: 33px;
+      width: 43px;
+    }
+
+    &.is-shown {
+      display: block;
+      opacity: 1;
+    }
+
+    &--fail {
+      &:before {
+        background-image: url('/assets/img/icons/message--fail.svg');
+      }
+    }
+
+    &--success {
+      &:before {
+        background-image: url('/assets/img/icons/message--success.svg');
+      }
+    }
+  }
+}
+
+label[for='greeting'],
+input[name='greeting'] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -999;
 }

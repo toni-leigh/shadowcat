@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="32px" viewBox="0 0 45 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>Form Success Green + Tick Inverse + Gradient + Lighter Tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Email-Ticks-and-Crosses" sketch:type="MSLayerGroup" transform="translate(-7179.000000, 1.000000)">
+            <g id="Green-Background-with-White" sketch:type="MSShapeGroup">
+                <g id="Inverted---more-green" transform="translate(153.000000, 0.000000)">
+                    <g id="Form-Success-Green-+-Tick-Inverse-+-Gradient-+-Lighter-Tick" transform="translate(7027.000000, 0.000000)">
+                        <g id="Form-Success-Green" transform="translate(0.000000, 3.975904)" stroke="#4CD335" stroke-width="1.44578313" fill="#FFFFFF">
+                            <rect id="Rectangle-20" filter="url(#filter-1)" x="0" y="0" width="39.1348315" height="26.0240964" rx="0.963855422"></rect>
+                            <path d="M1.1323736,24.9849398 L19.5674157,11.2048193" id="Line" stroke-linecap="square"></path>
+                            <path d="M38.0930478,24.9849398 L19.5674157,11.2048193" id="Line" stroke-linecap="square"></path>
+                            <path d="M1.08707865,13.3487536 C3.88251816,8.17449824 17.1852517,0.843373494 19.5670416,0.843373494 C22.0480336,0.843373494 36.0374126,8.20198491 38.047753,13.3487536 C38.2768621,13.9353067 38.1589665,15.5398516 38.0477519,16.0240964 L1.08707865,16.0240964 C0.935675392,15.3699538 0.638795707,14.1785088 1.08707865,13.3487536 Z" id="Triangle-1" filter="url(#filter-2)" transform="translate(19.514380, 8.433735) scale(1, -1) translate(-19.514380, -8.433735) "></path>
+                        </g>
+                        <g id="Tick-Inverse" transform="translate(19.567416, 0.000000)" fill="#4CD335">
+                            <g id="Tick">
+                                <path d="M9.66195922,7.7115126 L6.57217234,4.62172572 C6.00559625,4.05514963 5.09232002,4.06119701 4.52529846,4.62821858 L0.444726849,8.70879018 C-0.120914194,9.27443123 -0.125201667,10.1922284 0.438233996,10.7556641 L4.47270992,14.79014 C4.49761667,14.8193332 4.52386909,14.8477708 4.55146842,14.8753701 L8.63204003,18.9559417 C8.73921001,19.0631117 8.85902521,19.1501268 8.98667982,19.2169442 C9.53457448,19.5101385 10.2300145,19.4216542 10.6938027,18.957866 L14.7743743,14.8772944 C14.8093628,14.8423058 14.8422035,14.8059699 14.8728948,14.7684537 L22.9870088,6.65433965 C23.5462736,6.09507485 23.5477677,5.17425716 22.9807462,4.60723559 L18.9001746,0.526663984 C18.3345335,-0.0389770585 17.4166333,-0.0431614764 16.8530705,0.520401312 L9.66195922,7.7115126 Z" id="Rectangle-9" filter="url(#filter-3)"></path>
+                                <path d="M9.6284576,9.71402975 L6.20834331,6.30254001 C5.83159233,5.92673909 5.21895346,5.926466 4.84125814,6.30320887 L2.10938353,9.02819447 C1.73196766,9.40465861 1.73138801,10.0154588 2.10871298,10.3918322 L8.94155902,17.2074478 C9.20377067,17.4689982 9.58024406,17.5486467 9.91224947,17.4458916 C10.0611204,17.4017656 10.2013918,17.3211248 10.3188762,17.2039366 L21.2514238,6.29895785 C21.6290438,5.92229004 21.6284129,5.31209846 21.2507176,4.93535559 L18.518843,2.21036998 C18.1414271,1.83390585 17.5290988,1.83331176 17.1517934,2.20966562 L9.6284576,9.71402975 L9.6284576,9.71402975 Z" id="Tick-Small"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

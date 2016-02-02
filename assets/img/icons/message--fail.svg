@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="32px" viewBox="0 0 45 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>Form Fail Red + Cross Inverse + Gradient</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Form-Fail-Red-+-Cross-Inverse-+-Gradient" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <g id="Letter-Red" transform="translate(0.000000, 4.387352)" stroke="#FF7070" stroke-width="1.4229249" sketch:type="MSShapeGroup" fill="#FFFFFF">
+                <rect id="Rectangle-20" x="0" y="0" width="38.5927978" height="25.6126482" rx="0.948616601"></rect>
+                <path d="M1.11668975,24.5899209 L19.2963989,11.027668" id="Line" stroke-linecap="square"></path>
+                <path d="M37.5654432,24.5899209 L19.2963989,11.027668" id="Line" stroke-linecap="square"></path>
+                <path d="M1.07202216,13.1377061 C3.82874367,8.04525716 16.9472289,0.830039526 19.2960299,0.830039526 C21.7426592,0.830039526 35.5382795,8.07230926 37.5207759,13.1377061 C37.7467117,13.7149857 37.630449,15.2941623 37.5207747,15.770751 L1.07202216,15.770751 C0.922715899,15.1269506 0.629948121,13.9543426 1.07202216,13.1377061 Z" id="Triangle-1" filter="url(#filter-1)" transform="translate(19.244098, 8.300395) scale(1, -1) translate(-19.244098, -8.300395) "></path>
+            </g>
+            <g id="Cross-Inverse" transform="translate(22.750693, 0.000000)" fill="#EE5252" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-10" transform="translate(10.121147, 10.061598) rotate(-315.000000) translate(-10.121147, -10.061598) " x="0.115607197" y="5.79282376" width="20.0110803" height="8.53754941" rx="1.4229249"></rect>
+                <rect id="Rectangle-10" transform="translate(10.121147, 10.061598) rotate(-45.000000) translate(-10.121147, -10.061598) " x="0.115607197" y="5.79282376" width="20.0110803" height="8.53754941" rx="1.4229249"></rect>
+                <path d="M6.16352205,10.027861 L2.79438281,13.3818253 C2.42199295,13.7525379 2.4226151,14.3530822 2.79507917,14.7238686 L5.48911619,17.4057715 C5.86130469,17.7762836 6.46515207,17.7768683 6.83723156,17.4064647 L10.2063708,14.0525004 L13.57551,17.4064647 C13.9478999,17.7771773 14.5511613,17.7765579 14.9236254,17.4057715 L17.6176624,14.7238686 C17.9898509,14.3533565 17.9904383,13.7522289 17.6183588,13.3818253 L14.2492195,10.027861 L17.6183588,6.67389664 C17.9907486,6.30318405 17.9901265,5.70263976 17.6176624,5.3318533 L14.9236254,2.64995048 C14.5514369,2.27943834 13.9475895,2.27885365 13.57551,2.64925725 L10.2063708,6.00322158 L6.83723156,2.64925725 C6.46484169,2.27854466 5.86158026,2.27916401 5.48911619,2.64995048 L2.79507917,5.3318533 C2.42289067,5.70236544 2.42230333,6.30349303 2.79438281,6.67389664 L6.16352205,10.027861 L6.16352205,10.027861 Z" id="Cross-Small"></path>
+            </g>
+        </g>
+    </g>
+</svg>
