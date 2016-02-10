@@ -1,4 +1,6 @@
 var ThumbnailGallery = React.createClass({
+  imageIndex: 0,
+
   buildThumbnails: function() {
     var props = this.props,
         callback = this.setLightboxShownState,
@@ -21,15 +23,41 @@ var ThumbnailGallery = React.createClass({
   getInitialState: function() {
     return {
       lightboxIsShown: false,
-      image: '',
+      image: this.props['images']['all'][0],
       imageWidth: 300
     }
   },
 
+  nextImage: function(e) {
+    e.preventDefault();
+    this.imageIndex = typeof this.props['images']['all'][this.imageIndex + 1] === 'undefined'
+                    ? 0
+                    : this.imageIndex + 1;
+
+    this.setImage();
+  },
+
+  previousImage: function(e) {
+    e.preventDefault();
+    this.imageIndex = this.imageIndex === 0
+                    ? this.props['images']['all'].length - 1
+                    : this.imageIndex - 1;
+
+    this.setImage();
+  },
+
+  setImage: function(image) {
+    var image = this.props['images']['all'][this.imageIndex];
+    this.setState({
+      image: image,
+      scale: ImageScaler.pickScale(image.ratio)
+    });
+  },
+
   setLightboxShownState: function(clicked) {
-    var imageIndex = parseInt(clicked.currentTarget.dataset.imageIndex,10);
-    if (!isNaN(imageIndex)) {
-      this.state.image = this.props['images']['all'][imageIndex];
+    this.imageIndex = parseInt(clicked.currentTarget.dataset.imageIndex,10);
+    if (!isNaN(this.imageIndex)) {
+      this.setImage();
     }
     this.state.lightboxIsShown ? this.setState({lightboxIsShown: false}) : this.setState({lightboxIsShown: true});
   },
@@ -44,7 +72,10 @@ var ThumbnailGallery = React.createClass({
         <Lightbox
           is-shown={this.state.lightboxIsShown}
           thumbnail-gallery-callbacks__is-shown={this.setLightboxShownState}
-          image={this.state.image} />
+          thumbnail-gallery-callbacks__next-image={this.nextImage}
+          thumbnail-gallery-callbacks__previous-image={this.previousImage}
+          image={this.state.image}
+          scale={this.state.scale} />
       </div>
     )
   }

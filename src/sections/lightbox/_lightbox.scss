@@ -20,11 +20,22 @@
     max-width: 95vw;
   }
 
+  &__scroller {
+    bottom: 40px;
+    position: absolute;
+    &-next {
+      right: 40px;
+    }
+    &-previous {
+      left: 40px;
+    }
+  }
+
   .close {
     opacity: 0.8;
   }
 
-  //     Centring unknown dimensions hack
+  // Centring unknown dimensions hack
   &:before {
     content: '';
     display: inline-block;

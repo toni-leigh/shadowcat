@@ -49,6 +49,20 @@ ImageScaler = {
   },
 
   /*
+    @param {number} aspectRatio
+    @return {number} pickedScale - the index of the scaleWidths array that is to be used
+  */
+  pickScale: function(aspectRatio) {
+    var pickedScale = 0;
+    for (var x = 0; x < this.scaledWidths.length; x ++) {
+      if (this.nextSizeUpIsSensible(x, aspectRatio)) {
+        pickedScale = x + 1;
+      }
+    }
+    return pickedScale;
+  },
+
+  /*
     {Array} available scaled widths supplied by CMS
   */
   scaledWidths: [
