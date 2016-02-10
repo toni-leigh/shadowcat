@@ -40,7 +40,10 @@
       border-radius: 3px;
       color: $grey-very-light;
       font-size: 16px;
-      margin-bottom: 1.55em;
+      margin-bottom: 0.775em;
+      @media (min-width: 540px) {
+        margin-bottom: 1.55em;
+      }
       outline: none;
       padding: 0.666em;
       transition: all 0.1s;
@@ -157,7 +160,10 @@
     color: $black;
     display: none;
     line-height: 35px;
-    margin-bottom: 25px;
+    margin-bottom: 0.775em;
+    @media (min-width: 540px) {
+      margin-bottom: 1.55em;
+    }
     min-height: 57px;
     opacity: 0;
     padding: 11px 11px 11px 13px;
