@@ -29,7 +29,7 @@ var ThumbnailGallery = React.createClass({
   setLightboxShownState: function(clicked) {
     var imageIndex = parseInt(clicked.currentTarget.dataset.imageIndex,10);
     if (!isNaN(imageIndex)) {
-      this.state.image = this.props['images'][imageIndex];
+      this.state.image = this.props['images']['all'][imageIndex];
     }
     this.state.lightboxIsShown ? this.setState({lightboxIsShown: false}) : this.setState({lightboxIsShown: true});
   },
