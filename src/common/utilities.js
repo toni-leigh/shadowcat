@@ -44,8 +44,10 @@ ImageScaler = {
       this function will return true
   */
   nextSizeUpIsSensible: function(scaleWidthsIndex, aspectRatio) {
-    var maxWidth = this.getImageMaxWidth(aspectRatio);
-    return !isNaN(this.scaledWidths[scaleWidthsIndex + 1]) && maxWidth > this.scaledWidths[scaleWidthsIndex] && maxWidth < this.scaledWidths[scaleWidthsIndex + 1];
+    var maxWidth = this.getImageMaxWidth(aspectRatio),
+        currScaledWidth = this.scaledWidths[scaleWidthsIndex],
+        nextScaledWidth = this.scaledWidths[scaleWidthsIndex + 1];
+    return maxWidth > currScaledWidth && maxWidth < nextScaledWidth;
   },
 
   /*
@@ -55,8 +57,13 @@ ImageScaler = {
   pickScale: function(aspectRatio) {
     var pickedScale = 0;
     for (var x = 0; x < this.scaledWidths.length; x ++) {
+      if (isNaN(this.scaledWidths[x + 1])) {
+        pickedScale = x;
+        break;
+      }
       if (this.nextSizeUpIsSensible(x, aspectRatio)) {
         pickedScale = x + 1;
+        break;
       }
     }
     return pickedScale;
@@ -69,10 +76,10 @@ ImageScaler = {
     300,
     460,
     740,
-    940,
-    1280,
+    940 /*,
+    1280 ,
     1400,
-    1920
+    1920 */
   ]
 }
 
