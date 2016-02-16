@@ -10,6 +10,7 @@ var Lightbox = React.createClass({
   render: function() {
     return (
       <div className={'lightbox ' + this.getLightboxShownClass()}>
+        <span className='lightbox__heading'>{this.props['image'].image_name}</span>
         <i className='icon close' onClick={this.props['thumbnail-gallery-callbacks__is-shown']} />
         <img id='js-update-image' className='lightbox__image' src={Utilities.formatImageSrc(this.props['image'], this.props['scale'])} />
         <a className='lightbox__scroller lightbox__scroller-next' href='#' onClick={this.props['thumbnail-gallery-callbacks__next-image']}>next</a>

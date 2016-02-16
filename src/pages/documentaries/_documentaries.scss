@@ -1,6 +1,8 @@
 .documentaries {
   .image-fixed__heading-wrapper,
-  .image-fixed__strapline {
+  .image-fixed__strapline,
+  .lightbox__heading,
+  .lightbox__scroller {
     background-color: $blue-dark;
   }
   .testimonial__quote {

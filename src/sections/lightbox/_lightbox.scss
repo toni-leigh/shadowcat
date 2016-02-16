@@ -1,3 +1,6 @@
+$lightbox__break-1: 640px;
+$lightbox__break-2: 1024px;
+
 .lightbox {
   background-color: rgba($black,0.9);
   bottom: 0;
@@ -15,19 +18,66 @@
     -webkit-animation: show-lightbox 0.5s forwards;
   }
 
+  &__heading {
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    @media (min-width: $lightbox__break-1) {
+      left: 30px;
+      top: 30px;
+    }
+    @media (min-width: $lightbox__break-2) {
+      left: 40px;
+      top: 40px;
+    }
+  }
+
+  &__heading,
+  &__scroller {
+    padding: 10px 15px;
+    color: $grey-very-light;
+    display: inline-block;
+    font-family: $font__standout;
+    font-size: 20px;
+    @media (min-width: $lightbox__break-1) {
+      font-size: 22px;
+    }
+    @media (min-width: $lightbox__break-2) {
+      font-size: 24px;
+    }
+  }
+
   &__image {
     max-height: 95vh;
     max-width: 95vw;
   }
 
   &__scroller {
-    bottom: 40px;
+    bottom: 20px;
+    @media (min-width: $lightbox__break-1) {
+      bottom: 30px;
+    }
+    @media (min-width: $lightbox__break-2) {
+      bottom: 40px;
+    }
     position: absolute;
     &-next {
-      right: 40px;
+      right: 20px;
+      @media (min-width: $lightbox__break-1) {
+        right: 30px;
+      }
+      @media (min-width: $lightbox__break-2) {
+        right: 40px;
+      }
     }
     &-previous {
-      left: 40px;
+      left: 20px;
+      @media (min-width: $lightbox__break-1) {
+        left: 30px;
+      }
+      @media (min-width: $lightbox__break-2) {
+        left: 40px;
+      }
     }
   }
 

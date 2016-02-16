@@ -11,6 +11,13 @@
       color: $grey-very-light;
       display: inline-block;
       font-family: $font__standout;
+      font-size: 20px;
+      @media (min-width: 640px) {
+        font-size: 22px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
       margin: 4vh 0 80vh;
       padding: 10px 15px;
     }
